@@ -1,0 +1,22 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next",
+        "build": "next build",
+        "start": "next start"
+    },
+    "license": "MIT",
+    "devDependencies": {},
+    "dependencies": {
+        "babel-plugin-import-static-files": "^1.0.3",
+        "next": "^4.2.2",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "react-icons": "^2.2.7",
+        "styled-components": "^2.4.0"
+    },
+    "templateVersion": "2.2.0"
+}
