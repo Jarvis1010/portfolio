@@ -15,6 +15,10 @@ import markdown from './images/markdown.png';
 import quote from './images/quote.png';
 import hp from './images/HarryPotter.png';
 import weather from './images/weather.png';
+import node from './images/nodejs.png';
+import code from './images/copycode.png';
+import inator from './images/inator.png';
+import mormono from './images/mormono.png';
 
 export const about = {
   description: 'Software developer that provides focused skills needed to meet technical challenges. Driven to learn and understand new technologies, implement fundamental design principles, and write reliable, well-tested, reusable code.',
@@ -23,17 +27,16 @@ export const about = {
     'HTML',
     'CSS',
     'JavaScript',
+    'ES6',
+    'React.js',
     'Bootstrap',
     'JQuery',
     'MongoDB',
     'Angular.js',
     'Express',
     'Node',
-    'React',
     'VBA',
-    'PHP',
     'MySQL',
-    'JAVA',
   ],
 };
 
@@ -65,6 +68,26 @@ export const links = [
 ];
 
 export const portfolio = {
+  'npm modules and React Native apps': [
+    {
+      href: 'https://www.npmjs.com/package/react-copy-code',
+      src: code,
+      alt: 'Screenshot of react-copy-code',
+      desc: 'react-copy-code react-component',
+    },
+    {
+      href: 'https://www.npmjs.com/package/react-component-inator',
+      src: inator,
+      alt: 'Screenshot of react-component-inator',
+      desc: 'react-component-inator node module',
+    },
+    {
+      href: 'https://play.google.com/store/apps/details?id=com.lalibromormono',
+      src: mormono,
+      alt: 'Screenshot of Esperanto Book of Mormon',
+      desc: 'Book of Mormon in Esperanto Android App',
+    },
+  ],
   'Full Stack Projects and APIs': [
     {
       href: 'https://vote-ster.herokuapp.com/',
@@ -85,12 +108,6 @@ export const portfolio = {
       desc: 'Web Socket Stock Chart Site',
     },
     {
-      href: 'https://fast-caverns-82057.herokuapp.com/',
-      src: stamp,
-      alt: 'Screenshot of Unix Timestamp API',
-      desc: 'Unix Time Stamp API',
-    },
-    {
       href: 'https://fcc-tinyurl.herokuapp.com/',
       src: tiny,
       alt: 'Screenshot of tiny-url API',
@@ -98,6 +115,12 @@ export const portfolio = {
     },
   ],
   'Front End Projects': [
+    {
+      href: 'https://codepen.io/Jarvis1010/full/KNvJzB/',
+      src: crawler,
+      alt: 'Dungeon Crawler Screenshot',
+      desc: 'Dungeon Crawler Game',
+    },
     {
       href: 'https://codepen.io/Jarvis1010/full/qqRJKy',
       src: life,
@@ -141,12 +164,6 @@ export const portfolio = {
       desc: 'Pomodoro Countdown Clock',
     },
     {
-      href: 'https://codepen.io/Jarvis1010/full/KNvJzB/',
-      src: crawler,
-      alt: 'Dungeon Crawler Screenshot',
-      desc: 'Dungeon Crawler Game',
-    },
-    {
       href: 'https://codepen.io/Jarvis1010/full/QKevdp',
       src: quote,
       alt: 'Quote Getting App Screenshot',
@@ -157,18 +174,6 @@ export const portfolio = {
       src: hp,
       alt: 'Harry Potter Wiki Browser Sreenshot',
       desc: 'Wikipedia Searcher',
-    },
-    {
-      href: 'https://codepen.io/Jarvis1010/full/PGMLKJ/',
-      src: weather,
-      alt: 'Current Weather App Screenshot',
-      desc: 'Simple Weather App',
-    },
-    {
-      href: 'https://codepen.io/Jarvis1010/full/KNVoEM/',
-      src: markdown,
-      alt: 'Screenshot of Github markdown previewer',
-      desc: 'Github Markdown previewer',
     },
   ],
 };
