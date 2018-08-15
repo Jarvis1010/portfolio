@@ -1,19 +1,24 @@
-import React from 'react';
-import Link from 'next/link';
-import NavBar from '../NavBar/NavBar';
-import NavCollapse from '../NavCollapse/NavCollapse';
-import NavItems from '../NavItems/NavItems';
+import React from "react";
+import { NavWrapper, Brand, NavSlider, NavItem } from "../NavBar";
+import Link from "next/link";
+
+const navs = [
+  { nav: "About", href: "/#about" },
+  { nav: "Portfolio", href: "/#portfolio" },
+  { nav: "Contact", href: "/#contact" },
+];
 
 export default () => (
-  <NavBar inverse={true}>
-    <Link href="/"><a>Travis Mair</a></Link>
-    <NavCollapse>
-      <div />
-      <NavItems>
-        <a href="/#about">About</a>
-        <a href="/#portfolio">Portfolio</a>
-        <a href="/#contact">Contact</a>
-      </NavItems>
-    </NavCollapse>
-  </NavBar>
+  <NavWrapper>
+    <Brand brandName={"Travis Waith-Mair"} href="/" />
+    <NavSlider>
+      {navs.map(({ nav, href }, i) => (
+        <NavItem key={i}>
+          <Link href={href}>
+            <a>{nav}</a>
+          </Link>
+        </NavItem>
+      ))}
+    </NavSlider>
+  </NavWrapper>
 );
