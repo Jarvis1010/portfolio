@@ -1,0 +1,30 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "plugins": ["react", "prettier", "import", "jsx-a11y", "jest"],
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "rules": {
+    "prettier/prettier": "warn",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": 2,
+    "comma-dangle": "off"
+  },
+  "globals": {
+    "test": true,
+    "expect": true,
+    "describe": true,
+    "Promise": true
+  }
+}
