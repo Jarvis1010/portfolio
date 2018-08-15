@@ -1,4 +1,4 @@
-import SiteHeader from "./SiteHeader/SiteHeader";
+import StickyNav from "./StickyNav/StickyNav";
 import styled from "styled-components";
 import Root from "./Root";
 import PageWrapper from "./PageWrapper";
@@ -19,7 +19,7 @@ const MainWrapper = styled.main`
 const Layout = ({ strings = {}, theme = {}, children }) => (
   <Root>
     <PageWrapper>
-      <SiteHeader />
+      <StickyNav />
       <MainWrapper>{children}</MainWrapper>
       <Footer>JTWM © 2018. All Rights Reserved</Footer>
     </PageWrapper>
