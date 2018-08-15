@@ -17,6 +17,8 @@ const MainWrapper = styled.main`
   display: flex;
   flex-flow: column;
   align-items: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 `;
 
 const Layout = ({ children }) => (

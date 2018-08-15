@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/MyLayout.js';
-import AboutSection from '../components/AboutSection/AboutSection';
-import Portfolio from '../components/Portfolio/Portfolio';
-import Contact from '../components/Contact/Contact';
-import FinalSection from '../components/FinalSection/FinalSection';
-import styled from 'styled-components';
-import { list, desc, pageMeta, links, portfolio, about } from '../constants';
+import React from "react";
+import Layout from "../components/MyLayout.js";
+import AboutSection from "../components/AboutSection/AboutSection";
+import Portfolio from "../components/Portfolio/Portfolio";
+import Contact from "../components/Contact/Contact";
+import FinalSection from "../components/FinalSection/FinalSection";
+import styled from "styled-components";
+import { list, desc, pageMeta, links, portfolio, about } from "../constants";
 
 const ContentSection = styled.section`
   max-width: 900px;
@@ -17,13 +17,13 @@ const About = ContentSection.extend`
 `;
 
 const Final = styled.section`
-   width: 100%;
+  width: 100%;
   margin: 0;
 `;
 
-export default props => {
+export default () => {
   return (
-    <Layout {...props}>
+    <Layout>
       <About id="about">
         <AboutSection {...about} />
       </About>

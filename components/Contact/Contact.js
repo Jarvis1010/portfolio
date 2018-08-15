@@ -1,15 +1,16 @@
-import React from 'react';
-import ContactList from '../ContactList/ContactList';
-import ContentSection from '../ContentSection/ContentSection';
-import styled from 'styled-components';
+import React from "react";
+import ContactList from "../ContactList/ContactList";
+import ContentSection from "../ContentSection/ContentSection";
+import styled from "styled-components";
 
 const FlexItem = styled.p`
- flex: 1 1 300px;
-    margin: 0 1em;
+  flex: 1 1 300px;
+  margin: 0 1em;
 `;
 
 const FlexWrapper = styled.div`
-  display:flex;
+  display: flex;
+  flex-flow: row wrap;
 `;
 
 export const Contact = ({ className, list, message }) => (
