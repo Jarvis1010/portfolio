@@ -1,12 +1,13 @@
 import SiteHeader from "./SiteHeader/SiteHeader";
 import styled from "styled-components";
+import { lightGrey } from "../components/constants/styled-constants";
 
 const AppWrapper = styled.div`
-  background-color: #808080;
+  background-color: ${lightGrey};
 `;
 
 const Footer = styled.footer`
-  margin-top: 0;
+  margin: 0;
   text-align: center;
   color: white;
   background-color: #222;
@@ -22,7 +23,7 @@ const Layout = ({ children }) => (
   <AppWrapper>
     <SiteHeader />
     <MainWrapper>{children}</MainWrapper>
-    <Footer>JTM © 2016. All Rights Reserved</Footer>
+    <Footer>JTWM © 2018. All Rights Reserved</Footer>
   </AppWrapper>
 );
 
