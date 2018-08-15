@@ -34,16 +34,6 @@ export const ProfilePic = styled.figure`
 export const HR = styled.hr`
   border: 0;
   border-top: 3px solid;
-  &:after {
-    content: "< / >";
-    display: inline-block;
-    position: relative;
-    top: -15px;
-    padding: 0 3px;
-    background: #aaa;
-    color: white;
-    font-size: 18px;
-  }
 `;
 
 export const Description = styled.section`

@@ -17,6 +17,7 @@ const Inner = styled.div`
   overflow-y: scroll;
   height: 100vh;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 `;
 
 export default ({ children }) => (
