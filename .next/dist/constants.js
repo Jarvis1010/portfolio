@@ -28,7 +28,7 @@ var links = exports.links = [{ href: "https://github.com/Jarvis1010", content: "
 }];
 
 var portfolio = exports.portfolio = {
-  "npm modules and React Native apps": [{
+  "NPM modules and React Native apps": [{
     href: "https://www.npmjs.com/package/react-copy-code",
     src: code,
     alt: "Screenshot of react-copy-code",

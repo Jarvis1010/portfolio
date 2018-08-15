@@ -1,10 +1,7 @@
 import SiteHeader from "./SiteHeader/SiteHeader";
 import styled from "styled-components";
-import { lightGrey } from "../components/constants/styled-constants";
-
-const AppWrapper = styled.div`
-  background-color: ${lightGrey};
-`;
+import Root from "./Root";
+import PageWrapper from "./PageWrapper";
 
 const Footer = styled.footer`
   margin: 0;
@@ -21,12 +18,14 @@ const MainWrapper = styled.main`
   scroll-behavior: smooth;
 `;
 
-const Layout = ({ children }) => (
-  <AppWrapper>
-    <SiteHeader />
-    <MainWrapper>{children}</MainWrapper>
-    <Footer>JTWM © 2018. All Rights Reserved</Footer>
-  </AppWrapper>
+const Layout = ({ strings = {}, theme = {}, children }) => (
+  <Root>
+    <PageWrapper>
+      <SiteHeader />
+      <MainWrapper>{children}</MainWrapper>
+      <Footer>JTWM © 2018. All Rights Reserved</Footer>
+    </PageWrapper>
+  </Root>
 );
 
 export default Layout;
