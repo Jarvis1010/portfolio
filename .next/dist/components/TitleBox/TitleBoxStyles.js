@@ -21,3 +21,4 @@ var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n     font-size: 1
 var Box = exports.Box = _styledComponents2.default.div(_templateObject);
 
 var Title = exports.Title = _styledComponents2.default.h2(_templateObject2);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvVGl0bGVCb3gvVGl0bGVCb3hTdHlsZXMuanMiXSwibmFtZXMiOlsic3R5bGVkIiwiQm94IiwiZGl2IiwiVGl0bGUiLCJoMiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVAsQUFFQTs7Ozs7Ozs7O0FBQU8sSUFBTSxvQkFBTSwyQkFBTyxBQUFiLElBQU4sQUFRUDs7QUFBTyxJQUFNLHdCQUFRLDJCQUFPLEFBQWYsR0FBTiIsImZpbGUiOiJUaXRsZUJveFN0eWxlcy5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvdHJhdmlzLW1haXIvcG9ydGZvbGlvL3BvcnRmb2xpbyJ9
