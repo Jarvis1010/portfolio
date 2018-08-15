@@ -21,9 +21,9 @@ export const about = {
 };
 
 export const list = [
-  "Justin Travis Mair",
+  "J. Travis Waith-Mair",
   "travis.mair@gmail.com",
-  "(801) 200-7597",
+  "(801) 200 - 7597",
   "Salt Lake City, Utah",
 ];
 
