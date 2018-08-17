@@ -44,7 +44,7 @@ export const links = [
 ];
 
 export const portfolio = {
-  "Open Source Projectssx": [
+  "Open Source Projects": [
     {
       href: "https://www.npmjs.com/package/react-copy-code",
       src: "static/images/copycode.png",
