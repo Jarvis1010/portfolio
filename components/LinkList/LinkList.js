@@ -1,20 +1,20 @@
-import React from 'react';
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/lib/fa';
-import { ListOfLinks, IconLink } from './LinkListStyles';
+import React from "react";
+import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { ListOfLinks, IconLink } from "./LinkListStyles";
 
 function iconPicker(content) {
   switch (content) {
-    case 'github': {
+    case "github": {
       return <FaGithub />;
     }
-    case 'twitter': {
+    case "twitter": {
       return <FaTwitter />;
     }
-    case 'linkedin': {
+    case "linkedin": {
       return <FaLinkedin />;
     }
     default: {
-      return '';
+      return "";
     }
   }
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import profile from "./portfolio.jpg";
 import styled from "styled-components";
 import Grid from "../Grid";
 import PadBox from "../PadBox/PadBox";
@@ -41,7 +40,7 @@ export const AboutSection = ({
         <h1>{title}</h1>
       </Description>
       <ProfilePic>
-        <Image src={profile} alt="Profile Photo" />
+        <Image src="static/portfolio.jpg" alt="Profile Photo" />
       </ProfilePic>
     </Grid>
   </PadBox>

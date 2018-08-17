@@ -1,7 +1,3 @@
-import code from "./images/copycode.png";
-import inator from "./images/inator.png";
-import mormono from "./images/mormono.png";
-
 export const about = {
   description:
     "Software developer that provides focused skills needed to meet technical challenges. Driven to learn and understand new technologies, implement fundamental design principles, and write reliable, well-tested, reusable code.",
@@ -51,19 +47,19 @@ export const portfolio = {
   "Open Source Projectssx": [
     {
       href: "https://www.npmjs.com/package/react-copy-code",
-      src: code,
+      src: "static/images/copycode.png",
       alt: "Screenshot of react-copy-code",
       desc: "react-copy-code"
     },
     {
       href: "https://www.npmjs.com/package/react-clean-form",
-      src: inator,
+      src: "static/images/inator.png",
       alt: "Screenshot of react-clean-form",
       desc: "react-clean-form"
     },
     {
       href: "https://play.google.com/store/apps/details?id=com.sanktajlibroj",
-      src: mormono,
+      src: "static/images/mormono.png",
       alt: "Screenshot of Esperanto Book of Mormon",
       desc: "React Native App of Scriptures in Esperanto"
     }
