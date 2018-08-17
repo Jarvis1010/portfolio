@@ -36,9 +36,6 @@ var _styledComponents = require('styled-components');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/travis-mair/portfolio/portfolio/pages/_document.js?entry';
-
-
 var MyDocument = function (_Document) {
   (0, _inherits3.default)(MyDocument, _Document);
 
@@ -52,51 +49,13 @@ var MyDocument = function (_Document) {
     key: 'render',
     value: function render() {
       var sheet = new _styledComponents.ServerStyleSheet();
-      var main = sheet.collectStyles(_react2.default.createElement(_document.Main, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 7
-        }
-      }));
+      var main = sheet.collectStyles(_react2.default.createElement(_document.Main, null));
       var styleTags = sheet.getStyleElement();
 
-      return _react2.default.createElement('html', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        }
-      }, _react2.default.createElement(_document.Head, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        }
-      }, _react2.default.createElement('title', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        }
-      }, 'Portfolio'), _react2.default.createElement('meta', {
+      return _react2.default.createElement('html', null, _react2.default.createElement(_document.Head, null, _react2.default.createElement('title', null, 'Portfolio'), _react2.default.createElement('meta', {
         name: 'viewport',
-        content: 'initial-scale=1.0, width=device-width',
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        }
-      }), styleTags), _react2.default.createElement('body', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21
-        }
-      }, _react2.default.createElement('div', { className: 'root', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        }
-      }, main), _react2.default.createElement(_document.NextScript, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        }
-      })));
+        content: 'initial-scale=1.0, width=device-width'
+      }), styleTags), _react2.default.createElement('body', null, _react2.default.createElement('div', { className: 'root' }, main), _react2.default.createElement(_document.NextScript, null)));
     }
   }]);
 
@@ -104,4 +63,3 @@ var MyDocument = function (_Document) {
 }(_document2.default);
 
 exports.default = MyDocument;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL19kb2N1bWVudC5qcyJdLCJuYW1lcyI6WyJEb2N1bWVudCIsIkhlYWQiLCJNYWluIiwiTmV4dFNjcmlwdCIsIlNlcnZlclN0eWxlU2hlZXQiLCJNeURvY3VtZW50Iiwic2hlZXQiLCJtYWluIiwiY29sbGVjdFN0eWxlcyIsInN0eWxlVGFncyIsImdldFN0eWxlRWxlbWVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFZLEFBQU0sQUFBTTs7OztBQUMvQixBQUFTOzs7Ozs7O0lBRVksQTs7Ozs7Ozs7Ozs7NkJBQ1YsQUFDUDtVQUFNLFFBQU4sQUFBYyxBQUFJLEFBQ2xCO1VBQU0sYUFBTyxBQUFNLDhCQUFjLEFBQUM7O29CQUFEO3NCQUFqQyxBQUFhLEFBQW9CLEFBQ2pDO0FBRGlDO0FBQUEsT0FBQSxDQUFwQjtVQUNQLFlBQVksTUFBbEIsQUFBa0IsQUFBTSxBQUV4Qjs7NkJBQ0UsY0FBQTs7b0JBQUE7c0JBQUEsQUFDRTtBQURGO0FBQUEsT0FBQSxrQkFDRSxBQUFDOztvQkFBRDtzQkFBQSxBQUNFO0FBREY7QUFBQSx5QkFDRSxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FERixBQUNFLEFBQ0E7Y0FBQSxBQUNPLEFBQ0w7aUJBRkYsQUFFVTs7b0JBRlY7c0JBRkYsQUFFRSxBQUlDO0FBSkQ7QUFDRSxVQUpOLEFBQ0UsQUFTQSw0QkFBQSxjQUFBOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSx5QkFDRSxjQUFBLFNBQUssV0FBTCxBQUFlO29CQUFmO3NCQUFBLEFBQ0c7QUFESDtTQURGLEFBQ0UsQUFJQSx1QkFBQSxBQUFDOztvQkFBRDtzQkFoQk4sQUFDRSxBQVVFLEFBS0UsQUFJUDtBQUpPO0FBQUE7Ozs7O0FBdEI4QixBOztrQkFBbkIsQSIsImZpbGUiOiJfZG9jdW1lbnQuanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL1VzZXJzL3RyYXZpcy1tYWlyL3BvcnRmb2xpby9wb3J0Zm9saW8ifQ==

@@ -48,7 +48,7 @@ export const links = [
 ];
 
 export const portfolio = {
-  "NPM modules and React Native apps": [
+  "Open Source Projectssx": [
     {
       href: "https://www.npmjs.com/package/react-copy-code",
       src: code,
