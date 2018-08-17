@@ -1,20 +1,50 @@
-import React from 'react';
-import profile from './portfolio.jpg';
-import { HR, AboutWrapper, ProfilePic, Description } from './AboutStyles';
+import React from "react";
+import profile from "./portfolio.jpg";
+import styled from "styled-components";
+import Grid from "../Grid";
+import PadBox from "../PadBox/PadBox";
+import { breakWidth480 } from "../constants/styled-constants";
 
-export const AboutSection = ({ src, description, title, languages }) => (
-  <AboutWrapper>
-    <Description>
-      {description && <p>{description}</p>}
-      {languages && <h3>Programming Languages</h3>}
-      {languages && <p>{languages.join(', ')}</p>}
-      {description && title && <HR />}
-      {title && <h1>{title}</h1>}
-    </Description>
-    <ProfilePic>
-      <img src={profile} alt="Profile Photo" />
-    </ProfilePic>
-  </AboutWrapper>
+const ProfilePic = Grid.withComponent("figure").extend`
+  max-height: ${breakWidth480};
+`;
+
+const Description = styled.div`
+  text-align: right;
+`;
+
+const HR = styled.hr`
+  border: 0;
+  border-top: 3px solid;
+`;
+
+const Image = styled.img`
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+  margin-left: auto;
+  max-width: ${breakWidth480};
+`;
+
+export const AboutSection = ({
+  description = "",
+  title = "",
+  languages = []
+}) => (
+  <PadBox size="64">
+    <Grid minWidth={"400px"}>
+      <Description>
+        <p>{description}</p>
+        <h3>Programming Languages</h3>
+        <p>{languages.join(", ")}</p>
+        <HR />
+        <h1>{title}</h1>
+      </Description>
+      <ProfilePic>
+        <Image src={profile} alt="Profile Photo" />
+      </ProfilePic>
+    </Grid>
+  </PadBox>
 );
 
 export default AboutSection;

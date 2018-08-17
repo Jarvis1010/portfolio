@@ -4,38 +4,27 @@ import AboutSection from "../components/AboutSection/AboutSection";
 import Portfolio from "../components/Portfolio/Portfolio";
 import Contact from "../components/Contact/Contact";
 import FinalSection from "../components/FinalSection/FinalSection";
-import styled from "styled-components";
-import { list, desc, pageMeta, links, portfolio, about } from "../constants";
-
-const ContentSection = styled.section`
-  max-width: 900px;
-  margin: 0;
-`;
-
-const About = ContentSection.extend`
-  flex: 0 1 400px;
-`;
-
-const Final = styled.section`
-  width: 100%;
-  margin: 0;
-`;
+import { list, desc, links, portfolio, about } from "../constants";
+import Stack from "../components/Stack/Stack";
+import Stackable from "../components/Stack/Stackable";
 
 export default () => {
   return (
     <Layout>
-      <About id="about">
-        <AboutSection {...about} />
-      </About>
-      <ContentSection id="portfolio">
-        <Portfolio projectGroups={portfolio} />
-      </ContentSection>
-      <ContentSection id="contact">
-        <Contact list={list} message={desc} />
-      </ContentSection>
-      <Final>
-        <FinalSection links={links} />
-      </Final>
+      <Stack>
+        <Stackable type="light" id="about">
+          <AboutSection {...about} />
+        </Stackable>
+        <Stackable id="portfolio">
+          <Portfolio projectGroups={portfolio} />
+        </Stackable>
+        <Stackable type="dark" id="contact">
+          <Contact list={list} message={desc} />
+        </Stackable>
+        <Stackable>
+          <FinalSection links={links} />
+        </Stackable>
+      </Stack>
     </Layout>
   );
 };

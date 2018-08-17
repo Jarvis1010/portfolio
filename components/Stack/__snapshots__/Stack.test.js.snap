@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stack Tests renders with proper gaps 1`] = `
+.c0 {
+  display: grid;
+  grid-gap: 0;
+  grid-auto-columns: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Stack Tests renders with proper gaps 2`] = `
+.c0 {
+  display: grid;
+  grid-gap: 0.25rem;
+  grid-auto-columns: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Stack Tests renders with proper gaps 3`] = `
+.c0 {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-auto-columns: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Stack Tests renders with proper gaps 4`] = `
+.c0 {
+  display: grid;
+  grid-gap: 1rem;
+  grid-auto-columns: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Stack Tests renders with proper gaps 5`] = `
+.c0 {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-auto-columns: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Stack Tests renders with proper gaps 6`] = `
+.c0 {
+  display: grid;
+  grid-gap: 2rem;
+  grid-auto-columns: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Stack Tests renders with proper gaps 7`] = `
+.c0 {
+  display: grid;
+  grid-gap: 4rem;
+  grid-auto-columns: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Stack Tests renders with proper gaps 8`] = `
+.c0 {
+  display: grid;
+  grid-gap: 8rem;
+  grid-auto-columns: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Stack Tests renders with proper gaps 9`] = `
+.c0 {
+  display: grid;
+  grid-gap: 0;
+  grid-auto-columns: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;

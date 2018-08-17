@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid Tests renders Grid with columns passed as props 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(1px,1fr));
+  grid-gap: 1rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Grid Tests renders Grid with minWidth passed as props 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100,1fr));
+  grid-gap: 1rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Grid Tests renders with proper gaps with default columns and width 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
+  grid-gap: 0;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Grid Tests renders with proper gaps with default columns and width 2`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
+  grid-gap: 0.25rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Grid Tests renders with proper gaps with default columns and width 3`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
+  grid-gap: 0.5rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Grid Tests renders with proper gaps with default columns and width 4`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
+  grid-gap: 1rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Grid Tests renders with proper gaps with default columns and width 5`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
+  grid-gap: 1.5rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Grid Tests renders with proper gaps with default columns and width 6`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
+  grid-gap: 2rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Grid Tests renders with proper gaps with default columns and width 7`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
+  grid-gap: 4rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Grid Tests renders with proper gaps with default columns and width 8`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
+  grid-gap: 8rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Grid Tests renders with proper gaps with default columns and width 9`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
+  grid-gap: 1rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;

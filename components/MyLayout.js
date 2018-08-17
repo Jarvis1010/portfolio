@@ -2,25 +2,20 @@ import StickyNav from "./StickyNav/StickyNav";
 import styled from "styled-components";
 import Root from "./Root";
 import PageWrapper from "./PageWrapper";
+import { darkGrey } from "../components/constants/styled-constants";
 
 const Footer = styled.footer`
   margin: 0;
   text-align: center;
   color: white;
-  background-color: #222;
+  background-color: ${darkGrey};
 `;
 
-const MainWrapper = styled.main`
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-`;
-
-const Layout = ({ strings = {}, theme = {}, children }) => (
+const Layout = ({ children }) => (
   <Root>
     <PageWrapper>
       <StickyNav />
-      <MainWrapper>{children}</MainWrapper>
+      <main>{children}</main>
       <Footer>JTWM © 2018. All Rights Reserved</Footer>
     </PageWrapper>
   </Root>

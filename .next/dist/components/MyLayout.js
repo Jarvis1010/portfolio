@@ -28,50 +28,45 @@ var _PageWrapper = require("./PageWrapper");
 
 var _PageWrapper2 = _interopRequireDefault(_PageWrapper);
 
+var _styledConstants = require("../components/constants/styled-constants");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/MyLayout.js";
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(["\n  margin: 0;\n  text-align: center;\n  color: white;\n  background-color: #222;\n"], ["\n  margin: 0;\n  text-align: center;\n  color: white;\n  background-color: #222;\n"]),
-    _templateObject2 = (0, _taggedTemplateLiteral3.default)(["\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n"], ["\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n"]);
+var _templateObject = (0, _taggedTemplateLiteral3.default)(["\n  margin: 0;\n  text-align: center;\n  color: white;\n  background-color: ", ";\n"], ["\n  margin: 0;\n  text-align: center;\n  color: white;\n  background-color: ", ";\n"]);
 
-var Footer = _styledComponents2.default.footer(_templateObject);
-
-var MainWrapper = _styledComponents2.default.main(_templateObject2);
+var Footer = _styledComponents2.default.footer(_templateObject, _styledConstants.darkGrey);
 
 var Layout = function Layout(_ref) {
-  var _ref$strings = _ref.strings,
-      strings = _ref$strings === undefined ? {} : _ref$strings,
-      _ref$theme = _ref.theme,
-      theme = _ref$theme === undefined ? {} : _ref$theme,
-      children = _ref.children;
+  var children = _ref.children;
   return _react2.default.createElement(_Root2.default, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 15
     }
   }, _react2.default.createElement(_PageWrapper2.default, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 16
     }
   }, _react2.default.createElement(_StickyNav2.default, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 17
     }
-  }), _react2.default.createElement(MainWrapper, {
+  }), _react2.default.createElement("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 18
     }
   }, children), _react2.default.createElement(Footer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 19
     }
   }, "JTWM \xA9 2018. All Rights Reserved")));
 };
 
 exports.default = Layout;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvTXlMYXlvdXQuanMiXSwibmFtZXMiOlsiU3RpY2t5TmF2Iiwic3R5bGVkIiwiUm9vdCIsIlBhZ2VXcmFwcGVyIiwiRm9vdGVyIiwiZm9vdGVyIiwiTWFpbldyYXBwZXIiLCJtYWluIiwiTGF5b3V0Iiwic3RyaW5ncyIsInRoZW1lIiwiY2hpbGRyZW4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFlOzs7O0FBQ3RCLEFBQU87Ozs7QUFDUCxBQUFPLEFBQVU7Ozs7QUFDakIsQUFBTyxBQUFpQjs7Ozs7Ozs7Ozs7QUFFeEIsSUFBTSxTQUFTLDJCQUFULEFBQWdCLE9BQXRCOztBQU9BLElBQU0sY0FBYywyQkFBZCxBQUFxQixLQUEzQjs7QUFNQSxJQUFNLFNBQVMsU0FBVCxBQUFTLGFBQUE7MEJBQUEsQUFBRztNQUFILEFBQUcsdUNBQUgsQUFBYSxLQUFiO3dCQUFBLEFBQWlCO01BQWpCLEFBQWlCLG1DQUFqQixBQUF5QixLQUF6QjtNQUFBLEFBQTZCLGdCQUE3QixBQUE2Qjt5QkFDMUMsQUFBQzs7Z0JBQUQ7a0JBQUEsQUFDRTtBQURGO0FBQUEsR0FBQSxrQkFDRSxBQUFDOztnQkFBRDtrQkFBQSxBQUNFO0FBREY7QUFBQSxxQkFDRSxBQUFDOztnQkFBRDtrQkFERixBQUNFLEFBQ0E7QUFEQTtBQUFBLHNCQUNDLGNBQUQ7O2dCQUFBO2tCQUFBLEFBQWM7QUFBZDtBQUFBLEtBRkYsQUFFRSxBQUNBLDJCQUFDLGNBQUQ7O2dCQUFBO2tCQUFBO0FBQUE7QUFBQSxLQUxTLEFBQ2IsQUFDRSxBQUdFO0FBTE4sQUFVQTs7a0JBQUEsQUFBZSIsImZpbGUiOiJNeUxheW91dC5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvdHJhdmlzLW1haXIvcG9ydGZvbGlvL3BvcnRmb2xpbyJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvTXlMYXlvdXQuanMiXSwibmFtZXMiOlsiU3RpY2t5TmF2Iiwic3R5bGVkIiwiUm9vdCIsIlBhZ2VXcmFwcGVyIiwiZGFya0dyZXkiLCJGb290ZXIiLCJmb290ZXIiLCJMYXlvdXQiLCJjaGlsZHJlbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQWU7Ozs7QUFDdEIsQUFBTzs7OztBQUNQLEFBQU8sQUFBVTs7OztBQUNqQixBQUFPLEFBQWlCOzs7O0FBQ3hCLEFBQVMsQUFBZ0I7Ozs7Ozs7O0FBRXpCLElBQU0sU0FBUywyQkFBVCxBQUFnQixPQUF0QixBQUFNLEFBSWdCOztBQUd0QixJQUFNLFNBQVMsU0FBVCxBQUFTLGFBQUE7TUFBQSxBQUFHLGdCQUFILEFBQUc7eUJBQ2hCLEFBQUM7O2dCQUFEO2tCQUFBLEFBQ0U7QUFERjtBQUFBLEdBQUEsa0JBQ0UsQUFBQzs7Z0JBQUQ7a0JBQUEsQUFDRTtBQURGO0FBQUEscUJBQ0UsQUFBQzs7Z0JBQUQ7a0JBREYsQUFDRSxBQUNBO0FBREE7QUFBQSxzQkFDQSxjQUFBOztnQkFBQTtrQkFBQSxBQUFPO0FBQVA7QUFBQSxLQUZGLEFBRUUsQUFDQSwyQkFBQyxjQUFEOztnQkFBQTtrQkFBQTtBQUFBO0FBQUEsS0FMUyxBQUNiLEFBQ0UsQUFHRTtBQUxOLEFBVUE7O2tCQUFBLEFBQWUiLCJmaWxlIjoiTXlMYXlvdXQuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL3RyYXZpcy1tYWlyL3BvcnRmb2xpby9wb3J0Zm9saW8ifQ==

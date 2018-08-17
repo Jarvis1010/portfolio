@@ -74,6 +74,7 @@ export const spacing64 = "4rem"; /* 64px */
 export const spacing128 = "8rem"; /* 128px */
 
 /* -- MATERIAL BREAKPOINTS -- */
+export const breakWidth400 = "400px";
 export const breakWidth480 = "480px";
 export const breakWidth600 = "600px";
 export const breakWidth840 = "840px";

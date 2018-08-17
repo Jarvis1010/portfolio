@@ -1,35 +1,48 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.TitleBox = undefined;
 
-var _react = require('react');
+var _taggedTemplateLiteral2 = require("babel-runtime/helpers/taggedTemplateLiteral");
+
+var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
+
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TitleBoxStyles = require('./TitleBoxStyles');
+var _styledComponents = require("styled-components");
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/travis-mair/portfolio/portfolio/components/TitleBox/TitleBox.js';
+var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/TitleBox/TitleBox.js";
+
+var _templateObject = (0, _taggedTemplateLiteral3.default)(["\n  font-size: 18px;\n  display: block;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  text-align: center;\n  flex: 1 1 400px;\n"], ["\n  font-size: 18px;\n  display: block;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  text-align: center;\n  flex: 1 1 400px;\n"]),
+    _templateObject2 = (0, _taggedTemplateLiteral3.default)(["\n  font-size: 30px;\n"], ["\n  font-size: 30px;\n"]);
+
+var Box = _styledComponents2.default.div(_templateObject);
+
+var Title = _styledComponents2.default.h2(_templateObject2);
+
 var TitleBox = exports.TitleBox = function TitleBox(_ref) {
-  var className = _ref.className,
-      title = _ref.title,
+  var title = _ref.title,
       children = _ref.children;
-  return _react2.default.createElement(_TitleBoxStyles.Box, {
+  return _react2.default.createElement(Box, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 17
     }
-  }, _react2.default.createElement(_TitleBoxStyles.Title, {
+  }, _react2.default.createElement(Title, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 18
     }
   }, title), children);
 };
 
 exports.default = TitleBox;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvVGl0bGVCb3gvVGl0bGVCb3guanMiXSwibmFtZXMiOlsiUmVhY3QiLCJCb3giLCJUaXRsZSIsIlRpdGxlQm94IiwiY2xhc3NOYW1lIiwidGl0bGUiLCJjaGlsZHJlbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUFTLEFBQUssQUFBYSxBQUUzQjs7Ozs7QUFBTyxJQUFNLDhCQUFXLFNBQVgsQUFBVyxlQUFBO01BQUEsQUFBRyxpQkFBSCxBQUFHO01BQUgsQUFBYyxhQUFkLEFBQWM7TUFBZCxBQUFxQixnQkFBckIsQUFBcUI7eUJBQzNDLEFBQUM7O2dCQUFEO2tCQUFBLEFBQ0U7QUFERjtBQUFBLEdBQUEsa0JBQ0UsQUFBQzs7Z0JBQUQ7a0JBQUEsQUFBUTtBQUFSO0FBQUEsS0FERixBQUNFLEFBQ0MsUUFIbUIsQUFDdEI7QUFESyxBQU9QOztrQkFBQSxBQUFlIiwiZmlsZSI6IlRpdGxlQm94LmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy90cmF2aXMtbWFpci9wb3J0Zm9saW8vcG9ydGZvbGlvIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvVGl0bGVCb3gvVGl0bGVCb3guanMiXSwibmFtZXMiOlsiUmVhY3QiLCJzdHlsZWQiLCJCb3giLCJkaXYiLCJUaXRsZSIsImgyIiwiVGl0bGVCb3giLCJ0aXRsZSIsImNoaWxkcmVuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUFPOzs7Ozs7Ozs7OztBQUVQLElBQU0sTUFBTSwyQkFBTixBQUFhLElBQW5COztBQVFBLElBQU0sUUFBUSwyQkFBUixBQUFlLEdBQXJCLEFBSUE7O0FBQU8sSUFBTSw4QkFBVyxTQUFYLEFBQVcsZUFBQTtNQUFBLEFBQUcsYUFBSCxBQUFHO01BQUgsQUFBVSxnQkFBVixBQUFVO3lCQUMvQixjQUFEOztnQkFBQTtrQkFBQSxBQUNFO0FBREY7QUFBQSxHQUFBLGtCQUNHLGNBQUQ7O2dCQUFBO2tCQUFBLEFBQVE7QUFBUjtBQUFBLEtBREYsQUFDRSxBQUNDLFFBSG1CLEFBQ3RCO0FBREssQUFPUDs7a0JBQUEsQUFBZSIsImZpbGUiOiJUaXRsZUJveC5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvdHJhdmlzLW1haXIvcG9ydGZvbGlvL3BvcnRmb2xpbyJ9
