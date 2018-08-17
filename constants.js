@@ -16,15 +16,15 @@ export const about = {
     "MongoDB",
     "Angular.js",
     "Express",
-    "Node",
-  ],
+    "Node"
+  ]
 };
 
 export const list = [
   "J. Travis Waith-Mair",
   "travis.mair@gmail.com",
   "(801) 200 - 7597",
-  "Salt Lake City, Utah",
+  "Salt Lake City, Utah"
 ];
 
 export const desc =
@@ -34,17 +34,17 @@ export const pageMeta = {
   title: "Portfolio of Travis Mair",
   tags: [
     { name: "description", content: "Portfolio" },
-    { property: "og:type", content: "article" },
-  ],
+    { property: "og:type", content: "article" }
+  ]
 };
 
 export const links = [
   { href: "https://github.com/Jarvis1010", content: "github" },
   { href: "https://twitter.com/want2code", content: "twitter" },
   {
-    href: "https://www.linkedin.com/in/travis-mair-2b709447",
-    content: "linkedin",
-  },
+    href: "https://www.linkedin.com/in/travis-mair/",
+    content: "linkedin"
+  }
 ];
 
 export const portfolio = {
@@ -53,19 +53,19 @@ export const portfolio = {
       href: "https://www.npmjs.com/package/react-copy-code",
       src: code,
       alt: "Screenshot of react-copy-code",
-      desc: "react-copy-code react-component",
+      desc: "react-copy-code"
     },
     {
-      href: "https://www.npmjs.com/package/react-component-inator",
+      href: "https://www.npmjs.com/package/react-clean-form",
       src: inator,
-      alt: "Screenshot of react-component-inator",
-      desc: "react-component-inator node module",
+      alt: "Screenshot of react-clean-form",
+      desc: "react-clean-form"
     },
     {
       href: "https://play.google.com/store/apps/details?id=com.sanktajlibroj",
       src: mormono,
       alt: "Screenshot of Esperanto Book of Mormon",
-      desc: "Book of Mormon in Esperanto Android App",
-    },
-  ],
+      desc: "React Native App of Scriptures in Esperanto"
+    }
+  ]
 };
