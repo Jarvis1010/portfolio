@@ -13,7 +13,7 @@ const FlexWrapper = styled.div`
   flex-flow: row wrap;
 `;
 
-export const Contact = ({ className, list, message }) => (
+export const Contact = ({ list, message }) => (
   <ContentSection title="Contact">
     <FlexWrapper>
       <ContactList list={list} />

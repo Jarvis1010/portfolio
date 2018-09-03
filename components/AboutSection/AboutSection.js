@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Grid from "../Grid";
 import PadBox from "../PadBox/PadBox";
 import { breakWidth480 } from "../constants/styled-constants";
+import { string, array } from "prop-types";
 
 const ProfilePic = Grid.withComponent("figure").extend`
   max-height: ${breakWidth480};
@@ -40,10 +41,19 @@ export const AboutSection = ({
         <h1>{title}</h1>
       </Description>
       <ProfilePic>
-        <Image src="static/portfolio.jpg" alt="Profile Photo" />
+        <Image
+          src="static/components/AboutSection/portfolio.jpg"
+          alt="Profile Photo"
+        />
       </ProfilePic>
     </Grid>
   </PadBox>
 );
+
+AboutSection.propTypes = {
+  description: string,
+  title: string,
+  language: array
+};
 
 export default AboutSection;

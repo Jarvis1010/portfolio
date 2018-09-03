@@ -2,9 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const Content = styled.div`
-  background-color: #eee;
-  box-sizing: border-box;
-  color: #666;
   padding: 40px;
   border-bottom: 1px solid grey;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

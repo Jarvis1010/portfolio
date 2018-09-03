@@ -14,7 +14,9 @@ const Inner = styled.div`
   margin: 0 auto;
   max-width: ${breakWidthMax};
   overflow-x: hidden;
-  overflow-y: scroll;
+  perspective: 2px;
+  transform-style: preserve-3d;
+  overflow-y: auto;
   height: 100vh;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
