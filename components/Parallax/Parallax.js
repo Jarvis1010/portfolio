@@ -14,7 +14,6 @@ const Parallax = styled.div`
     background-size: cover;
     transform: translateZ(-1px) scale(1.5);
     z-index: -1;
-    opacity: 0.7;
     ${props =>
       props.backgroundUrl &&
       `background: url(${props.backgroundUrl}) no-repeat center center;`};

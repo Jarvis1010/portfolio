@@ -42,7 +42,7 @@ export const colorWarn = "#ffd072";
 
 export const colorLink30 = "#177c9c"; // blue 600
 export const colorLink = colorLink30;
-export const colorLinkHover = "yellow"; // TODO:blue20;
+export const colorLinkHover = colorLink; // TODO:blue20;
 
 //normal 16px/1.4em
 export const sans = `BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;`;
