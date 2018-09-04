@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import Grid from "../Grid";
 import PadBox from "../PadBox/PadBox";
-import { breakWidth480 } from "../constants/styled-constants";
 import { string, array } from "prop-types";
 
 const ProfilePic = Grid.withComponent("figure").extend`
-  max-height: ${breakWidth480};
+  max-height: 320px;
+  margin:0;
 `;
 
 const Description = styled.div`
@@ -22,17 +22,13 @@ const Image = styled.img`
   height: auto;
   width: 100%;
   border-radius: 50%;
-  margin-left: auto;
-  max-width: ${breakWidth480};
+  margin: auto;
+  max-width: 320px;
 `;
 
-export const AboutSection = ({
-  description = "",
-  title = "",
-  languages = []
-}) => (
+const AboutSection = ({ description = "", title = "", languages = [] }) => (
   <PadBox size="64">
-    <Grid minWidth={"400px"}>
+    <Grid minWidth={"280px"}>
       <Description>
         <p>{description}</p>
         <h3>Programming Languages</h3>

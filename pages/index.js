@@ -15,7 +15,7 @@ export default () => {
         <Stackable type="light" id="about">
           <AboutSection {...about} />
         </Stackable>
-        <Stackable id="portfolio">
+        <Stackable type="medium" id="portfolio">
           <Portfolio projectGroups={portfolio} />
         </Stackable>
         <Stackable type="dark" id="contact">

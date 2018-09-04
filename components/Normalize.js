@@ -15,7 +15,7 @@ import {
   monospace,
   sans,
   text120,
-  yellow10,
+  yellow10
 } from "./constants/styled-constants";
 
 injectGlobal`
