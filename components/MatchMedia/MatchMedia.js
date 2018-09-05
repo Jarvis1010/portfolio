@@ -46,17 +46,20 @@ class MatchMedia extends Component {
 
 export const withMatchMedia = query => Component => {
   return class extends React.Component {
-    state = { matches: true };
-
+    state = { mounted: false, matches: true };
+    componentDidMount() {
+      this.setState({ mounted: true });
+    }
     handleChange = ({ matches }) => {
       this.setState({ matches });
     };
 
     render() {
+      const { mounted, matches } = this.state;
       return (
         <Fragment>
           <MatchMedia query={query} onChange={this.handleChange} />
-          <Component matches={this.state.matches} {...this.props} />
+          {mounted && <Component matches={matches} {...this.props} />}
         </Fragment>
       );
     }

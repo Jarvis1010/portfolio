@@ -839,6 +839,7 @@ var withMatchMedia = function withMatchMedia(query) {
             enumerable: true,
             writable: true,
             value: {
+              mounted: false,
               matches: true
             }
           }), Object.defineProperty(_assertThisInitialized(_this2), "handleChange", {
@@ -856,26 +857,36 @@ var withMatchMedia = function withMatchMedia(query) {
         }
 
         _createClass(_class2, [{
+          key: "componentDidMount",
+          value: function componentDidMount() {
+            this.setState({
+              mounted: true
+            });
+          }
+        }, {
           key: "render",
           value: function render() {
+            var _state = this.state,
+                mounted = _state.mounted,
+                matches = _state.matches;
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_react__["Fragment"], {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 57
+                lineNumber: 60
               }
             }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(MatchMedia, {
               query: query,
               onChange: this.handleChange,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 58
+                lineNumber: 61
               }
-            }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Component, _extends({
-              matches: this.state.matches
+            }), mounted && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Component, _extends({
+              matches: matches
             }, this.props, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 59
+                lineNumber: 62
               }
             })));
           }
