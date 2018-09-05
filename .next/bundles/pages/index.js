@@ -747,7 +747,14 @@ function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_ref = MatchMedia.__proto__ || Object.getPrototypeOf(MatchMedia)).call.apply(_ref, [this].concat(args))), Object.defineProperty(_assertThisInitialized(_this), "mql", {
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_ref = MatchMedia.__proto__ || Object.getPrototypeOf(MatchMedia)).call.apply(_ref, [this].concat(args))), Object.defineProperty(_assertThisInitialized(_this), "state", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: {
+        matches: _this.props.defaultMatches
+      }
+    }), Object.defineProperty(_assertThisInitialized(_this), "mql", {
       configurable: true,
       enumerable: true,
       writable: true,
@@ -757,7 +764,7 @@ function (_Component) {
       enumerable: true,
       writable: true,
       value: function value(e) {
-        _this.props.onChange(e);
+        _this.setState(e);
       }
     }), _temp));
   }
@@ -797,7 +804,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return null;
+      return this.props.children(this.state);
     }
   }]);
 
@@ -811,6 +818,9 @@ Object.defineProperty(MatchMedia, "defaultProps", {
   value: {
     query: "(min-width: 0px)",
     defaultMatches: true,
+    children: function children() {
+      return null;
+    },
     onChange: function onChange() {
       return null;
     }
@@ -821,78 +831,39 @@ var withMatchMedia = function withMatchMedia(query) {
     return (
       /*#__PURE__*/
       function (_React$Component) {
-        _inherits(_class2, _React$Component);
+        _inherits(_class, _React$Component);
 
-        function _class2() {
-          var _ref2;
+        function _class() {
+          _classCallCheck(this, _class);
 
-          var _temp2, _this2;
-
-          _classCallCheck(this, _class2);
-
-          for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-            args[_key2] = arguments[_key2];
-          }
-
-          return _possibleConstructorReturn(_this2, (_temp2 = _this2 = _possibleConstructorReturn(this, (_ref2 = _class2.__proto__ || Object.getPrototypeOf(_class2)).call.apply(_ref2, [this].concat(args))), Object.defineProperty(_assertThisInitialized(_this2), "state", {
-            configurable: true,
-            enumerable: true,
-            writable: true,
-            value: {
-              mounted: false,
-              matches: true
-            }
-          }), Object.defineProperty(_assertThisInitialized(_this2), "handleChange", {
-            configurable: true,
-            enumerable: true,
-            writable: true,
-            value: function value(_ref3) {
-              var matches = _ref3.matches;
-
-              _this2.setState({
-                matches: matches
-              });
-            }
-          }), _temp2));
+          return _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).apply(this, arguments));
         }
 
-        _createClass(_class2, [{
-          key: "componentDidMount",
-          value: function componentDidMount() {
-            this.setState({
-              mounted: true
-            });
-          }
-        }, {
+        _createClass(_class, [{
           key: "render",
           value: function render() {
-            var _state = this.state,
-                mounted = _state.mounted,
-                matches = _state.matches;
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_react__["Fragment"], {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 60
-              }
-            }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(MatchMedia, {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(MatchMedia, {
               query: query,
-              onChange: this.handleChange,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 61
+                lineNumber: 54
               }
-            }), mounted && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Component, _extends({
-              matches: matches
-            }, this.props, {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 62
-              }
-            })));
+            }, function (props) {
+              return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Component, _extends({
+                matches: props.matches
+              }, _this2.props, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 55
+                }
+              }));
+            });
           }
         }]);
 
-        return _class2;
+        return _class;
       }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component)
     );
   };

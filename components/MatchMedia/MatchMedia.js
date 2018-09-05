@@ -4,8 +4,11 @@ class MatchMedia extends Component {
   static defaultProps = {
     query: "(min-width: 0px)",
     defaultMatches: true,
+    children: () => null,
     onChange: () => null
   };
+
+  state = { matches: this.props.defaultMatches };
 
   mql = null;
 
@@ -36,31 +39,21 @@ class MatchMedia extends Component {
   }
 
   handleChange = e => {
-    this.props.onChange(e);
+    this.setState(e);
   };
 
   render() {
-    return null;
+    return this.props.children(this.state);
   }
 }
 
 export const withMatchMedia = query => Component => {
   return class extends React.Component {
-    state = { mounted: false, matches: true };
-    componentDidMount() {
-      this.setState({ mounted: true });
-    }
-    handleChange = ({ matches }) => {
-      this.setState({ matches });
-    };
-
     render() {
-      const { mounted, matches } = this.state;
       return (
-        <Fragment>
-          <MatchMedia query={query} onChange={this.handleChange} />
-          {mounted && <Component matches={matches} {...this.props} />}
-        </Fragment>
+        <MatchMedia query={query}>
+          {props => <Component matches={props.matches} {...this.props} />}
+        </MatchMedia>
       );
     }
   };
