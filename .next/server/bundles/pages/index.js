@@ -841,7 +841,7 @@ function (_Component) {
       enumerable: true,
       writable: true,
       value: function value(e) {
-        _this.setState(e);
+        _this.update(e);
       }
     }), _temp));
   }
@@ -868,20 +868,44 @@ function (_Component) {
     key: "init",
     value: function init() {
       if (window && window.matchMedia) {
-        this.mql = window.matchMedia(this.props.query);
+        this.mql = window.matchMedia(this.props.media);
         this.mql.addListener(this.handleChange);
-        this.handleChange(this.mql);
+        this.update(this.mql);
       } else {
-        var matches = this.props.defaultMatches;
-        this.handleChange({
+        var _props = this.props,
+            media = _props.media,
+            matches = _props.defaultMatches;
+        this.update({
+          media: media,
           matches: matches
         });
       }
     }
   }, {
+    key: "update",
+    value: function update(_ref2) {
+      var matches = _ref2.matches,
+          media = _ref2.media;
+      this.setState({
+        matches: matches,
+        media: media
+      });
+      this.props.onChange({
+        matches: matches,
+        media: media
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return this.props.children(this.state);
+      var matches = this.state.matches;
+      var _props2 = this.props,
+          children = _props2.children,
+          media = _props2.media;
+      return children({
+        matches: matches,
+        media: media
+      });
     }
   }]);
 
@@ -893,17 +917,17 @@ Object.defineProperty(MatchMedia, "defaultProps", {
   enumerable: true,
   writable: true,
   value: {
-    query: "(min-width: 0px)",
+    media: "(min-width: 0px)",
     defaultMatches: true,
-    children: function children() {
+    onChange: function onChange() {
       return null;
     },
-    onChange: function onChange() {
+    children: function children() {
       return null;
     }
   }
 });
-var withMatchMedia = function withMatchMedia(query) {
+var withMatchMedia = function withMatchMedia(media) {
   return function (Component) {
     return (
       /*#__PURE__*/
@@ -922,10 +946,10 @@ var withMatchMedia = function withMatchMedia(query) {
             var _this2 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(MatchMedia, {
-              query: query,
+              media: media,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 54
+                lineNumber: 63
               }
             }, function (props) {
               return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Component, _extends({
@@ -933,7 +957,7 @@ var withMatchMedia = function withMatchMedia(query) {
               }, _this2.props, {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 55
+                  lineNumber: 64
                 }
               }));
             });
@@ -1636,67 +1660,75 @@ var Stack = __WEBPACK_IMPORTED_MODULE_0_styled_components___default.a.div(_templ
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__NavBar__ = __webpack_require__("./components/NavBar/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MatchMedia_MatchMedia__ = __webpack_require__("./components/MatchMedia/MatchMedia.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants_styled_constants__ = __webpack_require__("./components/constants/styled-constants.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__NavBar__ = __webpack_require__("./components/NavBar/index.js");
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/StickyNav/StickyNav.js";
 
 
-/* harmony default export */ __webpack_exports__["a"] = (function () {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__NavBar__["d" /* NavWrapper */], {
+
+
+
+var StickyNav = function StickyNav(_ref) {
+  var matches = _ref.matches;
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NavBar__["d" /* NavWrapper */], {
     id: "top",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__NavBar__["a" /* Brand */], {
-    brandName: "Travis Waith-Mair",
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__NavBar__["c" /* NavSlider */], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__NavBar__["b" /* NavItem */], {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NavBar__["a" /* Brand */], {
+    brandName: "Travis Waith-Mair",
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
-    onClick: function onClick() {
-      document.querySelector("#inner").scrollTop = window.innerHeight;
-    },
-    href: "javascript:void(0)",
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NavBar__["c" /* NavSlider */], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     }
-  }, "About")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__NavBar__["b" /* NavItem */], {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NavBar__["b" /* NavItem */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 10
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
+    onClick: function onClick() {
+      document.querySelector("#inner").scrollTop = matches ? 0 : window.innerHeight;
+    },
+    href: "javascript:void(0)",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    }
+  }, "About")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NavBar__["b" /* NavItem */], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "/#portfolio",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 23
     }
-  }, "Portfolio")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__NavBar__["b" /* NavItem */], {
+  }, "Portfolio")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NavBar__["b" /* NavItem */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 25
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "/#contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 26
     }
   }, "Contact"))));
-});
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1__MatchMedia_MatchMedia__["a" /* withMatchMedia */])("(max-width:".concat(__WEBPACK_IMPORTED_MODULE_2__constants_styled_constants__["b" /* breakWidth480 */], ")"))(StickyNav));
 
 /***/ }),
 

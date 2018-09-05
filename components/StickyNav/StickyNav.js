@@ -1,14 +1,18 @@
 import React from "react";
+import { withMatchMedia } from "../MatchMedia/MatchMedia";
+import { breakWidth480 } from "../constants/styled-constants";
 import { NavWrapper, Brand, NavSlider, NavItem } from "../NavBar";
 
-export default () => (
+const StickyNav = ({ matches }) => (
   <NavWrapper id="top">
     <Brand brandName={"Travis Waith-Mair"} href="/" />
     <NavSlider>
       <NavItem>
         <a
           onClick={() => {
-            document.querySelector("#inner").scrollTop = window.innerHeight;
+            document.querySelector("#inner").scrollTop = matches
+              ? 0
+              : window.innerHeight;
           }}
           href="javascript:void(0)"
         >
@@ -24,3 +28,5 @@ export default () => (
     </NavSlider>
   </NavWrapper>
 );
+
+export default withMatchMedia(`(max-width:${breakWidth480})`)(StickyNav);

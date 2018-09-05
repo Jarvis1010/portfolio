@@ -2,13 +2,15 @@ import React, { Component, Fragment } from "react"; // eslint-disable-line
 
 class MatchMedia extends Component {
   static defaultProps = {
-    query: "(min-width: 0px)",
+    media: "(min-width: 0px)",
     defaultMatches: true,
-    children: () => null,
-    onChange: () => null
+    onChange: () => null,
+    children: () => null
   };
 
-  state = { matches: this.props.defaultMatches };
+  state = {
+    matches: this.props.defaultMatches
+  };
 
   mql = null;
 
@@ -29,29 +31,36 @@ class MatchMedia extends Component {
 
   init() {
     if (window && window.matchMedia) {
-      this.mql = window.matchMedia(this.props.query);
+      this.mql = window.matchMedia(this.props.media);
       this.mql.addListener(this.handleChange);
-      this.handleChange(this.mql);
+      this.update(this.mql);
     } else {
-      const { defaultMatches: matches } = this.props;
-      this.handleChange({ matches });
+      const { media, defaultMatches: matches } = this.props;
+      this.update({ media, matches });
     }
   }
 
   handleChange = e => {
-    this.setState(e);
+    this.update(e);
   };
 
+  update({ matches, media }) {
+    this.setState({ matches, media });
+    this.props.onChange({ matches, media });
+  }
+
   render() {
-    return this.props.children(this.state);
+    const { matches } = this.state;
+    const { children, media } = this.props;
+    return children({ matches, media });
   }
 }
 
-export const withMatchMedia = query => Component => {
+export const withMatchMedia = media => Component => {
   return class extends React.Component {
     render() {
       return (
-        <MatchMedia query={query}>
+        <MatchMedia media={media}>
           {props => <Component matches={props.matches} {...this.props} />}
         </MatchMedia>
       );
