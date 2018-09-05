@@ -12,8 +12,7 @@ const Landing = styled(Stack)`
   justify-items: center;
 `;
 
-const backgroundImage =
-  "https://images.unsplash.com/photo-1527234639945-70d78416bd7d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=721783d6df00ea979608158fd776675e&auto=format&fit=crop&w=2519&q=80";
+const backgroundImage = "/static/images/background.jpeg";
 
 const ScrollLink = styled.a`
   color: ${white};
@@ -42,14 +41,26 @@ const ScrollLink = styled.a`
   }
 `;
 
-const LandingComponent = ({ matches }) =>
-  matches ? (
-    <Parallax backgroundUrl={backgroundImage}>
-      <Landing>
-        <BoxH1 subtitle="Web Developer">Travis Waith-Mair</BoxH1>
-        <ScrollLink href="#top" />
-      </Landing>
-    </Parallax>
-  ) : null;
+class LandingComponent extends React.Component {
+  componentDidMount() {
+    if (this.props.matches) this.scroll();
+  }
+  componentDidUpdate() {
+    if (this.props.matches) this.scroll();
+  }
+  scroll = () => {
+    document.querySelector("#inner").scrollTop = window.innerHeight;
+  };
+  render() {
+    return (
+      <Parallax backgroundUrl={backgroundImage}>
+        <Landing>
+          <BoxH1 subtitle="Web Developer">Travis Waith-Mair</BoxH1>
+          <ScrollLink href="#top" />
+        </Landing>
+      </Parallax>
+    );
+  }
+}
 
-export default withMatchMedia(`(min-width:${breakWidth480})`)(LandingComponent);
+export default withMatchMedia(`(max-width:${breakWidth480})`)(LandingComponent);

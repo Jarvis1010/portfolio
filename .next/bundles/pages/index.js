@@ -565,6 +565,20 @@ var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/Landing/La
 var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  color: ", ";\n  height: 100vh;\n  justify-items: center;\n"]),
     _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  color: ", ";\n  border: 2px solid ", ";\n  padding: 2rem;\n  margin-bottom: 200px;\n  align-self: end;\n  text-align: center;\n  position: relative;\n  background: rgba(0, 0, 0, 0.3);\n\n  &:hover {\n    background: rgba(0, 0, 0, 0.5);\n  }\n\n  &::after {\n    content: \"\";\n    width: 0;\n    height: 0;\n    left: 33%;\n    top: 33%;\n    position: absolute;\n    border-left: 0.75rem solid transparent;\n    border-right: 0.75rem solid transparent;\n    border-top: 1.5rem solid white;\n  }\n"]);
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
@@ -575,38 +589,79 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 var Landing = Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["d" /* default */])(__WEBPACK_IMPORTED_MODULE_3__Stack_Stack__["a" /* default */])(_templateObject, __WEBPACK_IMPORTED_MODULE_6__constants_styled_constants__["F" /* white */]);
-var backgroundImage = "https://images.unsplash.com/photo-1527234639945-70d78416bd7d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=721783d6df00ea979608158fd776675e&auto=format&fit=crop&w=2519&q=80";
+var backgroundImage = "/static/images/background.jpeg";
 var ScrollLink = __WEBPACK_IMPORTED_MODULE_1_styled_components__["d" /* default */].a(_templateObject2, __WEBPACK_IMPORTED_MODULE_6__constants_styled_constants__["F" /* white */], __WEBPACK_IMPORTED_MODULE_6__constants_styled_constants__["F" /* white */]);
 
-var LandingComponent = function LandingComponent(_ref) {
-  var matches = _ref.matches;
-  return matches ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Parallax_Parallax__["a" /* default */], {
-    backgroundUrl: backgroundImage,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Landing, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__BoxTitles_BoxTitle__["a" /* BoxH1 */], {
-    subtitle: "Web Developer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    }
-  }, "Travis Waith-Mair"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ScrollLink, {
-    href: "#top",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    }
-  }))) : null;
-};
+var LandingComponent =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(LandingComponent, _React$Component);
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2__MatchMedia_MatchMedia__["a" /* withMatchMedia */])("(min-width:".concat(__WEBPACK_IMPORTED_MODULE_6__constants_styled_constants__["b" /* breakWidth480 */], ")"))(LandingComponent));
+  function LandingComponent() {
+    var _ref;
+
+    var _temp, _this;
+
+    _classCallCheck(this, LandingComponent);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_ref = LandingComponent.__proto__ || Object.getPrototypeOf(LandingComponent)).call.apply(_ref, [this].concat(args))), Object.defineProperty(_assertThisInitialized(_this), "scroll", {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function value() {
+        document.querySelector("#inner").scrollTop = window.innerHeight;
+      }
+    }), _temp));
+  }
+
+  _createClass(LandingComponent, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (this.props.matches) this.scroll();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
+      if (this.props.matches) this.scroll();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Parallax_Parallax__["a" /* default */], {
+        backgroundUrl: backgroundImage,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Landing, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__BoxTitles_BoxTitle__["a" /* BoxH1 */], {
+        subtitle: "Web Developer",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        }
+      }, "Travis Waith-Mair"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ScrollLink, {
+        href: "#top",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        }
+      })));
+    }
+  }]);
+
+  return LandingComponent;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2__MatchMedia_MatchMedia__["a" /* withMatchMedia */])("(max-width:".concat(__WEBPACK_IMPORTED_MODULE_6__constants_styled_constants__["b" /* breakWidth480 */], ")"))(LandingComponent));
 
 /***/ }),
 
@@ -869,14 +924,16 @@ var withMatchMedia = function withMatchMedia(media) {
             var _this2 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(MatchMedia, {
+              defaultMatches: false,
               media: media,
               __source: {
                 fileName: _jsxFileName,
                 lineNumber: 63
               }
-            }, function (props) {
+            }, function (_ref3) {
+              var matches = _ref3.matches;
               return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Component, _extends({
-                matches: props.matches
+                matches: matches
               }, _this2.props, {
                 __source: {
                   fileName: _jsxFileName,
@@ -1572,75 +1629,70 @@ var Stack = __WEBPACK_IMPORTED_MODULE_0_styled_components__["d" /* default */].d
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MatchMedia_MatchMedia__ = __webpack_require__("./components/MatchMedia/MatchMedia.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants_styled_constants__ = __webpack_require__("./components/constants/styled-constants.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__NavBar__ = __webpack_require__("./components/NavBar/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__NavBar__ = __webpack_require__("./components/NavBar/index.js");
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/StickyNav/StickyNav.js";
 
 
 
-
-
-var StickyNav = function StickyNav(_ref) {
-  var matches = _ref.matches;
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NavBar__["d" /* NavWrapper */], {
+var StickyNav = function StickyNav() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__NavBar__["d" /* NavWrapper */], {
     id: "top",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 5
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NavBar__["a" /* Brand */], {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__NavBar__["a" /* Brand */], {
     brandName: "Travis Waith-Mair",
     href: "/",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 6
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__NavBar__["c" /* NavSlider */], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__NavBar__["b" /* NavItem */], {
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 8
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NavBar__["c" /* NavSlider */], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NavBar__["b" /* NavItem */], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     onClick: function onClick() {
-      document.querySelector("#inner").scrollTop = matches ? 0 : window.innerHeight;
+      document.querySelector("#inner").scrollTop = window.innerHeight;
     },
     href: "javascript:void(0)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 9
     }
-  }, "About")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NavBar__["b" /* NavItem */], {
+  }, "About")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__NavBar__["b" /* NavItem */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 18
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "/#portfolio",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 19
     }
-  }, "Portfolio")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__NavBar__["b" /* NavItem */], {
+  }, "Portfolio")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__NavBar__["b" /* NavItem */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 21
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     href: "/#contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 22
     }
   }, "Contact"))));
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1__MatchMedia_MatchMedia__["a" /* withMatchMedia */])("(max-width:".concat(__WEBPACK_IMPORTED_MODULE_2__constants_styled_constants__["b" /* breakWidth480 */], ")"))(StickyNav));
+/* harmony default export */ __webpack_exports__["a"] = (StickyNav);
 
 /***/ }),
 

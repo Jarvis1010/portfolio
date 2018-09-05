@@ -60,8 +60,8 @@ export const withMatchMedia = media => Component => {
   return class extends React.Component {
     render() {
       return (
-        <MatchMedia media={media}>
-          {props => <Component matches={props.matches} {...this.props} />}
+        <MatchMedia defaultMatches={false} media={media}>
+          {({ matches }) => <Component matches={matches} {...this.props} />}
         </MatchMedia>
       );
     }
