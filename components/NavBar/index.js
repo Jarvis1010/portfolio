@@ -8,7 +8,7 @@ import {
   fontSize18,
   spacing8,
   sans,
-  breakWidth480,
+  breakWidth480
 } from "../constants/styled-constants";
 
 const NavWrapper = styled.nav`
@@ -22,6 +22,7 @@ const NavWrapper = styled.nav`
   justify-content: flex-end;
   color: ${props => (props.theme.white ? props.theme.white : white)};
   position: sticky;
+  z-index: 6;
   top: 0;
 `;
 

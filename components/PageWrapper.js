@@ -24,6 +24,6 @@ const Inner = styled.div`
 
 export default ({ children }) => (
   <Outer>
-    <Inner>{children}</Inner>
+    <Inner id="inner">{children}</Inner>
   </Outer>
 );

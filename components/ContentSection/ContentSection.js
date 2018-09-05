@@ -4,30 +4,11 @@ import styled from "styled-components";
 const Content = styled.div`
   padding: 40px;
   border-bottom: 1px solid grey;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   text-align: center;
 `;
 
-const HR = styled.hr`
-  border: 0;
-  border-top: 3px solid;
-  text-align: center;
-  width: 60%;
-  margin-bottom: 30px;
-`;
-
-const Title = styled.h2`
-  font-size: 30px;
-`;
-
-export const ContentSection = ({ title, children }) => (
-  <Content>
-    <Title>{title}</Title>
-    <HR />
-    {children}
-  </Content>
-);
+export const ContentSection = ({ children }) => <Content>{children}</Content>;
 
 export default ContentSection;

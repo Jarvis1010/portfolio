@@ -1,12 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import {
-  NavWrapper,
-  NavItem,
-  Brand,
-  NavSlider,
-  NavCollapse
-} from "app/components/NavBar";
+import { NavWrapper, NavItem, Brand, NavSlider, NavCollapse } from "./index";
 import Link from "next/link";
 
 storiesOf("NavBar", module)

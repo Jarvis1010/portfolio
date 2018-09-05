@@ -53,8 +53,14 @@ export const monospace = `"Courier New", Courier, monospace`;
 export const fontSizeRoot = `100%`;
 
 /* desired px / 16px (root size) = rem */
+export const fontSize11 = "0.6875rem";
+export const fontSize13 = "0.8125rem";
+export const fontSize14 = "0.875rem";
+export const fontSize16 = "1rem";
 export const fontSize18 = "1.125rem";
+export const fontSize20 = "1.25rem";
 export const fontSize28 = "1.75rem";
+export const fontSize32 = "2rem";
 export const fontSize42 = "2.625rem";
 
 export const lineHeightTight = 1.2;

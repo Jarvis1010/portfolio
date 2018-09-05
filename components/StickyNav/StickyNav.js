@@ -1,24 +1,26 @@
 import React from "react";
 import { NavWrapper, Brand, NavSlider, NavItem } from "../NavBar";
-import Link from "next/link";
-
-const navs = [
-  { nav: "About", href: "/#about" },
-  { nav: "Portfolio", href: "/#portfolio" },
-  { nav: "Contact", href: "/#contact" },
-];
 
 export default () => (
-  <NavWrapper>
+  <NavWrapper id="top">
     <Brand brandName={"Travis Waith-Mair"} href="/" />
     <NavSlider>
-      {navs.map(({ nav, href }, i) => (
-        <NavItem key={i}>
-          <Link href={href}>
-            <a>{nav}</a>
-          </Link>
-        </NavItem>
-      ))}
+      <NavItem>
+        <a
+          onClick={() => {
+            document.querySelector("#inner").scrollTop = window.innerHeight;
+          }}
+          href="javascript:void(0)"
+        >
+          About
+        </a>
+      </NavItem>
+      <NavItem>
+        <a href="/#portfolio">Portfolio</a>
+      </NavItem>
+      <NavItem>
+        <a href="/#contact">Contact</a>
+      </NavItem>
     </NavSlider>
   </NavWrapper>
 );

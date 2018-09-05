@@ -7,6 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
+    "storybook": "start-storybook -p 9999 -c .storybook",
     "heroku-postbuild": "next build",
     "precommit": "lint-staged",
     "test": "jest --notify",
@@ -14,6 +15,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@storybook/react": "^3.4.10",
     "babel-eslint": "^8.2.6",
     "enzyme": "^3.4.3",
     "enzyme-adapter-react-16": "^1.1.1",

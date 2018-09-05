@@ -46,7 +46,7 @@ class MatchMedia extends Component {
 
 export const withMatchMedia = query => Component => {
   return class extends React.Component {
-    state = { matches: false };
+    state = { matches: true };
 
     handleChange = ({ matches }) => {
       this.setState({ matches });
