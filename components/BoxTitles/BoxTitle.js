@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import isBrowser from "is-in-browser";
 import {
   fontSize13,
   fontSize14,
@@ -44,7 +45,6 @@ const BoxHeading = styled.h2`
     font-size: ${({ as = "h2" }) => elements[as].subtitle};
     font-weight: normal;
     position: absolute;
-
     width: fit-content;
     ${props => (props.top ? "top" : "bottom")}: 0;
     left: 0;
@@ -71,7 +71,7 @@ const BottomBorder = styled.div`
     ${props => (props.top ? "border-top" : "border-bottom")}: 1px solid
       ${props => (props.inverse ? black : white)};
     /* width: ${props => (props.width ? `${props.width}px` : "1rem")}; */
-    width:calc(50% - ${props => `${props.width}px`});
+    width:calc(51% - ${props => `${props.width}px`});
   }
   &::before {
     left: 0;
@@ -87,21 +87,24 @@ class BoxTitle extends Component {
   };
 
   calculateHalfOfTextWidth = (txt = "") => {
-    const elementToCreate = this.props.as in elements ? this.props.as : "h2";
-    let element = document.createElement(elementToCreate);
-    element.id = "s";
-    element.style.height = 0;
-    element.style.padding = "1rem";
-    element.style.maxWidth = "fit-content";
-    element.style.fontSize = elements[elementToCreate].subtitle;
-    element.style.lineHeight = lineHeightTight;
-    element.style.fontWeight = "normal";
-    element.style.letterSpacing = "-0.03125rem";
-    document.body.appendChild(element);
-    element.innerText = txt;
-    const { width } = document.querySelector("#s").getBoundingClientRect();
-    document.body.removeChild(element);
-    return width / 2;
+    if (isBrowser & (txt.length > 0)) {
+      const elementToCreate = this.props.as in elements ? this.props.as : "h2";
+      let element = document.createElement(elementToCreate);
+      element.id = "s";
+      element.style.height = 0;
+      element.style.padding = elements[elementToCreate].subtitle;
+      element.style.maxWidth = "fit-content";
+      element.style.fontSize = elements[elementToCreate].subtitle;
+      element.style.lineHeight = lineHeightTight;
+      element.style.fontWeight = "normal";
+      element.style.letterSpacing = "-0.03125rem";
+      document.body.appendChild(element);
+      element.innerText = txt;
+      const { width } = document.querySelector("#s").getBoundingClientRect();
+      document.body.removeChild(element);
+      return width / 2;
+    }
+    return 0;
   };
 
   render() {
