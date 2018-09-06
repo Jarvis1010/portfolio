@@ -70,7 +70,7 @@ storiesOf("Box Title", module)
     </BoxTitle>
   ))
   .add("inverse default with long subtitle/short body", () => (
-    <BoxTitle inverse subtitle="Subtitle">
+    <BoxTitle inverse subtitle="Subtitle is much longer">
       Test
     </BoxTitle>
   ));

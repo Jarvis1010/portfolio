@@ -192,7 +192,7 @@ AboutSection.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__ = __webpack_require__("./components/constants/styled-constants.js");
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/BoxTitles/BoxTitle.js";
 
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  align-self: center;\n  margin: auto;\n  text-align: center;\n  max-width: fit-content;\n  border: 1px solid ", ";\n  color: ", ";\n  padding: ", ";\n  position: relative;\n  font-size: ", ";\n  font-weight: bold;\n  line-height: ", ";\n  letter-spacing: -0.03125rem;\n  ", ";\n\n  &::after {\n    content: ", ";\n    font-size: ", ";\n    font-weight: normal;\n    position: absolute;\n    width: fit-content;\n    ", ": 0;\n    left: 0;\n    right: 0;\n    display: block;\n    text-align: center;\n    margin: 0;\n    margin-left: auto;\n    margin-right: auto;\n    ", ": ", ";\n  }\n"]),
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  align-self: center;\n  margin: auto;\n  text-align: center;\n  min-width: ", "px;\n  max-width: fit-content;\n  border: 1px solid ", ";\n  color: ", ";\n  padding: ", ";\n  position: relative;\n  font-size: ", ";\n  font-weight: bold;\n  line-height: ", ";\n  letter-spacing: -0.03125rem;\n  ", ";\n\n  &::after {\n    content: ", ";\n    font-size: ", ";\n    font-weight: normal;\n    position: absolute;\n    width: fit-content;\n    ", ": 0;\n    left: 0;\n    right: 0;\n    display: block;\n    text-align: center;\n    margin: 0;\n    margin-left: auto;\n    margin-right: auto;\n    ", ": ", ";\n  }\n"]),
     _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  margin: 0;\n  padding: 0;\n  &::before,\n  &::after {\n    content: \"\";\n    position: absolute;\n    ", ": 0;\n    ", ": 1px solid\n      ", ";\n    /* width: ", "; */\n    width:calc(51% - ", ");\n  }\n  &::before {\n    left: 0;\n  }\n  &::after {\n    right: 0;\n  }\n"]);
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -251,29 +251,33 @@ var elements = {
     margin: "-0.4rem"
   }
 };
-var BoxHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.h2(_templateObject, function (props) {
+var BoxHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.h2(_templateObject, function (_ref) {
+  var _ref$minWidth = _ref.minWidth,
+      minWidth = _ref$minWidth === void 0 ? 1 : _ref$minWidth;
+  return minWidth;
+}, function (props) {
   return props.inverse ? __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["a" /* black */] : __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["F" /* white */];
 }, function (props) {
   return props.inverse ? __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["a" /* black */] : __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["F" /* white */];
-}, __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["z" /* spacing16 */], function (_ref) {
-  var _ref$as = _ref.as,
-      as = _ref$as === void 0 ? "h2" : _ref$as;
+}, __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["z" /* spacing16 */], function (_ref2) {
+  var _ref2$as = _ref2.as,
+      as = _ref2$as === void 0 ? "h2" : _ref2$as;
   return elements[as].main;
 }, __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["u" /* lineHeightTight */], function (props) {
   return props.top ? "border-top: none" : "border-bottom: none";
 }, function (props) {
   return props.subtitle ? "\"".concat(props.subtitle, "\"") : " ";
-}, function (_ref2) {
-  var _ref2$as = _ref2.as,
-      as = _ref2$as === void 0 ? "h2" : _ref2$as;
+}, function (_ref3) {
+  var _ref3$as = _ref3.as,
+      as = _ref3$as === void 0 ? "h2" : _ref3$as;
   return elements[as].subtitle;
 }, function (props) {
   return props.top ? "top" : "bottom";
 }, function (props) {
   return props.top ? "margin-top" : "margin-bottom";
-}, function (_ref3) {
-  var _ref3$as = _ref3.as,
-      as = _ref3$as === void 0 ? "h2" : _ref3$as;
+}, function (_ref4) {
+  var _ref4$as = _ref4.as,
+      as = _ref4$as === void 0 ? "h2" : _ref4$as;
   return elements[as].margin;
 });
 var BottomBorder = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div(_templateObject2, function (props) {
@@ -294,7 +298,7 @@ function (_Component) {
   _inherits(BoxTitle, _Component);
 
   function BoxTitle() {
-    var _ref4;
+    var _ref5;
 
     var _temp, _this;
 
@@ -304,14 +308,14 @@ function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_ref4 = BoxTitle.__proto__ || Object.getPrototypeOf(BoxTitle)).call.apply(_ref4, [this].concat(args))), Object.defineProperty(_assertThisInitialized(_this), "state", {
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_ref5 = BoxTitle.__proto__ || Object.getPrototypeOf(BoxTitle)).call.apply(_ref5, [this].concat(args))), Object.defineProperty(_assertThisInitialized(_this), "state", {
       configurable: true,
       enumerable: true,
       writable: true,
       value: {
         bottomBorderlength: undefined
       }
-    }), Object.defineProperty(_assertThisInitialized(_this), "calculateHalfOfTextWidth", {
+    }), Object.defineProperty(_assertThisInitialized(_this), "calculateTextWidth", {
       configurable: true,
       enumerable: true,
       writable: true,
@@ -324,7 +328,7 @@ function (_Component) {
         return txt.length > 0 ? __WEBPACK_IMPORTED_MODULE_2_string_pixel_width___default()(txt, {
           font: "Arial",
           size: fontSizeInPixels
-        }) / 2 + fontSizeInPixels : 0;
+        }) + fontSizeInPixels : 0;
       }
     }), _temp));
   }
@@ -339,21 +343,23 @@ function (_Component) {
           subtitle = _props.subtitle,
           props = _objectWithoutProperties(_props, ["children", "inverse", "top", "subtitle"]);
 
+      var subTitleWidth = this.calculateTextWidth(subtitle);
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(BoxHeading, _extends({}, props, {
+        minWidth: subTitleWidth,
         subtitle: subtitle,
         inverse: inverse,
         top: top,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 106
         }
       }), children, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(BottomBorder, {
         inverse: inverse,
         top: top,
-        width: this.calculateHalfOfTextWidth(subtitle),
+        width: subTitleWidth / 2,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 114
         }
       }));
     }
@@ -362,28 +368,28 @@ function (_Component) {
   return BoxTitle;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-var BoxH1 = function BoxH1(_ref5) {
-  var children = _ref5.children,
-      props = _objectWithoutProperties(_ref5, ["children"]);
+var BoxH1 = function BoxH1(_ref6) {
+  var children = _ref6.children,
+      props = _objectWithoutProperties(_ref6, ["children"]);
 
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(BoxTitle, _extends({}, props, {
     as: "h1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 121
     }
   }), children);
 };
-var SectionBoxTitle = function SectionBoxTitle(_ref6) {
-  var children = _ref6.children,
-      props = _objectWithoutProperties(_ref6, ["children"]);
+var SectionBoxTitle = function SectionBoxTitle(_ref7) {
+  var children = _ref7.children,
+      props = _objectWithoutProperties(_ref7, ["children"]);
 
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(BoxTitle, _extends({}, props, {
     as: "h2",
     top: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 127
     }
   }), children);
 };

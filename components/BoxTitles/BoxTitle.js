@@ -29,6 +29,7 @@ const BoxHeading = styled.h2`
   align-self: center;
   margin: auto;
   text-align: center;
+  min-width: ${({ minWidth = 1 }) => minWidth}px;
   max-width: fit-content;
   border: 1px solid ${props => (props.inverse ? black : white)};
   color: ${props => (props.inverse ? black : white)};
@@ -86,28 +87,31 @@ class BoxTitle extends Component {
     bottomBorderlength: undefined
   };
 
-  calculateHalfOfTextWidth = (txt = "") => {
+  calculateTextWidth = (txt = "") => {
     const as = this.props.as in elements ? this.props.as : "h2";
     const FONT_MULTIPLE = parseFloat(elements[as].subtitle);
     const BASE_FONT_SIZE = 16;
     const fontSizeInPixels = BASE_FONT_SIZE * FONT_MULTIPLE;
 
     return txt.length > 0
-      ? pixelWidth(txt, { font: "Arial", size: fontSizeInPixels }) / 2 +
+      ? pixelWidth(txt, { font: "Arial", size: fontSizeInPixels }) +
           fontSizeInPixels
       : 0;
   };
 
   render() {
     const { children, inverse, top, subtitle, ...props } = this.props;
+    const subTitleWidth = this.calculateTextWidth(subtitle);
     return (
-      <BoxHeading {...props} subtitle={subtitle} inverse={inverse} top={top}>
+      <BoxHeading
+        {...props}
+        minWidth={subTitleWidth}
+        subtitle={subtitle}
+        inverse={inverse}
+        top={top}
+      >
         {children}
-        <BottomBorder
-          inverse={inverse}
-          top={top}
-          width={this.calculateHalfOfTextWidth(subtitle)}
-        />
+        <BottomBorder inverse={inverse} top={top} width={subTitleWidth / 2} />
       </BoxHeading>
     );
   }
