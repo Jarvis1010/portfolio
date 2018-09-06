@@ -187,8 +187,8 @@ AboutSection.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__("styled-components");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_styled_components__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_is_in_browser__ = __webpack_require__("is-in-browser");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_is_in_browser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_is_in_browser__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_string_pixel_width__ = __webpack_require__("string-pixel-width");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_string_pixel_width___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_string_pixel_width__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__ = __webpack_require__("./components/constants/styled-constants.js");
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/BoxTitles/BoxTitle.js";
 
@@ -317,29 +317,14 @@ function (_Component) {
       writable: true,
       value: function value() {
         var txt = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
-
-        if (__WEBPACK_IMPORTED_MODULE_2_is_in_browser___default.a & txt.length > 0) {
-          var elementToCreate = _this.props.as in elements ? _this.props.as : "h2";
-          var element = document.createElement(elementToCreate);
-          element.id = "s";
-          element.style.height = 0;
-          element.style.padding = elements[elementToCreate].subtitle;
-          element.style.maxWidth = "fit-content";
-          element.style.fontSize = elements[elementToCreate].subtitle;
-          element.style.lineHeight = __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["u" /* lineHeightTight */];
-          element.style.fontWeight = "normal";
-          element.style.letterSpacing = "-0.03125rem";
-          document.body.appendChild(element);
-          element.innerText = txt;
-
-          var _document$querySelect = document.querySelector("#s").getBoundingClientRect(),
-              width = _document$querySelect.width;
-
-          document.body.removeChild(element);
-          return width / 2;
-        }
-
-        return 0;
+        var as = _this.props.as in elements ? _this.props.as : "h2";
+        var FONT_MULTIPLE = parseFloat(elements[as].subtitle);
+        var BASE_FONT_SIZE = 16;
+        var fontSizeInPixels = BASE_FONT_SIZE * FONT_MULTIPLE;
+        return txt.length > 0 ? __WEBPACK_IMPORTED_MODULE_2_string_pixel_width___default()(txt, {
+          font: "Arial",
+          size: fontSizeInPixels
+        }) / 2 + fontSizeInPixels : 0;
       }
     }), _temp));
   }
@@ -360,7 +345,7 @@ function (_Component) {
         top: top,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 104
         }
       }), children, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(BottomBorder, {
         inverse: inverse,
@@ -368,7 +353,7 @@ function (_Component) {
         width: this.calculateHalfOfTextWidth(subtitle),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 106
         }
       }));
     }
@@ -385,7 +370,7 @@ var BoxH1 = function BoxH1(_ref5) {
     as: "h1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 117
     }
   }), children);
 };
@@ -398,7 +383,7 @@ var SectionBoxTitle = function SectionBoxTitle(_ref6) {
     top: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 123
     }
   }), children);
 };
@@ -1973,7 +1958,7 @@ var colorLink = colorLink30;
 var colorLinkHover = colorLink; // TODO:blue20;
 //normal 16px/1.4em
 
-var sans = "BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen,Ubuntu,Cantarell,\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\",Arial,sans-serif;";
+var sans = "\"Segoe UI\",Roboto,Oxygen,Ubuntu,Cantarell,\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\",Arial,sans-serif;";
 var serif = "\"Baskerville\", \"Palatino\", \"Palatino Linotype\", \"Georgia\", \"Times New Roman\", serif";
 var monospace = "\"Courier New\", Courier, monospace";
 /* effectively 16px (16px * 100% = 16px) but respects users' special needs */
@@ -2243,13 +2228,6 @@ module.exports = __webpack_require__("./pages/index.js");
 
 /***/ }),
 
-/***/ "is-in-browser":
-/***/ (function(module, exports) {
-
-module.exports = require("is-in-browser");
-
-/***/ }),
-
 /***/ "next/link":
 /***/ (function(module, exports) {
 
@@ -2275,6 +2253,13 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-icons/fa");
+
+/***/ }),
+
+/***/ "string-pixel-width":
+/***/ (function(module, exports) {
+
+module.exports = require("string-pixel-width");
 
 /***/ }),
 

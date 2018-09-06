@@ -9,12 +9,13 @@ webpackHotUpdate(5,{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_is_in_browser__ = __webpack_require__("./node_modules/is-in-browser/dist/module.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_string_pixel_width__ = __webpack_require__("./node_modules/string-pixel-width/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_string_pixel_width___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_string_pixel_width__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__ = __webpack_require__("./components/constants/styled-constants.js");
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/BoxTitles/BoxTitle.js";
 
 var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  align-self: center;\n  margin: auto;\n  text-align: center;\n  max-width: fit-content;\n  border: 1px solid ", ";\n  color: ", ";\n  padding: ", ";\n  position: relative;\n  font-size: ", ";\n  font-weight: bold;\n  line-height: ", ";\n  letter-spacing: -0.03125rem;\n  ", ";\n\n  &::after {\n    content: ", ";\n    font-size: ", ";\n    font-weight: normal;\n    position: absolute;\n    width: fit-content;\n    ", ": 0;\n    left: 0;\n    right: 0;\n    display: block;\n    text-align: center;\n    margin: 0;\n    margin-left: auto;\n    margin-right: auto;\n    ", ": ", ";\n  }\n"]),
-    _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  margin: 0;\n  padding: 0;\n  &::before,\n  &::after {\n    content: \"\";\n    position: absolute;\n    ", ": 0;\n    ", ": 1px solid\n      ", ";\n    /* width: ", "; */\n    width:calc(50% - ", ");\n  }\n  &::before {\n    left: 0;\n  }\n  &::after {\n    right: 0;\n  }\n"]);
+    _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  margin: 0;\n  padding: 0;\n  &::before,\n  &::after {\n    content: \"\";\n    position: absolute;\n    ", ": 0;\n    ", ": 1px solid\n      ", ";\n    /* width: ", "; */\n    width:calc(51% - ", ");\n  }\n  &::before {\n    left: 0;\n  }\n  &::after {\n    right: 0;\n  }\n"]);
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -138,29 +139,14 @@ function (_Component) {
       writable: true,
       value: function value() {
         var txt = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
-
-        if (__WEBPACK_IMPORTED_MODULE_2_is_in_browser__["a" /* default */] & txt.length > 0) {
-          var elementToCreate = _this.props.as in elements ? _this.props.as : "h2";
-          var element = document.createElement(elementToCreate);
-          element.id = "s";
-          element.style.height = 0;
-          element.style.padding = "1rem";
-          element.style.maxWidth = "fit-content";
-          element.style.fontSize = elements[elementToCreate].subtitle;
-          element.style.lineHeight = __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["u" /* lineHeightTight */];
-          element.style.fontWeight = "normal";
-          element.style.letterSpacing = "-0.03125rem";
-          document.body.appendChild(element);
-          element.innerText = txt;
-
-          var _document$querySelect = document.querySelector("#s").getBoundingClientRect(),
-              width = _document$querySelect.width;
-
-          document.body.removeChild(element);
-          return width / 2;
-        }
-
-        return 0;
+        var as = _this.props.as in elements ? _this.props.as : "h2";
+        var FONT_MULTIPLE = parseFloat(elements[as].subtitle);
+        var BASE_FONT_SIZE = 16;
+        var fontSizeInPixels = BASE_FONT_SIZE * FONT_MULTIPLE;
+        return txt.length > 0 ? __WEBPACK_IMPORTED_MODULE_2_string_pixel_width___default()(txt, {
+          font: "Arial",
+          size: fontSizeInPixels
+        }) / 2 + fontSizeInPixels : 0;
       }
     }), _temp));
   }
@@ -181,7 +167,7 @@ function (_Component) {
         top: top,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 104
         }
       }), children, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(BottomBorder, {
         inverse: inverse,
@@ -189,7 +175,7 @@ function (_Component) {
         width: this.calculateHalfOfTextWidth(subtitle),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 106
         }
       }));
     }
@@ -206,7 +192,7 @@ var BoxH1 = function BoxH1(_ref5) {
     as: "h1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 117
     }
   }), children);
 };
@@ -219,7 +205,7 @@ var SectionBoxTitle = function SectionBoxTitle(_ref6) {
     top: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 123
     }
   }), children);
 };
@@ -228,4 +214,4 @@ var SectionBoxTitle = function SectionBoxTitle(_ref6) {
 /***/ })
 
 })
-//# sourceMappingURL=5.59ef83c33239c9640fc5.hot-update.js.map
+//# sourceMappingURL=5.a0c58bfe6098b58d63f9.hot-update.js.map

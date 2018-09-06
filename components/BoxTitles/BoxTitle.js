@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import isBrowser from "is-in-browser";
+import pixelWidth from "string-pixel-width";
 import {
   fontSize13,
   fontSize14,
@@ -87,24 +87,15 @@ class BoxTitle extends Component {
   };
 
   calculateHalfOfTextWidth = (txt = "") => {
-    if (isBrowser & (txt.length > 0)) {
-      const elementToCreate = this.props.as in elements ? this.props.as : "h2";
-      let element = document.createElement(elementToCreate);
-      element.id = "s";
-      element.style.height = 0;
-      element.style.padding = elements[elementToCreate].subtitle;
-      element.style.maxWidth = "fit-content";
-      element.style.fontSize = elements[elementToCreate].subtitle;
-      element.style.lineHeight = lineHeightTight;
-      element.style.fontWeight = "normal";
-      element.style.letterSpacing = "-0.03125rem";
-      document.body.appendChild(element);
-      element.innerText = txt;
-      const { width } = document.querySelector("#s").getBoundingClientRect();
-      document.body.removeChild(element);
-      return width / 2;
-    }
-    return 0;
+    const as = this.props.as in elements ? this.props.as : "h2";
+    const FONT_MULTIPLE = parseFloat(elements[as].subtitle);
+    const BASE_FONT_SIZE = 16;
+    const fontSizeInPixels = BASE_FONT_SIZE * FONT_MULTIPLE;
+
+    return txt.length > 0
+      ? pixelWidth(txt, { font: "Arial", size: fontSizeInPixels }) / 2 +
+          fontSizeInPixels
+      : 0;
   };
 
   render() {

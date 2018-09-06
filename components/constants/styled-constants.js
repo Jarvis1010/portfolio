@@ -45,7 +45,7 @@ export const colorLink = colorLink30;
 export const colorLinkHover = colorLink; // TODO:blue20;
 
 //normal 16px/1.4em
-export const sans = `BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;`;
+export const sans = `"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;`;
 export const serif = `"Baskerville", "Palatino", "Palatino Linotype", "Georgia", "Times New Roman", serif`;
 export const monospace = `"Courier New", Courier, monospace`;
 
