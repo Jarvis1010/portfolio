@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import {
   fontSize13,
   fontSize14,
@@ -24,7 +24,7 @@ const elements = {
   h6: { main: fontSize14, subtitle: fontSize13, margin: `-0.4rem` }
 };
 
-const baseCss = css`
+const BoxHeading = styled.h2`
   align-self: center;
   margin: auto;
   text-align: center;
@@ -33,8 +33,7 @@ const baseCss = css`
   color: ${props => (props.inverse ? black : white)};
   padding: ${spacing16};
   position: relative;
-  font-size: ${({ element }) =>
-    element in elements ? elements[element].main : elements.h2.main};
+  font-size: ${({ as = "h2" }) => elements[as].main};
   font-weight: bold;
   line-height: ${lineHeightTight};
   letter-spacing: -0.03125rem;
@@ -42,8 +41,7 @@ const baseCss = css`
 
   &::after {
     content: ${props => (props.subtitle ? `"${props.subtitle}"` : " ")};
-    font-size: ${({ element }) =>
-      element in elements ? elements[element].subtitle : elements.h2.subtitle};
+    font-size: ${({ as = "h2" }) => elements[as].subtitle};
     font-weight: normal;
     position: absolute;
 
@@ -56,8 +54,9 @@ const baseCss = css`
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    ${props => (props.top ? "margin-top" : "margin-bottom")}: ${({ element }) =>
-      element in elements ? elements[element].margin : elements.h2.margin};
+    ${props => (props.top ? "margin-top" : "margin-bottom")}: ${({
+      as = "h2"
+    }) => elements[as].margin};
   }
 `;
 
@@ -71,7 +70,8 @@ const BottomBorder = styled.div`
     ${props => (props.top ? "top" : "bottom")}: 0;
     ${props => (props.top ? "border-top" : "border-bottom")}: 1px solid
       ${props => (props.inverse ? black : white)};
-    width: ${props => (props.width ? `${props.width}px` : "1rem")};
+    /* width: ${props => (props.width ? `${props.width}px` : "1rem")}; */
+    width:calc(50% - ${props => `${props.width}px`});
   }
   &::before {
     left: 0;
@@ -85,67 +85,48 @@ class BoxTitle extends Component {
   state = {
     bottomBorderlength: undefined
   };
-  node = null;
-  handleRef = node => {
-    if (node && !this.node) {
-      this.node = node;
-      const { width: parentWidth } = node.getBoundingClientRect();
-      const { fontSize, width: calculatedWidth } = window.getComputedStyle(
-        node,
-        "::after"
-      );
 
-      const afterWidth =
-        calculatedWidth === "fit-content"
-          ? 0
-          : calculatedWidth.slice(0, calculatedWidth.length - 2);
-
-      const buffer = afterWidth === 0 ? 0 : parseFloat(fontSize);
-
-      const bottomBorderlength = (parentWidth - afterWidth) / 2 - buffer;
-
-      this.setState({ bottomBorderlength });
-    }
+  calculateHalfOfTextWidth = (txt = "") => {
+    const elementToCreate = this.props.as in elements ? this.props.as : "h2";
+    let element = document.createElement(elementToCreate);
+    element.id = "s";
+    element.style.height = 0;
+    element.style.padding = "1rem";
+    element.style.maxWidth = "fit-content";
+    element.style.fontSize = elements[elementToCreate].subtitle;
+    element.style.lineHeight = lineHeightTight;
+    element.style.fontWeight = "normal";
+    element.style.letterSpacing = "-0.03125rem";
+    document.body.appendChild(element);
+    element.innerText = txt;
+    const { width } = document.querySelector("#s").getBoundingClientRect();
+    document.body.removeChild(element);
+    return width / 2;
   };
 
   render() {
-    const { children, element, inverse, top, ...props } = this.props;
-
-    const StyledElement =
-      element in elements
-        ? styled[element]`
-            ${baseCss};
-          `
-        : styled.h2`
-            ${baseCss};
-          `;
+    const { children, inverse, top, subtitle, ...props } = this.props;
     return (
-      <StyledElement
-        {...props}
-        ref={this.handleRef}
-        inverse={inverse}
-        top={top}
-        element={element}
-      >
+      <BoxHeading {...props} subtitle={subtitle} inverse={inverse} top={top}>
         {children}
         <BottomBorder
           inverse={inverse}
           top={top}
-          width={this.state.bottomBorderlength}
+          width={this.calculateHalfOfTextWidth(subtitle)}
         />
-      </StyledElement>
+      </BoxHeading>
     );
   }
 }
 
 export const BoxH1 = ({ children, ...props }) => (
-  <BoxTitle {...props} element="h1">
+  <BoxTitle {...props} as="h1">
     {children}
   </BoxTitle>
 );
 
 export const SectionBoxTitle = ({ children, ...props }) => (
-  <BoxTitle {...props} element="h2" top>
+  <BoxTitle {...props} as="h2" top>
     {children}
   </BoxTitle>
 );

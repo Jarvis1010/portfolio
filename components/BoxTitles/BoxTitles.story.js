@@ -19,42 +19,42 @@ storiesOf("Box Title", module)
   ))
   .add("h1 with subtitle", () => (
     <Background>
-      <BoxTitle element="h1" subtitle="Subtitle">
+      <BoxTitle as="h1" subtitle="Subtitle">
         Test Title
       </BoxTitle>
     </Background>
   ))
   .add("h2 with subtitle", () => (
     <Background>
-      <BoxTitle element="h2" subtitle="Subtitle">
+      <BoxTitle as="h2" subtitle="Subtitle">
         Test Title
       </BoxTitle>
     </Background>
   ))
   .add("h3 with subtitle", () => (
     <Background>
-      <BoxTitle element="h3" subtitle="Subtitle">
+      <BoxTitle as="h3" subtitle="Subtitle">
         Test Title
       </BoxTitle>
     </Background>
   ))
   .add("h4 with subtitle", () => (
     <Background>
-      <BoxTitle element="h4" subtitle="Subtitle">
+      <BoxTitle as="h4" subtitle="Subtitle">
         Test Title
       </BoxTitle>
     </Background>
   ))
   .add("h5 with subtitle", () => (
     <Background>
-      <BoxTitle element="h5" subtitle="Subtitle">
+      <BoxTitle as="h5" subtitle="Subtitle">
         Test Title
       </BoxTitle>
     </Background>
   ))
   .add("h6 with subtitle", () => (
     <Background>
-      <BoxTitle element="h6" subtitle="Subtitle">
+      <BoxTitle as="h6" subtitle="Subtitle">
         Test Title
       </BoxTitle>
     </Background>
@@ -62,5 +62,15 @@ storiesOf("Box Title", module)
   .add("inverse default with subtitle on top", () => (
     <BoxTitle inverse top subtitle="Subtitle">
       Test Title
+    </BoxTitle>
+  ))
+  .add("inverse default with long body/short subtitle", () => (
+    <BoxTitle inverse subtitle="Subtitle">
+      Test Title is much longer
+    </BoxTitle>
+  ))
+  .add("inverse default with long subtitle/short body", () => (
+    <BoxTitle inverse subtitle="Subtitle">
+      Test
     </BoxTitle>
   ));
