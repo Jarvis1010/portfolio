@@ -1,5 +1,5 @@
-import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import Document, { Head, Main, NextScript } from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
   render() {
@@ -19,10 +19,7 @@ export default class MyDocument extends Document {
         </Head>
 
         <body>
-          <div className="root">
-            {main}
-          </div>
-
+          <div className="root">{main}</div>
           <NextScript />
         </body>
       </html>

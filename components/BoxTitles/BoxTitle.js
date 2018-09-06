@@ -122,9 +122,9 @@ class BoxTitle extends Component {
     return (
       <StyledElement
         {...props}
+        ref={this.handleRef}
         inverse={inverse}
         top={top}
-        ref={this.handleRef}
         element={element}
       >
         {children}

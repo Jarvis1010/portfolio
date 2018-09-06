@@ -433,7 +433,7 @@ var addUpUntilIndex = function addUpUntilIndex(sizes, index) {
 var makeStyleTag = function makeStyleTag(target, tagEl, insertBefore) {
   var el = document.createElement('style');
   el.setAttribute(SC_ATTR, '');
-  el.setAttribute(SC_VERSION_ATTR, "4.0.0-beta.0");
+  el.setAttribute(SC_VERSION_ATTR, "4.0.0-beta.0-1");
 
   var nonce = getNonce();
   if (nonce) {
@@ -462,7 +462,7 @@ var makeStyleTag = function makeStyleTag(target, tagEl, insertBefore) {
 var wrapAsHtmlTag = function wrapAsHtmlTag(css, names) {
   return function (additionalAttrs) {
     var nonce = getNonce();
-    var attrs = [nonce && 'nonce="' + nonce + '"', SC_ATTR + '="' + stringifyNames(names) + '"', SC_VERSION_ATTR + '="' + "4.0.0-beta.0" + '"', additionalAttrs];
+    var attrs = [nonce && 'nonce="' + nonce + '"', SC_ATTR + '="' + stringifyNames(names) + '"', SC_VERSION_ATTR + '="' + "4.0.0-beta.0-1" + '"', additionalAttrs];
 
     var htmlAttr = attrs.filter(Boolean).join(' ');
     return '<style ' + htmlAttr + '>' + css() + '</style>';
@@ -474,7 +474,7 @@ var wrapAsElement = function wrapAsElement(css, names) {
   return function () {
     var _props;
 
-    var props = (_props = {}, _props[SC_ATTR] = stringifyNames(names), _props[SC_VERSION_ATTR] = "4.0.0-beta.0", _props);
+    var props = (_props = {}, _props[SC_ATTR] = stringifyNames(names), _props[SC_VERSION_ATTR] = "4.0.0-beta.0-1", _props);
 
     var nonce = getNonce();
     if (nonce) {
@@ -552,7 +552,7 @@ var makeSpeedyTag = function makeSpeedyTag(el, getImportRuleTag) {
 
     var size = sizes[marker];
     var sheet = sheetForTag(el);
-    var removalIndex = addUpUntilIndex(sizes, marker);
+    var removalIndex = addUpUntilIndex(sizes, marker) - 1;
     deleteRules(sheet, removalIndex, size);
     sizes[marker] = 0;
     resetIdNames(names, id);
@@ -896,7 +896,7 @@ var StyleSheet = function () {
     var isStreamed = false;
 
     /* retrieve all of our SSR style elements from the DOM */
-    var nodes = document.querySelectorAll('style[' + SC_ATTR + '][' + SC_VERSION_ATTR + '="' + "4.0.0-beta.0" + '"]');
+    var nodes = document.querySelectorAll('style[' + SC_ATTR + '][' + SC_VERSION_ATTR + '="' + "4.0.0-beta.0-1" + '"]');
     var nodesSize = nodes.length;
 
     /* abort rehydration if no previous style tags were found */
@@ -2336,7 +2336,7 @@ function (_Document) {
       }, main), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 23
         }
       })));
     }
@@ -2369,4 +2369,4 @@ function (_Document) {
 /***/ })
 
 })
-//# sourceMappingURL=1.0baa13986f34fff27450.hot-update.js.map
+//# sourceMappingURL=1.5caa121f869919639a1f.hot-update.js.map

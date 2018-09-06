@@ -348,9 +348,9 @@ function (_Component) {
 
       var StyledElement = element in elements ? __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a[element](_templateObject3, baseCss) : __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.h2(_templateObject3, baseCss);
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledElement, _extends({}, props, {
+        ref: this.handleRef,
         inverse: inverse,
         top: top,
-        ref: this.handleRef,
         element: element,
         __source: {
           fileName: _jsxFileName,

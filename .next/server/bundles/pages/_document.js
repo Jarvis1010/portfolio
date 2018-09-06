@@ -162,7 +162,7 @@ function (_Document) {
       }, main), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 23
         }
       })));
     }
