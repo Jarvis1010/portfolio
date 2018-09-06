@@ -124,7 +124,7 @@ class BoxTitle extends Component {
         {...props}
         inverse={inverse}
         top={top}
-        innerRef={this.handleRef}
+        ref={this.handleRef}
         element={element}
       >
         {children}

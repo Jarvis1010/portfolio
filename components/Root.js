@@ -3,11 +3,10 @@ import { ThemeProvider } from "styled-components";
 import StringsProvider from "./Translate";
 import Normalize from "./Normalize";
 
-const Root = ({ theme = {}, strings = {}, ...props }) => (
+const Root = ({ theme = {}, strings = {}, children }) => (
   <StringsProvider strings={strings}>
-    <ThemeProvider theme={theme}>
-      <Normalize {...props} />
-    </ThemeProvider>
+    <Normalize />
+    <ThemeProvider theme={theme}>{children}</ThemeProvider>
   </StringsProvider>
 );
 

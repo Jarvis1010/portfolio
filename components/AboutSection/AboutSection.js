@@ -4,9 +4,9 @@ import Grid from "../Grid";
 import PadBox from "../PadBox/PadBox";
 import { string, array } from "prop-types";
 
-const ProfilePic = Grid.withComponent("figure").extend`
+const ProfilePic = styled(Grid)`
   max-height: 320px;
-  margin:0;
+  margin: 0;
 `;
 
 const Description = styled.div`
@@ -36,7 +36,7 @@ const AboutSection = ({ description = "", title = "", languages = [] }) => (
         <HR />
         <h1>{title}</h1>
       </Description>
-      <ProfilePic>
+      <ProfilePic as="figure">
         <Image
           src="static/components/AboutSection/portfolio.jpg"
           alt="Profile Photo"

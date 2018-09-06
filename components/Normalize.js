@@ -1,5 +1,4 @@
-import React from "react";
-import { injectGlobal } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 import {
   black,
@@ -18,7 +17,7 @@ import {
   yellow10
 } from "./constants/styled-constants";
 
-injectGlobal`
+const Normalize = createGlobalStyle`
 
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 
@@ -304,7 +303,5 @@ injectGlobal`
       white-space: pre-wrap;
   }
 `;
-
-const Normalize = props => <normalize {...props} />;
 
 export default Normalize;
