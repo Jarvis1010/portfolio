@@ -32,6 +32,7 @@ const handlePaddingFor = pos => ({ size = "32", ...props }) =>
 
 const PadBox = styled.div`
   width: 100%;
+  height: 100%;
   padding-bottom: ${handlePaddingFor("bottom")};
   padding-left: ${handlePaddingFor("left")};
   padding-top: ${handlePaddingFor("top")};

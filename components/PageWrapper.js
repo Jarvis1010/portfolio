@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { white, breakWidthMax } from "./constants/styled-constants";
+import {
+  white,
+  breakWidthMax,
+  breakWidth480
+} from "./constants/styled-constants";
 
 const Outer = styled.div`
   background-color: rgb(247, 248, 248);
@@ -16,10 +20,14 @@ const Inner = styled.div`
   overflow-x: hidden;
   perspective: 2px;
   transform-style: preserve-3d;
+  scroll-snap-type: y proximity;
   overflow-y: auto;
   height: 100vh;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  @media (max-width: ${breakWidth480}) {
+    scroll-padding-top: 64px;
+  }
 `;
 
 export default ({ children }) => (
