@@ -13,6 +13,7 @@ const AboutWrapper = styled(PadBox)`
 
 const SplitGrid = styled(Grid)`
   margin-top: ${spacing16};
+  justify-content: space-around;
 `;
 
 const Profile = styled.section`
@@ -40,7 +41,16 @@ const ContactList = styled(Stack)`
     display: block;
     padding: ${spacing16};
     border-bottom: 1px solid ${grey};
+    top: 0;
+    position: absolute;
+    width: 100%;
   }
+`;
+
+const ContactListItem = styled(PadBox)`
+  position: relative;
+  height: 100%;
+  width: 100%;
 `;
 
 const Email = styled.a.attrs({ href: props => `mailto:${props.children}` })``;
@@ -67,21 +77,21 @@ const AboutSection = () => (
           <Paragraph>{about.description}</Paragraph>
         </Profile>
         <Details minWidth={"280px"}>
-          <ContactList as="ul">
-            <li>
+          <ContactList size="8" as="ul">
+            <ContactListItem size="8" as="li">
               <strong>Name:</strong> Travis Waith-Mair
-            </li>
-            <li>
+            </ContactListItem>
+            <ContactListItem size="8" as="li">
               <strong>Email:</strong>
               <Email> travis.mair@gmail.com</Email>
-            </li>
-            <li>
+            </ContactListItem>
+            <ContactListItem size="8" as="li">
               <strong>Telephone:</strong>
               <Telephone> (801) 200-7597</Telephone>
-            </li>
-            <li>
+            </ContactListItem>
+            <ContactListItem size="8" as="li">
               <strong>Location:</strong> Salt Lake City, Utah
-            </li>
+            </ContactListItem>
           </ContactList>
           <Image src="static/images/profile.png" alt="Profile Photo" />
         </Details>

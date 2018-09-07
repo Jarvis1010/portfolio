@@ -5,7 +5,7 @@ import PadBox from "../PadBox/PadBox";
 import Grid from "../Grid";
 
 export const FinalSection = ({ links }) => (
-  <PadBox>
+  <PadBox size="16">
     <Grid minWidth={"320px"}>
       <TitleBox title="ABOUT THIS PAGE">
         <p>Made with love and patience by Justin Travis Waith-Mair</p>
