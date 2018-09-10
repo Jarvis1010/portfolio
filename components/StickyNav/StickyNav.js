@@ -16,6 +16,9 @@ const StickyNav = () => (
         </a>
       </NavItem>
       <NavItem>
+        <a href="/#experience">Experience</a>
+      </NavItem>
+      <NavItem>
         <a href="/#portfolio">Portfolio</a>
       </NavItem>
       <NavItem>

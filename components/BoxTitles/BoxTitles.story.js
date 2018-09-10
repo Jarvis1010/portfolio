@@ -1,5 +1,5 @@
 import { storiesOf } from "@storybook/react";
-import BoxTitle from "./BoxTitle";
+import BoxTitle, { SectionBoxTitle } from "./BoxTitle";
 import React from "react";
 import styled from "styled-components";
 
@@ -73,4 +73,9 @@ storiesOf("Box Title", module)
     <BoxTitle inverse subtitle="Subtitle is much longer">
       Test
     </BoxTitle>
+  ))
+  .add("SectionBoxTitle inverse with long subtitle/short body", () => (
+    <SectionBoxTitle inverse subtitle="Subtitle is much longer">
+      Test
+    </SectionBoxTitle>
   ));

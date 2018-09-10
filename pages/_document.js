@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { pageMeta } from "../components/constants/constants";
 
 export default class MyDocument extends Document {
   render() {
@@ -10,11 +11,10 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Portfolio</title>
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
+          <title>{pageMeta.title}</title>
+          {pageMeta.tags.map(tag => (
+            <meta {...tag} />
+          ))}
           {styleTags}
         </Head>
 

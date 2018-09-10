@@ -1,7 +1,6 @@
 export const about = {
   description:
-    "Software developer that provides focused skills needed to meet technical challenges. Driven to learn and understand new technologies, implement fundamental design principles, and write reliable, well-tested, reusable code.",
-  title: "Web Developer",
+    "My name is Travis Waith-Mair and I am a I'm an excited and ambitious Web Developer, currently working just outside of Salt Lake City, UT. Outside of my day job, I building and maintaining open source projects, freelance work, and hand out my kids at home.  I love Javascript and especially React.js.  Outside of web development, I love all things nerdy.  I often can be found debating Star Wars, super heroes, and most anything else nerdy.   I have learned to speak Thai, and some Spanish and Esperanto.  I am both driven and self-motivated, and I am constantly experimenting with new technologies and techniques. I am very passionate about Web Development, and driven to learn and understand new technologies, implement fundamental design principles, and write reliable, well-tested, reusable code.",
   languages: [
     "HTML",
     "CSS",
@@ -27,10 +26,11 @@ export const desc =
   "If you want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, random questions about the universe and the meaning of life... just feel free to drop me a line anytime.";
 
 export const pageMeta = {
-  title: "Portfolio of Travis Mair",
+  title: "Travis Waith-Mair's Personal website",
   tags: [
-    { name: "description", content: "Portfolio" },
-    { property: "og:type", content: "article" }
+    { name: "description", content: "Personal Website" },
+    { property: "og:type", content: "article" },
+    { name: "viewport", content: "initial-scale=1.0, width=device-width" }
   ]
 };
 

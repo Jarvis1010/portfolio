@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/MyLayout.js";
 import AboutSection from "../components/AboutSection/AboutSection";
+import ExperienceSection from "../components/ExperienceSections/ExperienceSection";
 import Portfolio from "../components/Portfolio/Portfolio";
 import Contact from "../components/Contact/Contact";
 import FinalSection from "../components/FinalSection/FinalSection";
@@ -21,17 +22,18 @@ export default () => {
         <Stackable type="light">
           <AboutSection />
         </Stackable>
-        <Stackable type="medium" id="portfolio">
+        <Stackable type="medium">
+          <ExperienceSection />
+        </Stackable>
+        <Stackable type="dark" id="portfolio">
           <Stack style={{ paddingTop: "2rem" }}>
-            <SectionBoxTitle inverse subtitle="My Stuff">
-              Portfolio
-            </SectionBoxTitle>
+            <SectionBoxTitle subtitle="My Stuff">Portfolio</SectionBoxTitle>
             <Portfolio projectGroups={portfolio} />
           </Stack>
         </Stackable>
-        <Stackable type="dark" id="contact">
+        <Stackable type="medium" id="contact">
           <Stack style={{ paddingTop: "2rem" }}>
-            <SectionBoxTitle subtitle="Talk To Me">
+            <SectionBoxTitle inverse subtitle="Talk To Me">
               Contact Information
             </SectionBoxTitle>
             <Contact list={list} message={desc} />

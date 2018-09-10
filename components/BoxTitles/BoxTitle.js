@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import pixelWidth from "string-pixel-width";
 import {
+  fontSize11,
   fontSize13,
   fontSize14,
   fontSize16,
@@ -17,12 +18,12 @@ import {
 } from "../constants/styled-constants";
 
 const elements = {
-  h1: { main: fontSize42, subtitle: fontSize28, margin: `-0.9rem` },
-  h2: { main: fontSize32, subtitle: fontSize20, margin: `-0.7rem` },
-  h3: { main: fontSize28, subtitle: fontSize18, margin: `-0.6rem` },
-  h4: { main: fontSize20, subtitle: fontSize16, margin: `-0.6rem` },
-  h5: { main: fontSize18, subtitle: fontSize14, margin: `-0.5rem` },
-  h6: { main: fontSize14, subtitle: fontSize13, margin: `-0.4rem` }
+  h1: { main: fontSize42, subtitle: fontSize20, margin: `-0.9rem` },
+  h2: { main: fontSize32, subtitle: fontSize18, margin: `-0.7rem` },
+  h3: { main: fontSize28, subtitle: fontSize16, margin: `-0.6rem` },
+  h4: { main: fontSize20, subtitle: fontSize14, margin: `-0.6rem` },
+  h5: { main: fontSize18, subtitle: fontSize13, margin: `-0.5rem` },
+  h6: { main: fontSize14, subtitle: fontSize11, margin: `-0.4rem` }
 };
 
 const BoxHeading = styled.h2`
@@ -92,10 +93,10 @@ class BoxTitle extends Component {
     const FONT_MULTIPLE = parseFloat(elements[as].subtitle);
     const BASE_FONT_SIZE = 16;
     const fontSizeInPixels = BASE_FONT_SIZE * FONT_MULTIPLE;
-
+    const leftAndRightPadding = fontSizeInPixels * 2;
     return txt.length > 0
       ? pixelWidth(txt, { font: "Arial", size: fontSizeInPixels }) +
-          fontSizeInPixels
+          leftAndRightPadding
       : 0;
   };
 

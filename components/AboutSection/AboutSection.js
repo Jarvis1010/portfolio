@@ -73,7 +73,7 @@ const AboutSection = () => (
     <PadBox size="0" top="16">
       <SplitGrid minWidth={"280px"}>
         <Profile>
-          <h3>Profesional Profile</h3>
+          <h3>Professional Profile</h3>
           <Paragraph>{about.description}</Paragraph>
         </Profile>
         <Details minWidth={"280px"}>

@@ -3,6 +3,66 @@ __NEXT_REGISTER_PAGE('/_document', function() {
           var comp =
       webpackJsonp([1],{
 
+/***/ "./components/constants/constants.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return about; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return list; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return desc; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return pageMeta; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return links; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return portfolio; });
+var about = {
+  description: "My name is Travis Waith-Mair and I am a I'm an excited and ambitious Web Developer, currently working just outside of Salt Lake City, UT. Outside of my day job, I building and maintaining open source projects, freelance work, and hand out my kids at home.  I love Javascript and especially React.js.  Outside of web development, I love all things nerdy.  I often can be found debating Star Wars, super heroes, and most anything else nerdy.   I have learned to speak Thai, and some Spanish and Esperanto.  I am both driven and self-motivated, and I am constantly experimenting with new technologies and techniques. I am very passionate about Web Development, and driven to learn and understand new technologies, implement fundamental design principles, and write reliable, well-tested, reusable code.",
+  languages: ["HTML", "CSS", "JavaScript", "ES6", "React.js", "Bootstrap", "MongoDB", "Angular.js", "Express", "Node"]
+};
+var list = ["J. Travis Waith-Mair", "travis.mair@gmail.com", "(801) 200 - 7597", "Salt Lake City, Utah"];
+var desc = "If you want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, random questions about the universe and the meaning of life... just feel free to drop me a line anytime.";
+var pageMeta = {
+  title: "Travis Waith-Mair's Personal website",
+  tags: [{
+    name: "description",
+    content: "Personal Website"
+  }, {
+    property: "og:type",
+    content: "article"
+  }, {
+    name: "viewport",
+    content: "initial-scale=1.0, width=device-width"
+  }]
+};
+var links = [{
+  href: "https://github.com/Jarvis1010",
+  content: "github"
+}, {
+  href: "https://twitter.com/want2code",
+  content: "twitter"
+}, {
+  href: "https://www.linkedin.com/in/travis-mair/",
+  content: "linkedin"
+}];
+var portfolio = {
+  "Open Source Projects": [{
+    href: "https://www.npmjs.com/package/react-copy-code",
+    src: "static/images/copycode.png",
+    alt: "Screenshot of react-copy-code",
+    desc: "react-copy-code"
+  }, {
+    href: "https://www.npmjs.com/package/react-clean-form",
+    src: "static/images/inator.png",
+    alt: "Screenshot of react-clean-form",
+    desc: "react-clean-form"
+  }, {
+    href: "https://play.google.com/store/apps/details?id=com.sanktajlibroj",
+    src: "static/images/mormono.png",
+    alt: "Screenshot of Esperanto Book of Mormon",
+    desc: "React Native App of Scriptures in Esperanto"
+  }]
+};
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/extends.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -902,7 +962,7 @@ module.exports = __webpack_require__("./node_modules/next/dist/server/document.j
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.4.2
+/** @license React v16.5.0
  * react-is.development.js
  *
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -934,12 +994,12 @@ var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
 var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
 var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
 var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
-var REACT_TIMEOUT_TYPE = hasSymbol ? Symbol.for('react.timeout') : 0xead1;
+var REACT_PLACEHOLDER_TYPE = hasSymbol ? Symbol.for('react.placeholder') : 0xead1;
 
 function isValidElementType(type) {
   return typeof type === 'string' || typeof type === 'function' ||
   // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-  type === REACT_FRAGMENT_TYPE || type === REACT_ASYNC_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_TIMEOUT_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE);
+  type === REACT_FRAGMENT_TYPE || type === REACT_ASYNC_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_PLACEHOLDER_TYPE || typeof type === 'object' && type !== null && (typeof type.then === 'function' || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE);
 }
 
 function typeOf(object) {
@@ -1088,6 +1148,7 @@ module.exports = hash;
 /* unused harmony export keyframes */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return createGlobalStyle; });
 /* unused harmony export isStyledComponent */
+/* unused harmony export ThemeConsumer */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ThemeProvider; });
 /* unused harmony export withTheme */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServerStyleSheet; });
@@ -1099,17 +1160,14 @@ module.exports = hash;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_stylis_rule_sheet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_stylis_rule_sheet__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_fbjs_lib_hyphenateStyleName__ = __webpack_require__("./node_modules/fbjs/lib/hyphenateStyleName.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_fbjs_lib_hyphenateStyleName___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_fbjs_lib_hyphenateStyleName__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_memoize_one__ = __webpack_require__("./node_modules/memoize-one/dist/memoize-one.esm.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_prop_types__ = __webpack_require__("./node_modules/next/node_modules/prop-types/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__emotion_is_prop_valid__ = __webpack_require__("./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.esm.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics__ = __webpack_require__("./node_modules/styled-components/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_is__ = __webpack_require__("./node_modules/react-is/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_is___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_react_is__);
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_memoize_one__ = __webpack_require__("./node_modules/memoize-one/dist/memoize-one.esm.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prop_types__ = __webpack_require__("./node_modules/next/node_modules/prop-types/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__emotion_is_prop_valid__ = __webpack_require__("./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.esm.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_hoist_non_react_statics__ = __webpack_require__("./node_modules/styled-components/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_hoist_non_react_statics__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_is__ = __webpack_require__("./node_modules/react-is/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_is___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react_is__);
 
 
 
@@ -1211,6 +1269,36 @@ function isStyledComponent(target) /* : %checks */{
     // $FlowFixMe TODO: flow for styledComponentId
     target && typeof target.styledComponentId === 'string'
   );
+}
+
+// 
+
+/**
+ * inlined version of
+ * https://github.com/facebook/fbjs/blob/master/packages/fbjs/src/core/hyphenateStyleName.js
+ */
+
+var uppercasePattern = /([A-Z])/g;
+var msPattern = /^ms-/;
+
+/**
+ * Hyphenates a camelcased CSS property name, for example:
+ *
+ *   > hyphenateStyleName('backgroundColor')
+ *   < "background-color"
+ *   > hyphenateStyleName('MozTransition')
+ *   < "-moz-transition"
+ *   > hyphenateStyleName('msTransition')
+ *   < "-ms-transition"
+ *
+ * As Modernizr suggests (http://modernizr.com/docs/#prefixed), an `ms` prefix
+ * is converted to `-ms-`.
+ *
+ * @param {string} string
+ * @return {string}
+ */
+function hyphenateStyleName(string) {
+  return string.replace(uppercasePattern, '-$1').toLowerCase().replace(msPattern, '-ms-');
 }
 
 // 
@@ -1513,7 +1601,7 @@ var addUpUntilIndex = function addUpUntilIndex(sizes, index) {
 var makeStyleTag = function makeStyleTag(target, tagEl, insertBefore) {
   var el = document.createElement('style');
   el.setAttribute(SC_ATTR, '');
-  el.setAttribute(SC_VERSION_ATTR, "4.0.0-beta.0-1");
+  el.setAttribute(SC_VERSION_ATTR, "4.0.0-beta.2-0");
 
   var nonce = getNonce();
   if (nonce) {
@@ -1542,7 +1630,7 @@ var makeStyleTag = function makeStyleTag(target, tagEl, insertBefore) {
 var wrapAsHtmlTag = function wrapAsHtmlTag(css, names) {
   return function (additionalAttrs) {
     var nonce = getNonce();
-    var attrs = [nonce && 'nonce="' + nonce + '"', SC_ATTR + '="' + stringifyNames(names) + '"', SC_VERSION_ATTR + '="' + "4.0.0-beta.0-1" + '"', additionalAttrs];
+    var attrs = [nonce && 'nonce="' + nonce + '"', SC_ATTR + '="' + stringifyNames(names) + '"', SC_VERSION_ATTR + '="' + "4.0.0-beta.2-0" + '"', additionalAttrs];
 
     var htmlAttr = attrs.filter(Boolean).join(' ');
     return '<style ' + htmlAttr + '>' + css() + '</style>';
@@ -1554,7 +1642,7 @@ var wrapAsElement = function wrapAsElement(css, names) {
   return function () {
     var _props;
 
-    var props = (_props = {}, _props[SC_ATTR] = stringifyNames(names), _props[SC_VERSION_ATTR] = "4.0.0-beta.0-1", _props);
+    var props = (_props = {}, _props[SC_ATTR] = stringifyNames(names), _props[SC_VERSION_ATTR] = "4.0.0-beta.2-0", _props);
 
     var nonce = getNonce();
     if (nonce) {
@@ -1976,7 +2064,7 @@ var StyleSheet = function () {
     var isStreamed = false;
 
     /* retrieve all of our SSR style elements from the DOM */
-    var nodes = document.querySelectorAll('style[' + SC_ATTR + '][' + SC_VERSION_ATTR + '="' + "4.0.0-beta.0-1" + '"]');
+    var nodes = document.querySelectorAll('style[' + SC_ATTR + '][' + SC_VERSION_ATTR + '="' + "4.0.0-beta.2-0" + '"]');
     var nodesSize = nodes.length;
 
     /* abort rehydration if no previous style tags were found */
@@ -2257,7 +2345,7 @@ var objToCss = function objToCss(obj, prevKey) {
     return chunk !== undefined && chunk !== null && chunk !== false && chunk !== '';
   }).map(function (key) {
     if (isPlainObject(obj[key])) return objToCss(obj[key], key);
-    return __WEBPACK_IMPORTED_MODULE_3_fbjs_lib_hyphenateStyleName___default()(key) + ': ' + obj[key] + ';';
+    return hyphenateStyleName(key) + ': ' + obj[key] + ';';
   }).join(' ');
   return prevKey ? prevKey + ' {\n  ' + css + '\n}' : css;
 };
@@ -2465,7 +2553,7 @@ var ThemeProvider = function (_Component) {
 
     var _this = possibleConstructorReturn(this, _Component.call(this, props));
 
-    _this.getContext = Object(__WEBPACK_IMPORTED_MODULE_4_memoize_one__["a" /* default */])(_this.getContext.bind(_this));
+    _this.getContext = Object(__WEBPACK_IMPORTED_MODULE_3_memoize_one__["a" /* default */])(_this.getContext.bind(_this));
     _this.renderInner = _this.renderInner.bind(_this);
     return _this;
   }
@@ -2630,7 +2718,7 @@ var StyleSheetManager = function (_Component) {
 
     var _this = possibleConstructorReturn(this, _Component.call(this, props));
 
-    _this.getContext = Object(__WEBPACK_IMPORTED_MODULE_4_memoize_one__["a" /* default */])(_this.getContext);
+    _this.getContext = Object(__WEBPACK_IMPORTED_MODULE_3_memoize_one__["a" /* default */])(_this.getContext);
     return _this;
   }
 
@@ -2661,9 +2749,9 @@ var StyleSheetManager = function (_Component) {
   return StyleSheetManager;
 }(__WEBPACK_IMPORTED_MODULE_2_react__["Component"]);
  true ? StyleSheetManager.propTypes = {
-  sheet: __WEBPACK_IMPORTED_MODULE_5_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_5_prop_types___default.a.instanceOf(StyleSheet), __WEBPACK_IMPORTED_MODULE_5_prop_types___default.a.instanceOf(ServerStyleSheet)]),
-  target: __WEBPACK_IMPORTED_MODULE_5_prop_types___default.a.shape({
-    appendChild: __WEBPACK_IMPORTED_MODULE_5_prop_types___default.a.func.isRequired
+  sheet: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.instanceOf(StyleSheet), __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.instanceOf(ServerStyleSheet)]),
+  target: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.shape({
+    appendChild: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.func.isRequired
   })
 } : void 0;
 
@@ -2762,7 +2850,7 @@ var BaseStyledComponent = function (_Component) {
         warnInnerRef();
       } else if (key === 'forwardedRef') propsForElement.ref = this.props[key];
       // Don't pass through non HTML tags through to HTML elements
-      else if (!isTargetTag || Object(__WEBPACK_IMPORTED_MODULE_6__emotion_is_prop_valid__["a" /* default */])(key)) {
+      else if (!isTargetTag || Object(__WEBPACK_IMPORTED_MODULE_5__emotion_is_prop_valid__["a" /* default */])(key)) {
           propsForElement[key] = key === 'style' && key in this.attrs ? _extends({}, this.attrs[key], this.props[key]) : this.props[key];
         }
     }
@@ -2892,7 +2980,7 @@ var _StyledComponent = (function (ComponentStyle) {
     }
 
     if (isClass) {
-      __WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics___default()(StyledComponent, target, {
+      __WEBPACK_IMPORTED_MODULE_6_hoist_non_react_statics___default()(StyledComponent, target, {
         // all SC-specific things should not be hoisted
         attrs: true,
         componentStyle: true,
@@ -3072,7 +3160,7 @@ var _constructWithOptions = (function (css) {
   var constructWithOptions = function constructWithOptions(componentConstructor, tag) {
     var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : EMPTY_OBJECT;
 
-    if (!Object(__WEBPACK_IMPORTED_MODULE_8_react_is__["isValidElementType"])(tag)) {
+    if (!Object(__WEBPACK_IMPORTED_MODULE_7_react_is__["isValidElementType"])(tag)) {
       throw new StyledComponentsError(1, String(tag));
     }
 
@@ -3115,7 +3203,7 @@ var _keyframes = (function (nameGenerator, stringifyRules, css) {
 
 // 
 
-var _GlobalStyle = (function (ComponentStyle, stringifyRules) {
+var _GlobalStyle = (function (stringifyRules) {
   var GlobalStyle = function () {
     function GlobalStyle(rules, componentId) {
       classCallCheck(this, GlobalStyle);
@@ -3132,8 +3220,7 @@ var _GlobalStyle = (function (ComponentStyle, stringifyRules) {
     GlobalStyle.prototype.createStyles = function createStyles(executionContext, styleSheet) {
       var flatCSS = flatten(this.rules, executionContext);
       var css = stringifyRules(flatCSS, '');
-      // TODO: We will need to figure out how to do this before 4.0
-      // const name = ComponentStyle.generateName(this.componentId + css)
+
       styleSheet.inject(this.componentId, css);
     };
 
@@ -3158,8 +3245,8 @@ var _GlobalStyle = (function (ComponentStyle, stringifyRules) {
 
 // 
 
-var _createGlobalStyle = (function (ComponentStyle, stringifyRules, css) {
-  var GlobalStyle = _GlobalStyle(ComponentStyle, stringifyRules);
+var _createGlobalStyle = (function (stringifyRules, css) {
+  var GlobalStyle = _GlobalStyle(stringifyRules);
 
   var createGlobalStyle = function createGlobalStyle(strings) {
     for (var _len = arguments.length, interpolations = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -3171,33 +3258,36 @@ var _createGlobalStyle = (function (ComponentStyle, stringifyRules, css) {
     var style = new GlobalStyle(rules, id);
     var count = 0;
 
-    var GlobalStyleComponent = function (_React$Component) {
-      inherits(GlobalStyleComponent, _React$Component);
+    var GlobalStyleComponent = function (_React$PureComponent) {
+      inherits(GlobalStyleComponent, _React$PureComponent);
 
       function GlobalStyleComponent() {
         classCallCheck(this, GlobalStyleComponent);
 
-        var _this = possibleConstructorReturn(this, _React$Component.call(this));
+        var _this = possibleConstructorReturn(this, _React$PureComponent.call(this));
 
         count += 1;
-        _this.instance = count;
         return _this;
       }
 
       GlobalStyleComponent.prototype.componentWillUnmount = function componentWillUnmount() {
         count -= 1;
-        style.removeStyles(this.styleSheet);
+
+        /**
+         * Depending on the order "render" is called this can cause the styles to be lost
+         * until the next render pass of the remaining instance, which may
+         * not be immediate.
+         */
+        if (count === 0) style.removeStyles(this.styleSheet);else if ("development" !== 'production' && IS_BROWSER && count > 1) {
+          console.warn('The global style component ' + id + ' was composed and rendered multiple times in your React component tree. Only the last-rendered copy will have its styles remain in <head>.');
+        }
       };
 
       GlobalStyleComponent.prototype.render = function render() {
         var _this2 = this;
 
-        if (true) {
-          if (__WEBPACK_IMPORTED_MODULE_2_react___default.a.Children.count(this.props.children)) {
-            throw new StyledComponentsError(11);
-          } else if (IS_BROWSER && this.instance > 1) {
-            console.warn('The global style component ' + id + ' was composed and rendered multiple times in your React component tree. Only the last-rendered copy will have its styles remain in <head>.');
-          }
+        if ("development" !== 'production' && __WEBPACK_IMPORTED_MODULE_2_react___default.a.Children.count(this.props.children)) {
+          throw new StyledComponentsError(11);
         }
 
         return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
@@ -3235,7 +3325,7 @@ var _createGlobalStyle = (function (ComponentStyle, stringifyRules, css) {
       };
 
       return GlobalStyleComponent;
-    }(__WEBPACK_IMPORTED_MODULE_2_react___default.a.Component);
+    }(__WEBPACK_IMPORTED_MODULE_2_react___default.a.PureComponent);
 
     GlobalStyleComponent.styledComponentId = id;
 
@@ -3269,7 +3359,7 @@ var withTheme = (function (Component$$1) {
     );
   });
 
-  __WEBPACK_IMPORTED_MODULE_7_hoist_non_react_statics___default()(WithTheme, Component$$1);
+  __WEBPACK_IMPORTED_MODULE_6_hoist_non_react_statics___default()(WithTheme, Component$$1);
 
   WithTheme.displayName = 'WithTheme(' + getComponentName(Component$$1) + ')';
 
@@ -3303,19 +3393,16 @@ if ("development" !== 'production' && "development" !== 'test' && typeof window 
   window['__styled-components-init__'] += 1;
 }
 
-/* Instantiate internal singletons */
-var ComponentStyle = _ComponentStyle(generateAlphabeticName, flatten, stringifyRules);
-
 /* Instantiate exported singletons */
 var keyframes = _keyframes(generateAlphabeticName, stringifyRules, css);
-var createGlobalStyle = _createGlobalStyle(ComponentStyle, stringifyRules, css);
+var createGlobalStyle = _createGlobalStyle(stringifyRules, css);
 
 // 
 
 /* Instantiate singletons */
-var ComponentStyle$1 = _ComponentStyle(generateAlphabeticName, flatten, stringifyRules);
+var ComponentStyle = _ComponentStyle(generateAlphabeticName, flatten, stringifyRules);
 var constructWithOptions = _constructWithOptions(css);
-var StyledComponent = _StyledComponent(ComponentStyle$1);
+var StyledComponent = _StyledComponent(ComponentStyle);
 
 var index = _styled(StyledComponent, constructWithOptions);
 
@@ -6020,10 +6107,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_document__ = __webpack_require__("./node_modules/next/document.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_document___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_document__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_constants_constants__ = __webpack_require__("./components/constants/constants.js");
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/pages/_document.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -6036,6 +6126,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -6058,32 +6149,32 @@ function (_Document) {
       var main = sheet.collectStyles(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 7
+          lineNumber: 8
         }
       }));
       var styleTags = sheet.getStyleElement();
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("html", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 12
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Head"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 13
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
-        }
-      }, "Portfolio"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
-        name: "viewport",
-        content: "initial-scale=1.0, width=device-width",
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 14
         }
+      }, __WEBPACK_IMPORTED_MODULE_3__components_constants_constants__["e" /* pageMeta */].title), __WEBPACK_IMPORTED_MODULE_3__components_constants_constants__["e" /* pageMeta */].tags.map(function (tag) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", _extends({}, tag, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16
+          }
+        }));
       }), styleTags), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", {
         __source: {
           fileName: _jsxFileName,
