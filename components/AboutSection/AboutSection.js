@@ -5,7 +5,12 @@ import Stack from "../Stack/Stack";
 import { SectionBoxTitle } from "../BoxTitles/BoxTitle";
 import PadBox from "../PadBox/PadBox";
 import { about } from "../constants/constants";
-import { spacing16, grey, breakWidth480 } from "../constants/styled-constants";
+import {
+  spacing16,
+  spacing32,
+  grey,
+  breakWidth480
+} from "../constants/styled-constants";
 
 const AboutWrapper = styled(PadBox)`
   scroll-snap-align: start;
@@ -20,6 +25,10 @@ const SplitGrid = styled(Grid)`
 
 const Profile = styled.section`
   justify-self: center;
+  padding: ${spacing32};
+  @media (min-width: ${breakWidth480}) {
+    box-shadow: -11px 14px 34px 6px rgba(128, 128, 128, 1);
+  }
 `;
 
 const Paragraph = styled.p`
@@ -31,7 +40,12 @@ const Details = styled(Grid)`
   max-width: ${breakWidth480};
   justify-items: center;
   justify-self: center;
+  padding: ${spacing32};
   margin: 0;
+  width: 100%;
+  @media (min-width: ${breakWidth480}) {
+    box-shadow: -11px 14px 34px 6px rgba(128, 128, 128, 1);
+  }
 `;
 
 const ContactList = styled(Stack)`

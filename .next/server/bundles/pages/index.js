@@ -90,9 +90,9 @@ var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/AboutSecti
 
 var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  scroll-snap-align: start;\n  min-height: 100vh;\n  display: grid;\n"]),
     _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  margin-top: ", ";\n  justify-content: space-around;\n"]),
-    _templateObject3 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  justify-self: center;\n"]),
+    _templateObject3 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  justify-self: center;\n  padding: ", ";\n  @media (min-width: ", ") {\n    box-shadow: -11px 14px 34px 6px rgba(128, 128, 128, 1);\n  }\n"]),
     _templateObject4 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  max-width: ", ";\n  line-height: 2rem;\n"]),
-    _templateObject5 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  max-width: ", ";\n  justify-items: center;\n  justify-self: center;\n  margin: 0;\n"]),
+    _templateObject5 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  max-width: ", ";\n  justify-items: center;\n  justify-self: center;\n  padding: ", ";\n  margin: 0;\n  width: 100%;\n  @media (min-width: ", ") {\n    box-shadow: -11px 14px 34px 6px rgba(128, 128, 128, 1);\n  }\n"]),
     _templateObject6 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  list-style: none;\n  padding-left: 0;\n  margin-left: 0;\n  width: 100%;\n  & > li:not(:last-child):after {\n    content: \"\";\n    display: block;\n    padding: ", ";\n    border-bottom: 1px solid ", ";\n    top: 0;\n    position: absolute;\n    width: 90%;\n    height: 100%;\n  }\n"]),
     _templateObject7 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  position: relative;\n  height: 100%;\n  width: 100%;\n"]),
     _templateObject8 = /*#__PURE__*/ _taggedTemplateLiteral([""]),
@@ -110,9 +110,9 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var AboutWrapper = __WEBPACK_IMPORTED_MODULE_1_styled_components___default()(__WEBPACK_IMPORTED_MODULE_5__PadBox_PadBox__["a" /* default */])(_templateObject);
 var SplitGrid = __WEBPACK_IMPORTED_MODULE_1_styled_components___default()(__WEBPACK_IMPORTED_MODULE_2__Grid__["a" /* default */])(_templateObject2, __WEBPACK_IMPORTED_MODULE_7__constants_styled_constants__["B" /* spacing16 */]);
-var Profile = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.section(_templateObject3);
+var Profile = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.section(_templateObject3, __WEBPACK_IMPORTED_MODULE_7__constants_styled_constants__["C" /* spacing32 */], __WEBPACK_IMPORTED_MODULE_7__constants_styled_constants__["b" /* breakWidth480 */]);
 var Paragraph = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.p(_templateObject4, __WEBPACK_IMPORTED_MODULE_7__constants_styled_constants__["b" /* breakWidth480 */]);
-var Details = __WEBPACK_IMPORTED_MODULE_1_styled_components___default()(__WEBPACK_IMPORTED_MODULE_2__Grid__["a" /* default */])(_templateObject5, __WEBPACK_IMPORTED_MODULE_7__constants_styled_constants__["b" /* breakWidth480 */]);
+var Details = __WEBPACK_IMPORTED_MODULE_1_styled_components___default()(__WEBPACK_IMPORTED_MODULE_2__Grid__["a" /* default */])(_templateObject5, __WEBPACK_IMPORTED_MODULE_7__constants_styled_constants__["b" /* breakWidth480 */], __WEBPACK_IMPORTED_MODULE_7__constants_styled_constants__["C" /* spacing32 */], __WEBPACK_IMPORTED_MODULE_7__constants_styled_constants__["b" /* breakWidth480 */]);
 var ContactList = __WEBPACK_IMPORTED_MODULE_1_styled_components___default()(__WEBPACK_IMPORTED_MODULE_3__Stack_Stack__["a" /* default */])(_templateObject6, __WEBPACK_IMPORTED_MODULE_7__constants_styled_constants__["B" /* spacing16 */], __WEBPACK_IMPORTED_MODULE_7__constants_styled_constants__["q" /* grey */]);
 var ContactListItem = __WEBPACK_IMPORTED_MODULE_1_styled_components___default()(__WEBPACK_IMPORTED_MODULE_5__PadBox_PadBox__["a" /* default */])(_templateObject7);
 var Email = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.a.attrs({
@@ -134,120 +134,120 @@ var AboutSection = function AboutSection() {
     bottom: "32",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 87
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__BoxTitles_BoxTitle__["b" /* SectionBoxTitle */], {
     inverse: true,
     subtitle: "All about me",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 88
     }
   }, "Personal Details"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__PadBox_PadBox__["a" /* default */], {
     size: "0",
     top: "16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 91
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(SplitGrid, {
     minWidth: "280px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 92
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Profile, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 93
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 94
     }
   }, "Professional Profile"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Paragraph, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 95
     }
   }, __WEBPACK_IMPORTED_MODULE_6__constants_constants__["a" /* about */].description)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Details, {
     minWidth: "280px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 97
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactList, {
     size: "8",
     as: "ul",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 98
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactListItem, {
     size: "8",
     as: "li",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 99
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 100
     }
   }, "Name:"), " Travis Waith-Mair"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactListItem, {
     size: "8",
     as: "li",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 102
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 103
     }
   }, "Email:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Email, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 104
     }
   }, " travis.mair@gmail.com")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactListItem, {
     size: "8",
     as: "li",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 106
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 107
     }
   }, "Telephone:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Telephone, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 108
     }
   }, " (801) 200-7597")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactListItem, {
     size: "8",
     as: "li",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 110
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 111
     }
   }, "Location:"), " Salt Lake City, Utah")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Image, {
     src: "static/images/profile.png",
     alt: "Profile Photo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 114
     }
   })))));
 };
@@ -1792,12 +1792,12 @@ var type = {
   },
   // eslint-disable-line no-use-before-define
   medium: {
-    "background-color": __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["w" /* mediumGrey */],
+    background: "linear-gradient(45deg, ".concat(__WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["w" /* mediumGrey */], " 0%, #d0d0d0 100%)"),
     color: __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["a" /* black */]
   },
   // eslint-disable-line no-use-before-define
   dark: {
-    "background-color": __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["f" /* darkGrey */],
+    background: "linear-gradient(45deg, ".concat(__WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["f" /* darkGrey */], " 0%, #676767 100%)"),
     color: __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["H" /* white */]
   },
   // eslint-disable-line no-use-before-define
