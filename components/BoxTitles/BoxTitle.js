@@ -14,7 +14,8 @@ import {
   lineHeightTight,
   spacing16,
   black,
-  white
+  white,
+  serif
 } from "../constants/styled-constants";
 
 const elements = {
@@ -38,6 +39,7 @@ const BoxHeading = styled.h2`
   position: relative;
   font-size: ${({ as = "h2" }) => elements[as].main};
   font-weight: bold;
+  font-family: ${serif};
   line-height: ${lineHeightTight};
   letter-spacing: -0.03125rem;
   ${props => (props.top ? `border-top: none` : `border-bottom: none`)};
@@ -95,7 +97,7 @@ class BoxTitle extends Component {
     const fontSizeInPixels = BASE_FONT_SIZE * FONT_MULTIPLE;
     const leftAndRightPadding = fontSizeInPixels * 2;
     return txt.length > 0
-      ? pixelWidth(txt, { font: "Arial", size: fontSizeInPixels }) +
+      ? pixelWidth(txt, { font: "Times New Roman", size: fontSizeInPixels }) +
           leftAndRightPadding
       : 0;
   };

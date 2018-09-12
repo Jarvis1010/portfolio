@@ -33,7 +33,7 @@ export const grey = grey30;
 
 export const text120 = "#212225"; // onyxtext
 export const black = "#0d0f10";
-export const white = "#f9f9f9";
+export const white = "#fafafa";
 
 /* Util Colors */
 export const colorError = "orange"; // TODO:red10;
@@ -45,8 +45,8 @@ export const colorLink = colorLink30;
 export const colorLinkHover = colorLink; // TODO:blue20;
 
 //normal 16px/1.4em
-export const sans = `"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;`;
-export const serif = `"Baskerville", "Palatino", "Palatino Linotype", "Georgia", "Times New Roman", serif`;
+export const sans = `Montserrat, Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;`;
+export const serif = `"Slabo 27px", "Palatino", "Palatino Linotype", "Georgia", "Times New Roman", serif`;
 export const monospace = `"Courier New", Courier, monospace`;
 
 /* effectively 16px (16px * 100% = 16px) but respects users' special needs */

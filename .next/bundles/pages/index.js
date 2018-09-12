@@ -200,7 +200,7 @@ var AboutSection = function AboutSection() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__ = __webpack_require__("./components/constants/styled-constants.js");
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/BoxTitles/BoxTitle.js";
 
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  align-self: center;\n  margin: auto;\n  text-align: center;\n  min-width: ", "px;\n  max-width: fit-content;\n  border: 1px solid ", ";\n  color: ", ";\n  padding: ", ";\n  position: relative;\n  font-size: ", ";\n  font-weight: bold;\n  line-height: ", ";\n  letter-spacing: -0.03125rem;\n  ", ";\n\n  &::after {\n    content: ", ";\n    font-size: ", ";\n    font-weight: normal;\n    position: absolute;\n    width: fit-content;\n    ", ": 0;\n    left: 0;\n    right: 0;\n    display: block;\n    text-align: center;\n    margin: 0;\n    margin-left: auto;\n    margin-right: auto;\n    ", ": ", ";\n  }\n"]),
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  align-self: center;\n  margin: auto;\n  text-align: center;\n  min-width: ", "px;\n  max-width: fit-content;\n  border: 1px solid ", ";\n  color: ", ";\n  padding: ", ";\n  position: relative;\n  font-size: ", ";\n  font-weight: bold;\n  font-family: ", ";\n  line-height: ", ";\n  letter-spacing: -0.03125rem;\n  ", ";\n\n  &::after {\n    content: ", ";\n    font-size: ", ";\n    font-weight: normal;\n    position: absolute;\n    width: fit-content;\n    ", ": 0;\n    left: 0;\n    right: 0;\n    display: block;\n    text-align: center;\n    margin: 0;\n    margin-left: auto;\n    margin-right: auto;\n    ", ": ", ";\n  }\n"]),
     _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  margin: 0;\n  padding: 0;\n  &::before,\n  &::after {\n    content: \"\";\n    position: absolute;\n    ", ": 0;\n    ", ": 1px solid\n      ", ";\n    /* width: ", "; */\n    width:calc(51% - ", ");\n  }\n  &::before {\n    left: 0;\n  }\n  &::after {\n    right: 0;\n  }\n"]);
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -271,7 +271,7 @@ var BoxHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["d" /* default 
   var _ref2$as = _ref2.as,
       as = _ref2$as === void 0 ? "h2" : _ref2$as;
   return elements[as].main;
-}, __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["w" /* lineHeightTight */], function (props) {
+}, __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["z" /* serif */], __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["v" /* lineHeightTight */], function (props) {
   return props.top ? "border-top: none" : "border-bottom: none";
 }, function (props) {
   return props.subtitle ? "\"".concat(props.subtitle, "\"") : " ";
@@ -335,7 +335,7 @@ function (_Component) {
         var fontSizeInPixels = BASE_FONT_SIZE * FONT_MULTIPLE;
         var leftAndRightPadding = fontSizeInPixels * 2;
         return txt.length > 0 ? __WEBPACK_IMPORTED_MODULE_2_string_pixel_width___default()(txt, {
-          font: "Arial",
+          font: "Times New Roman",
           size: fontSizeInPixels
         }) + leftAndRightPadding : 0;
       }
@@ -360,7 +360,7 @@ function (_Component) {
         top: top,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 109
         }
       }), children, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(BottomBorder, {
         inverse: inverse,
@@ -368,7 +368,7 @@ function (_Component) {
         width: subTitleWidth / 2,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 117
         }
       }));
     }
@@ -385,7 +385,7 @@ var BoxH1 = function BoxH1(_ref6) {
     as: "h1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 124
     }
   }), children);
 };
@@ -398,7 +398,7 @@ var SectionBoxTitle = function SectionBoxTitle(_ref7) {
     top: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 130
     }
   }), children);
 };
@@ -1112,6 +1112,9 @@ var Footer = __WEBPACK_IMPORTED_MODULE_3_styled_components__["d" /* default */].
 var Layout = function Layout(_ref) {
   var children = _ref.children;
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Root__["a" /* default */], {
+    theme: {
+      primaryColor: "#cd7d7a"
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
@@ -1206,7 +1209,7 @@ var NavItem = __WEBPACK_IMPORTED_MODULE_1_styled_components__["d" /* default */]
   return props.theme.white ? props.theme.white : __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["H" /* white */];
 }, __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["F" /* spacing8 */]);
 var BrandName = __WEBPACK_IMPORTED_MODULE_1_styled_components__["d" /* default */].h2(_templateObject3, function (props) {
-  return props.theme.fontFamily ? props.theme.fontFamily : __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["z" /* sans */];
+  return props.theme.fontFamily ? props.theme.fontFamily : __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["y" /* sans */];
 }, __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["k" /* fontSize18 */], __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["F" /* spacing8 */]);
 var BrandLink = __WEBPACK_IMPORTED_MODULE_1_styled_components__["d" /* default */].a(_templateObject4, function (props) {
   return props.theme.white ? props.theme.white : __WEBPACK_IMPORTED_MODULE_3__constants_styled_constants__["H" /* white */];
@@ -1334,13 +1337,13 @@ function (_React$Component) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__ = __webpack_require__("./components/constants/styled-constants.js");
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n\n  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');\n\n  *, *:before, *:after {\n    box-sizing: border-box;\n  }\n\n  html {\n    font: normal normal 400 ", "/", " ", ";\n    -ms-text-size-adjust: 100%;\n    -webkit-text-size-adjust: 100%;\n  }\n\n  body {\n    color: ", ";\n    margin: 0;\n  }\n\n  ::selection {\n      background: #d9f7fc;\n  }\n\n  normalize {\n    display: block;\n\n    & article,\n    & aside,\n    & details,\n    & figcaption,\n    & figure,\n    & footer,\n    & header,\n    & hgroup,\n    & main,\n    & menu,\n    & nav,\n    & section,\n    & summary {\n      display: block;\n    }\n\n    & audio,\n    & canvas,\n    & progress,\n    & video {\n      display: inline-block;\n      vertical-align: baseline;\n    }\n\n    & audio:not([controls]) {\n      display: none;\n      height: 0;\n    }\n\n    & [hidden],\n    & template {\n      display: none;\n    }\n\n    & a {\n      background-color: transparent;\n    }\n\n    & a:active,\n    & a:hover {\n      outline: 0;\n    }\n\n    & abbr[title] {\n      border-bottom: 1px dotted;\n    }\n\n    & b,\n    & strong {\n      font-weight: bold;\n    }\n\n    & dfn {\n      font-style: italic;\n    }\n\n    & h1 {\n      font-size: 2em;\n      margin: 0.67em 0;\n    }\n\n    & mark {\n      background: ", ";\n      color: ", ";\n    }\n\n    & small {\n      font-size: 80%;\n    }\n\n    & sub,\n    & sup {\n      font-size: 75%;\n      line-height: 0;\n      position: relative;\n      vertical-align: baseline;\n    }\n\n    & sup {\n      top: -0.5em;\n    }\n\n    & sub {\n      bottom: -0.25em;\n    }\n\n    & img {\n      border: 0;\n    }\n\n    & svg:not(:root) {\n      overflow: hidden;\n    }\n\n    & figure {\n      margin: 1em 40px;\n    }\n\n    & hr {\n      height: 0;\n    }\n\n    & pre {\n      overflow: auto;\n    }\n\n    & code,\n    & kbd,\n    & pre,\n    & samp {\n      font-family: monospace, monospace;\n      font-size: 1em;\n    }\n\n    & button,\n    & input,\n    & optgroup,\n    & select,\n    & textarea {\n      color: inherit;\n      font: inherit;\n      margin: 0;\n    }\n\n    & button {\n      overflow: visible;\n    }\n\n    & button,\n    & select {\n      text-transform: none;\n    }\n    button,\n    html input[type=\"button\"],\n    input[type=\"reset\"],\n    input[type=\"submit\"] {\n      -webkit-appearance: button;\n      cursor: pointer;\n    }\n\n    & button[disabled],\n    & html input[disabled] {\n      cursor: default;\n    }\n\n    & button::-moz-focus-inner,\n    & input::-moz-focus-inner {\n      border: 0;\n      padding: 0;\n    }\n\n    & input {\n      line-height: normal;\n    }\n\n    & input[type=\"checkbox\"],\n    & input[type=\"radio\"] {\n      box-sizing: border-box;\n      padding: 0;\n    }\n\n    & input[type=\"number\"]::-webkit-inner-spin-button,\n    & input[type=\"number\"]::-webkit-outer-spin-button {\n      height: auto;\n    }\n\n    & input[type=\"search\"] {\n      -webkit-appearance: textfield;\n      box-sizing: content-box;\n    }\n\n    & input[type=\"search\"]::-webkit-search-cancel-button,\n    & input[type=\"search\"]::-webkit-search-decoration {\n      -webkit-appearance: none;\n    }\n\n    & fieldset {\n      border: 1px solid ", ";\n      margin: 0 2px;\n      padding: 0.35em 0.625em 0.75em;\n    }\n\n    & legend {\n      border: 0;\n      padding: 0;\n    }\n\n    & textarea {\n      overflow: auto;\n    }\n\n    & optgroup {\n      font-weight: bold;\n    }\n\n    & table {\n      border-collapse: collapse;\n      border-spacing: 0;\n    }\n\n    & td,\n    & th {\n      padding: 0;\n    }\n  }\n\n  & a {\n    color: ", ";\n    text-decoration: none;\n\n    &:hover {\n        color: ", "\n    }\n}\n\n  & h1, & h2, & h3, & h4, & h5, & h6 {\n      font-family: ", ";\n  }\n\n  & h1 {\n      font: normal normal normal ", "/", " ", ";\n      font-weight: 300;\n  }\n\n  & h2 {\n      font-size: ", ";\n      line-height: ", ";\n      font-weight: 100;\n  }\n\n  & h3, & h4, & h5, & h6 {\n      font-size: ", ";\n      font-weight: bold;\n  }\n\n  & h3 {\n      line-height: ", ";\n      letter-spacing: 0.00278em;\n  }\n\n  & h4, & h5, & h6 {\n      line-height: ", ";\n  }\n\n  & dt {\n      font-size: ", ";\n      font-style: italic;\n      font-weight: 400;\n      line-height: ", ";\n  }\n\n  & dd {\n      margin: 0;\n  }\n\n  & code {\n      font-family: ", ";\n      white-space: pre-wrap;\n  }\n"]);
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n\n@import url('https://fonts.googleapis.com/css?family=Montserrat|Slabo+27px');\n\n  *, *:before, *:after {\n    box-sizing: border-box;\n  }\n\n  html {\n    font: normal normal 400 ", "/", " ", ";\n    -ms-text-size-adjust: 100%;\n    -webkit-text-size-adjust: 100%;\n  }\n\n  body {\n    color: ", ";\n    margin: 0;\n  }\n\n  ::selection {\n      background: #d9f7fc;\n  }\n\n  normalize {\n    display: block;\n\n    & article,\n    & aside,\n    & details,\n    & figcaption,\n    & figure,\n    & footer,\n    & header,\n    & hgroup,\n    & main,\n    & menu,\n    & nav,\n    & section,\n    & summary {\n      display: block;\n    }\n\n    & audio,\n    & canvas,\n    & progress,\n    & video {\n      display: inline-block;\n      vertical-align: baseline;\n    }\n\n    & audio:not([controls]) {\n      display: none;\n      height: 0;\n    }\n\n    & [hidden],\n    & template {\n      display: none;\n    }\n\n    & a {\n      background-color: transparent;\n    }\n\n    & a:active,\n    & a:hover {\n      outline: 0;\n    }\n\n    & abbr[title] {\n      border-bottom: 1px dotted;\n    }\n\n    & b,\n    & strong {\n      font-weight: bold;\n    }\n\n    & dfn {\n      font-style: italic;\n    }\n\n    & h1 {\n      font-size: 2em;\n      margin: 0.67em 0;\n    }\n\n    & mark {\n      background: ", ";\n      color: ", ";\n    }\n\n    & small {\n      font-size: 80%;\n    }\n\n    & sub,\n    & sup {\n      font-size: 75%;\n      line-height: 0;\n      position: relative;\n      vertical-align: baseline;\n    }\n\n    & sup {\n      top: -0.5em;\n    }\n\n    & sub {\n      bottom: -0.25em;\n    }\n\n    & img {\n      border: 0;\n    }\n\n    & svg:not(:root) {\n      overflow: hidden;\n    }\n\n    & figure {\n      margin: 1em 40px;\n    }\n\n    & hr {\n      height: 0;\n    }\n\n    & pre {\n      overflow: auto;\n    }\n\n    & code,\n    & kbd,\n    & pre,\n    & samp {\n      font-family: monospace, monospace;\n      font-size: 1em;\n    }\n\n    & button,\n    & input,\n    & optgroup,\n    & select,\n    & textarea {\n      color: inherit;\n      font: inherit;\n      margin: 0;\n    }\n\n    & button {\n      overflow: visible;\n    }\n\n    & button,\n    & select {\n      text-transform: none;\n    }\n    button,\n    html input[type=\"button\"],\n    input[type=\"reset\"],\n    input[type=\"submit\"] {\n      -webkit-appearance: button;\n      cursor: pointer;\n    }\n\n    & button[disabled],\n    & html input[disabled] {\n      cursor: default;\n    }\n\n    & button::-moz-focus-inner,\n    & input::-moz-focus-inner {\n      border: 0;\n      padding: 0;\n    }\n\n    & input {\n      line-height: normal;\n    }\n\n    & input[type=\"checkbox\"],\n    & input[type=\"radio\"] {\n      box-sizing: border-box;\n      padding: 0;\n    }\n\n    & input[type=\"number\"]::-webkit-inner-spin-button,\n    & input[type=\"number\"]::-webkit-outer-spin-button {\n      height: auto;\n    }\n\n    & input[type=\"search\"] {\n      -webkit-appearance: textfield;\n      box-sizing: content-box;\n    }\n\n    & input[type=\"search\"]::-webkit-search-cancel-button,\n    & input[type=\"search\"]::-webkit-search-decoration {\n      -webkit-appearance: none;\n    }\n\n    & fieldset {\n      border: 1px solid ", ";\n      margin: 0 2px;\n      padding: 0.35em 0.625em 0.75em;\n    }\n\n    & legend {\n      border: 0;\n      padding: 0;\n    }\n\n    & textarea {\n      overflow: auto;\n    }\n\n    & optgroup {\n      font-weight: bold;\n    }\n\n    & table {\n      border-collapse: collapse;\n      border-spacing: 0;\n    }\n\n    & td,\n    & th {\n      padding: 0;\n    }\n  }\n\n  & a {\n    color: ", ";\n    text-decoration: none;\n\n    &:hover {\n        color: ", "\n    }\n}\n\n  & h1, & h2, & h3, & h4, & h5, & h6 {\n      font-family: ", ";\n  }\n\n  & h1 {\n      font: normal normal normal ", "/", " ", ";\n      font-weight: 300;\n  }\n\n  & h2 {\n      font-size: ", ";\n      line-height: ", ";\n      font-weight: 100;\n  }\n\n  & h3, & h4, & h5, & h6 {\n      font-size: ", ";\n      font-weight: bold;\n  }\n\n  & h3 {\n      line-height: ", ";\n      letter-spacing: 0.00278em;\n  }\n\n  & h4, & h5, & h6 {\n      line-height: ", ";\n  }\n\n  & dt {\n      font-size: ", ";\n      font-style: italic;\n      font-weight: 400;\n      line-height: ", ";\n  }\n\n  & dd {\n      margin: 0;\n  }\n\n  & code {\n      font-family: ", ";\n      white-space: pre-wrap;\n  }\n"]);
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
 
-var Normalize = Object(__WEBPACK_IMPORTED_MODULE_0_styled_components__["c" /* createGlobalStyle */])(_templateObject, __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["p" /* fontSizeRoot */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["v" /* lineHeight */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["z" /* sans */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["G" /* text120 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["I" /* yellow10 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["a" /* black */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["r" /* grey15 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["d" /* colorLink */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["e" /* colorLinkHover */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["z" /* sans */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["o" /* fontSize42 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["w" /* lineHeightTight */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["z" /* sans */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["m" /* fontSize28 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["w" /* lineHeightTight */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["k" /* fontSize18 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["w" /* lineHeightTight */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["w" /* lineHeightTight */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["k" /* fontSize18 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["w" /* lineHeightTight */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["y" /* monospace */]);
+var Normalize = Object(__WEBPACK_IMPORTED_MODULE_0_styled_components__["c" /* createGlobalStyle */])(_templateObject, __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["p" /* fontSizeRoot */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["u" /* lineHeight */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["y" /* sans */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["G" /* text120 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["I" /* yellow10 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["a" /* black */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["r" /* grey15 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["d" /* colorLink */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["e" /* colorLinkHover */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["y" /* sans */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["o" /* fontSize42 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["v" /* lineHeightTight */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["y" /* sans */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["m" /* fontSize28 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["v" /* lineHeightTight */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["k" /* fontSize18 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["v" /* lineHeightTight */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["v" /* lineHeightTight */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["k" /* fontSize18 */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["v" /* lineHeightTight */], __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["x" /* monospace */]);
 /* harmony default export */ __webpack_exports__["a"] = (Normalize);
 
 /***/ }),
@@ -1695,12 +1698,12 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var type = {
   light: {
-    "background-color": __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["u" /* lightGrey */],
+    "background-color": __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["H" /* white */],
     color: __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["a" /* black */]
   },
   // eslint-disable-line no-use-before-define
   medium: {
-    "background-color": __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["x" /* mediumGrey */],
+    "background-color": __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["w" /* mediumGrey */],
     color: __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["a" /* black */]
   },
   // eslint-disable-line no-use-before-define
@@ -1715,7 +1718,7 @@ var type = {
   },
   // eslint-disable-line no-use-before-define
   default: {
-    "background-color": __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["u" /* lightGrey */],
+    "background-color": __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["H" /* white */],
     color: __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["a" /* black */]
   }
 };
@@ -1898,7 +1901,7 @@ var Inner = __WEBPACK_IMPORTED_MODULE_1_styled_components__["d" /* default */].d
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return links; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return portfolio; });
 var about = {
-  description: "My name is Travis Waith-Mair and I am a I'm an excited and ambitious Web Developer, currently working just outside of Salt Lake City, UT. Outside of my day job, I building and maintaining open source projects, freelance work, and hand out my kids at home.  I love Javascript and especially React.js.  Outside of web development, I love all things nerdy.  I often can be found debating Star Wars, super heroes, and most anything else nerdy.   I have learned to speak Thai, and some Spanish and Esperanto.  I am both driven and self-motivated, and I am constantly experimenting with new technologies and techniques. I am very passionate about Web Development, and driven to learn and understand new technologies, implement fundamental design principles, and write reliable, well-tested, reusable code.",
+  description: "My name is Travis Waith-Mair and I'm an excited and energetic Web Developer, currently working just outside of Salt Lake City, UT. Outside of my day job, I enjoy building and maintaining open source projects, freelance work, and hand out my kids at home.  I love Javascript and especially React.js.  Outside of web development, I love all things nerdy.  I often can be found debating Star Wars, super heroes, and most anything else nerdy.   I have learned to speak Thai, and some Spanish and Esperanto.  I am both driven and self-motivated, and I am constantly experimenting with new technologies and techniques. I am very passionate about Web Development, and driven to learn and understand new technologies, implement fundamental design principles, and write reliable, well-tested, reusable code.",
   languages: ["HTML", "CSS", "JavaScript", "ES6", "React.js", "Bootstrap", "MongoDB", "Angular.js", "Express", "Node"]
 };
 var list = ["J. Travis Waith-Mair", "travis.mair@gmail.com", "(801) 200 - 7597", "Salt Lake City, Utah"];
@@ -1963,8 +1966,8 @@ var portfolio = {
 /* unused harmony export yellow30 */
 /* unused harmony export yellow40 */
 /* unused harmony export yellow */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return lightGrey; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return mediumGrey; });
+/* unused harmony export lightGrey */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return mediumGrey; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return darkGrey; });
 /* unused harmony export grey3 */
 /* unused harmony export grey5 */
@@ -1984,9 +1987,9 @@ var portfolio = {
 /* unused harmony export colorLink30 */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return colorLink; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return colorLinkHover; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return sans; });
-/* unused harmony export serif */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return monospace; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return sans; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return serif; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return monospace; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return fontSizeRoot; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return fontSize11; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return fontSize13; });
@@ -1997,8 +2000,8 @@ var portfolio = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return fontSize28; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return fontSize32; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return fontSize42; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return lineHeightTight; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return lineHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return lineHeightTight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return lineHeight; });
 /* unused harmony export capitalize */
 /* unused harmony export uppercase */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return spacing4; });
@@ -2062,7 +2065,7 @@ var grey = grey30;
 var text120 = "#212225"; // onyxtext
 
 var black = "#0d0f10";
-var white = "#f9f9f9";
+var white = "#fafafa";
 /* Util Colors */
 
 var colorError = "orange"; // TODO:red10;
@@ -2075,8 +2078,8 @@ var colorLink = colorLink30;
 var colorLinkHover = colorLink; // TODO:blue20;
 //normal 16px/1.4em
 
-var sans = "\"Segoe UI\",Roboto,Oxygen,Ubuntu,Cantarell,\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\",Arial,sans-serif;";
-var serif = "\"Baskerville\", \"Palatino\", \"Palatino Linotype\", \"Georgia\", \"Times New Roman\", serif";
+var sans = "Montserrat, Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", Arial, sans-serif;";
+var serif = "\"Slabo 27px\", \"Palatino\", \"Palatino Linotype\", \"Georgia\", \"Times New Roman\", serif";
 var monospace = "\"Courier New\", Courier, monospace";
 /* effectively 16px (16px * 100% = 16px) but respects users' special needs */
 

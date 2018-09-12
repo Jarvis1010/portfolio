@@ -19,7 +19,7 @@ import {
 
 const Normalize = createGlobalStyle`
 
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Slabo+27px');
 
   *, *:before, *:after {
     box-sizing: border-box;
