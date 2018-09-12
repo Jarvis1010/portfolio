@@ -33,7 +33,7 @@ export const grey = grey30;
 
 export const text120 = "#212225"; // onyxtext
 export const black = "#0d0f10";
-export const white = "#fafafa";
+export const white = "#fff";
 
 /* Util Colors */
 export const colorError = "orange"; // TODO:red10;

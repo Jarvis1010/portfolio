@@ -9,6 +9,8 @@ import { spacing16, grey, breakWidth480 } from "../constants/styled-constants";
 
 const AboutWrapper = styled(PadBox)`
   scroll-snap-align: start;
+  min-height: 100vh;
+  display: grid;
 `;
 
 const SplitGrid = styled(Grid)`
@@ -28,6 +30,7 @@ const Paragraph = styled.p`
 const Details = styled(Grid)`
   max-width: ${breakWidth480};
   justify-items: center;
+  justify-self: center;
   margin: 0;
 `;
 
@@ -43,7 +46,8 @@ const ContactList = styled(Stack)`
     border-bottom: 1px solid ${grey};
     top: 0;
     position: absolute;
-    width: 100%;
+    width: 90%;
+    height: 100%;
   }
 `;
 

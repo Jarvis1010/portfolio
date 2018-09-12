@@ -18,12 +18,12 @@ __NEXT_REGISTER_PAGE('/', function() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__constants_styled_constants__ = __webpack_require__("./components/constants/styled-constants.js");
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/AboutSection/AboutSection.js";
 
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  scroll-snap-align: start;\n"]),
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  scroll-snap-align: start;\n  min-height: 100vh;\n  display: grid;\n"]),
     _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  margin-top: ", ";\n  justify-content: space-around;\n"]),
     _templateObject3 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  justify-self: center;\n"]),
     _templateObject4 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  max-width: ", ";\n  line-height: 2rem;\n"]),
-    _templateObject5 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  max-width: ", ";\n  justify-items: center;\n  margin: 0;\n"]),
-    _templateObject6 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  list-style: none;\n  padding-left: 0;\n  margin-left: 0;\n  width: 100%;\n  & > li:not(:last-child):after {\n    content: \"\";\n    display: block;\n    padding: ", ";\n    border-bottom: 1px solid ", ";\n    top: 0;\n    position: absolute;\n    width: 100%;\n  }\n"]),
+    _templateObject5 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  max-width: ", ";\n  justify-items: center;\n  justify-self: center;\n  margin: 0;\n"]),
+    _templateObject6 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  list-style: none;\n  padding-left: 0;\n  margin-left: 0;\n  width: 100%;\n  & > li:not(:last-child):after {\n    content: \"\";\n    display: block;\n    padding: ", ";\n    border-bottom: 1px solid ", ";\n    top: 0;\n    position: absolute;\n    width: 90%;\n    height: 100%;\n  }\n"]),
     _templateObject7 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  position: relative;\n  height: 100%;\n  width: 100%;\n"]),
     _templateObject8 = /*#__PURE__*/ _taggedTemplateLiteral([""]),
     _templateObject9 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  height: auto;\n  width: 100%;\n  border-radius: 50%;\n  margin: auto;\n  max-width: 280px;\n"]);
@@ -64,86 +64,69 @@ var AboutSection = function AboutSection() {
     bottom: "32",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 73
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__BoxTitles_BoxTitle__["b" /* SectionBoxTitle */], {
     inverse: true,
     subtitle: "All about me",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 74
     }
   }, "Personal Details"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__PadBox_PadBox__["a" /* default */], {
     size: "0",
     top: "16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 77
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(SplitGrid, {
     minWidth: "280px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 78
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Profile, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 79
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 80
     }
   }, "Professional Profile"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Paragraph, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 81
     }
   }, __WEBPACK_IMPORTED_MODULE_6__constants_constants__["a" /* about */].description)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Details, {
     minWidth: "280px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 83
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactList, {
     size: "8",
     as: "ul",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 84
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactListItem, {
     size: "8",
     as: "li",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    }
-  }, "Name:"), " Travis Waith-Mair"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactListItem, {
-    size: "8",
-    as: "li",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong", {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 85
     }
-  }, "Email:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Email, {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 86
     }
-  }, " travis.mair@gmail.com")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactListItem, {
+  }, "Name:"), " Travis Waith-Mair"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactListItem, {
     size: "8",
     as: "li",
     __source: {
@@ -155,12 +138,12 @@ var AboutSection = function AboutSection() {
       fileName: _jsxFileName,
       lineNumber: 89
     }
-  }, "Telephone:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Telephone, {
+  }, "Email:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Email, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 90
     }
-  }, " (801) 200-7597")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactListItem, {
+  }, " travis.mair@gmail.com")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactListItem, {
     size: "8",
     as: "li",
     __source: {
@@ -172,12 +155,29 @@ var AboutSection = function AboutSection() {
       fileName: _jsxFileName,
       lineNumber: 93
     }
+  }, "Telephone:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Telephone, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    }
+  }, " (801) 200-7597")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ContactListItem, {
+    size: "8",
+    as: "li",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    }
   }, "Location:"), " Salt Lake City, Utah")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Image, {
     src: "static/images/profile.png",
     alt: "Profile Photo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 100
     }
   })))));
 };
@@ -541,7 +541,7 @@ var ContentSection = function ContentSection(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PadBox_PadBox__ = __webpack_require__("./components/PadBox/PadBox.js");
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/ExperienceSections/ExperienceSection.js";
 
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  scroll-snap-align: start;\n"]);
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  scroll-snap-align: start;\n  min-height: 100vh;\n  display: grid;\n"]);
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -563,14 +563,14 @@ var Experience = function Experience() {
     bottom: "32",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BoxTitles_BoxTitle__["b" /* SectionBoxTitle */], {
     inverse: true,
     subtitle: "What I have been doing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
     }
   }, "Work Experience"));
 };
@@ -2065,7 +2065,7 @@ var grey = grey30;
 var text120 = "#212225"; // onyxtext
 
 var black = "#0d0f10";
-var white = "#fafafa";
+var white = "#fff";
 /* Util Colors */
 
 var colorError = "orange"; // TODO:red10;

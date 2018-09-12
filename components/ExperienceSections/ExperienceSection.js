@@ -9,6 +9,8 @@ import PadBox from "../PadBox/PadBox";
 
 const ExperienceWrapper = styled(PadBox)`
   scroll-snap-align: start;
+  min-height: 100vh;
+  display: grid;
 `;
 
 const Experience = () => (
