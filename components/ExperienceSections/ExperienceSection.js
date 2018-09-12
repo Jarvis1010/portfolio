@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 // import Grid from "../Grid";
 // import Stack from "../Stack/Stack";
+import Split from "../Split";
 import { SectionBoxTitle } from "../BoxTitles/BoxTitle";
 import PadBox from "../PadBox/PadBox";
 // import { about } from "../constants/constants";
@@ -18,6 +19,12 @@ const Experience = () => (
     <SectionBoxTitle inverse subtitle="What I have been doing">
       Work Experience
     </SectionBoxTitle>
+    <PadBox size="64" top="16">
+      <Split fraction="1/3">
+        <PadBox style={{ borderRight: "1px solid black" }}>dates</PadBox>
+        <PadBox>details</PadBox>
+      </Split>
+    </PadBox>
   </ExperienceWrapper>
 );
 

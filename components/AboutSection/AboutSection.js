@@ -9,7 +9,8 @@ import {
   spacing16,
   spacing32,
   grey,
-  breakWidth480
+  breakWidth480,
+  breakWidth840
 } from "../constants/styled-constants";
 
 const AboutWrapper = styled(PadBox)`
@@ -26,7 +27,7 @@ const SplitGrid = styled(Grid)`
 const Profile = styled.section`
   justify-self: center;
   padding: ${spacing32};
-  @media (min-width: ${breakWidth480}) {
+  @media (min-width: ${breakWidth840}) {
     box-shadow: -11px 14px 34px 6px rgba(128, 128, 128, 1);
   }
 `;
@@ -43,7 +44,7 @@ const Details = styled(Grid)`
   padding: ${spacing32};
   margin: 0;
   width: 100%;
-  @media (min-width: ${breakWidth480}) {
+  @media (min-width: ${breakWidth840}) {
     box-shadow: -11px 14px 34px 6px rgba(128, 128, 128, 1);
   }
 `;
