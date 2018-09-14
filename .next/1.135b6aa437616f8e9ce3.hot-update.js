@@ -521,7 +521,7 @@ var addUpUntilIndex = function addUpUntilIndex(sizes, index) {
 var makeStyleTag = function makeStyleTag(target, tagEl, insertBefore) {
   var el = document.createElement('style');
   el.setAttribute(SC_ATTR, '');
-  el.setAttribute(SC_VERSION_ATTR, "4.0.0-beta.2-0");
+  el.setAttribute(SC_VERSION_ATTR, "4.0.0-beta.3-side-effect-test");
 
   var nonce = getNonce();
   if (nonce) {
@@ -550,7 +550,7 @@ var makeStyleTag = function makeStyleTag(target, tagEl, insertBefore) {
 var wrapAsHtmlTag = function wrapAsHtmlTag(css, names) {
   return function (additionalAttrs) {
     var nonce = getNonce();
-    var attrs = [nonce && 'nonce="' + nonce + '"', SC_ATTR + '="' + stringifyNames(names) + '"', SC_VERSION_ATTR + '="' + "4.0.0-beta.2-0" + '"', additionalAttrs];
+    var attrs = [nonce && 'nonce="' + nonce + '"', SC_ATTR + '="' + stringifyNames(names) + '"', SC_VERSION_ATTR + '="' + "4.0.0-beta.3-side-effect-test" + '"', additionalAttrs];
 
     var htmlAttr = attrs.filter(Boolean).join(' ');
     return '<style ' + htmlAttr + '>' + css() + '</style>';
@@ -562,7 +562,7 @@ var wrapAsElement = function wrapAsElement(css, names) {
   return function () {
     var _props;
 
-    var props = (_props = {}, _props[SC_ATTR] = stringifyNames(names), _props[SC_VERSION_ATTR] = "4.0.0-beta.2-0", _props);
+    var props = (_props = {}, _props[SC_ATTR] = stringifyNames(names), _props[SC_VERSION_ATTR] = "4.0.0-beta.3-side-effect-test", _props);
 
     var nonce = getNonce();
     if (nonce) {
@@ -675,18 +675,20 @@ var makeSpeedyTag = function makeSpeedyTag(el, getImportRuleTag) {
   };
 
   return {
-    styleTag: el,
+    clone: function clone() {
+      throw new StyledComponentsError(5);
+    },
+
+    css: css,
     getIds: getIdsFromMarkersFactory(markers),
     hasNameForId: hasNameForId(names),
     insertMarker: insertMarker,
     insertRules: insertRules,
     removeRules: removeRules,
-    css: css,
-    toHTML: wrapAsHtmlTag(css, names),
+    sealed: false,
+    styleTag: el,
     toElement: wrapAsElement(css, names),
-    clone: function clone() {
-      throw new StyledComponentsError(5);
-    }
+    toHTML: wrapAsHtmlTag(css, names)
   };
 };
 
@@ -777,6 +779,7 @@ var makeBrowserTag = function makeBrowserTag(el, getImportRuleTag) {
     insertMarker: insertMarker,
     insertRules: insertRules,
     removeRules: removeRules,
+    sealed: false,
     styleTag: el,
     toElement: wrapAsElement(css, names),
     toHTML: wrapAsHtmlTag(css, names)
@@ -841,6 +844,7 @@ var makeServerTagInternal = function makeServerTagInternal(namesArg, markersArg)
     insertMarker: insertMarker,
     insertRules: insertRules,
     removeRules: removeRules,
+    sealed: false,
     styleTag: null,
     toElement: wrapAsElement(css, names),
     toHTML: wrapAsHtmlTag(css, names)
@@ -960,7 +964,6 @@ var StyleSheet = function () {
 
     sheetRunningId += 1;
     this.id = sheetRunningId;
-    this.sealed = false;
     this.forceServer = forceServer;
     this.target = forceServer ? null : target;
     this.tagMap = {};
@@ -984,7 +987,7 @@ var StyleSheet = function () {
     var isStreamed = false;
 
     /* retrieve all of our SSR style elements from the DOM */
-    var nodes = document.querySelectorAll('style[' + SC_ATTR + '][' + SC_VERSION_ATTR + '="' + "4.0.0-beta.2-0" + '"]');
+    var nodes = document.querySelectorAll('style[' + SC_ATTR + '][' + SC_VERSION_ATTR + '="' + "4.0.0-beta.3-side-effect-test" + '"]');
     var nodesSize = nodes.length;
 
     /* abort rehydration if no previous style tags were found */
@@ -1055,6 +1058,7 @@ var StyleSheet = function () {
 
   StyleSheet.prototype.clone = function clone() {
     var sheet = new StyleSheet(this.target, this.forceServer);
+
     /* add to clone array */
     this.clones.push(sheet);
 
@@ -1083,7 +1087,11 @@ var StyleSheet = function () {
 
   StyleSheet.prototype.sealAllTags = function sealAllTags() {
     this.capacity = 1;
-    this.sealed = true;
+
+    this.tags.forEach(function (tag) {
+      // eslint-disable-next-line no-param-reassign
+      tag.sealed = true;
+    });
   };
 
   StyleSheet.prototype.makeTag = function makeTag$$1(tag) {
@@ -1097,7 +1105,7 @@ var StyleSheet = function () {
   StyleSheet.prototype.getTagForId = function getTagForId(id) {
     /* simply return a tag, when the componentId was already assigned one */
     var prev = this.tagMap[id];
-    if (prev !== undefined && !this.sealed) {
+    if (prev !== undefined && !prev.sealed) {
       return prev;
     }
 
@@ -1105,9 +1113,9 @@ var StyleSheet = function () {
 
     /* shard (create a new tag) if the tag is exhausted (See MAX_SIZE) */
     this.capacity -= 1;
+
     if (this.capacity === 0) {
       this.capacity = MAX_SIZE;
-      this.sealed = false;
       tag = this.makeTag(tag);
       this.tags.push(tag);
     }
@@ -1158,11 +1166,13 @@ var StyleSheet = function () {
   StyleSheet.prototype.inject = function inject(id, cssRules, name) {
     var clones = this.clones;
 
+
     for (var i = 0; i < clones.length; i += 1) {
       clones[i].inject(id, cssRules, name);
     }
 
     var tag = this.getTagForId(id);
+
     /* add deferred rules for component */
     if (this.deferred[id] !== undefined) {
       // Combine passed cssRules with previously deferred CSS rules
@@ -1170,6 +1180,7 @@ var StyleSheet = function () {
       // do the same (see clones[i].inject)
       var rules = this.deferred[id].concat(cssRules);
       tag.insertRules(id, rules, name);
+
       this.deferred[id] = undefined;
     } else {
       tag.insertRules(id, cssRules, name);
@@ -1564,7 +1575,6 @@ var ServerStyleSheet = function () {
 
   ServerStyleSheet.prototype.getStyleTags = function getStyleTags() {
     this.complete();
-
     return this.instance.toHTML();
   };
 
@@ -2460,4 +2470,4 @@ function (_Document) {
 /***/ })
 
 })
-//# sourceMappingURL=1.8e36c0cdcb9ac7e8e69d.hot-update.js.map
+//# sourceMappingURL=1.135b6aa437616f8e9ce3.hot-update.js.map

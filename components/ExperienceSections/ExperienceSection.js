@@ -22,7 +22,10 @@ const Experience = () => (
     <PadBox size="64" top="16">
       <Split fraction="1/3">
         <PadBox style={{ borderRight: "1px solid black" }}>dates</PadBox>
-        <PadBox>details</PadBox>
+        <PadBox>
+          Duis consectetur veniam eiusmod amet aliquip incididunt nostrud
+          laboris est.
+        </PadBox>
       </Split>
     </PadBox>
   </ExperienceWrapper>

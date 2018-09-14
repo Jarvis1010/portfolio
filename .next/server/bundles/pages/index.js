@@ -675,7 +675,7 @@ var Experience = function Experience() {
       fileName: _jsxFileName,
       lineNumber: 25
     }
-  }, "details"))));
+  }, "Duis consectetur veniam eiusmod amet aliquip incididunt nostrud laboris est."))));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Experience);
