@@ -1,6 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": ["eslint:recommended", "plugin:flowtype/recommended"],
+  "extends": ["eslint:recommended", "plugin:jsx-a11y/recommended"],
   "plugins": ["react", "prettier", "import", "jsx-a11y", "jest", "jsx-a11y"],
   "parserOptions": {
     "ecmaVersion": 8,
