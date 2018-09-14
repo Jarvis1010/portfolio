@@ -1,5 +1,5 @@
-import React from 'react';
-import { ItemWrapper, ProjectLink, ScreenShot } from './ProjectItemStyles';
+import React from "react";
+import { ItemWrapper, ProjectLink, ScreenShot } from "./ProjectItemStyles";
 
 export const ProjectItem = ({ src, href, alt, desc }) => (
   <ItemWrapper>

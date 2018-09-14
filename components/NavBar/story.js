@@ -43,16 +43,19 @@ storiesOf("NavBar", module)
       <NavSlider>
         <NavItem>
           <Link href="/">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>test</a>
           </Link>
         </NavItem>
         <NavItem>
           <Link href="/">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>test</a>
           </Link>
         </NavItem>
         <NavItem>
           <Link href="/">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>test</a>
           </Link>
         </NavItem>
@@ -72,16 +75,19 @@ storiesOf("NavBar", module)
       <NavCollapse>
         <NavItem>
           <Link href="/">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>test</a>
           </Link>
         </NavItem>
         <NavItem>
           <Link href="/">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>test</a>
           </Link>
         </NavItem>
         <NavItem>
           <Link href="/">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>test</a>
           </Link>
         </NavItem>

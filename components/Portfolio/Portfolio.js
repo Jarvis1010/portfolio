@@ -1,8 +1,8 @@
-import React from 'react';
-import ProjectList from '../ProjectList/ProjectList';
-import ContentSection from '../ContentSection/ContentSection';
+import React from "react";
+import ProjectList from "../ProjectList/ProjectList";
+import ContentSection from "../ContentSection/ContentSection";
 
-export const Portfolio = ({ className, projectGroups = {} }) => (
+export const Portfolio = ({ projectGroups = {} }) => (
   <ContentSection title="Portfolio">
     {projectGroups &&
       Object.keys(projectGroups).map(key => (

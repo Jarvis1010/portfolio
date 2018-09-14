@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
     const styleTags = sheet.getStyleElement();
 
     return (
-      <html>
+      <html lang="en">
         <Head>
           <title>{pageMeta.title}</title>
           {pageMeta.tags.map(tag => (

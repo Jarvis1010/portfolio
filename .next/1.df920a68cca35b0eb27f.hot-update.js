@@ -2402,6 +2402,7 @@ function (_Document) {
       }));
       var styleTags = sheet.getStyleElement();
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("html", {
+        lang: "en",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 12
@@ -2470,4 +2471,4 @@ function (_Document) {
 /***/ })
 
 })
-//# sourceMappingURL=1.135b6aa437616f8e9ce3.hot-update.js.map
+//# sourceMappingURL=1.df920a68cca35b0eb27f.hot-update.js.map
