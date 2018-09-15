@@ -865,6 +865,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Parallax_Parallax__["a" /* default */], {
+        as: "header",
         backgroundUrl: backgroundImage,
         __source: {
           fileName: _jsxFileName,
@@ -882,6 +883,7 @@ function (_React$Component) {
           lineNumber: 58
         }
       }, "Travis Waith-Mair"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ScrollLink, {
+        "aria-label": "scoll navbar to top",
         href: "#top",
         __source: {
           fileName: _jsxFileName,
@@ -1220,7 +1222,7 @@ var Layout = function Layout(_ref) {
   var children = _ref.children;
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Root__["a" /* default */], {
     theme: {
-      primaryColor: "#cd7d7a"
+      primaryColor: "#BD5751"
     },
     __source: {
       fileName: _jsxFileName,
@@ -1549,14 +1551,16 @@ var Inner = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div(_templ
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_components__ = __webpack_require__("styled-components");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_styled_components__);
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  position: relative;\n  min-height: ", ";\n  &:after {\n    content: \" \";\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: grey;\n    background-size: cover;\n    transform: translateZ(-1px) scale(1.5);\n    z-index: -1;\n    ", ";\n  }\n"]);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__ = __webpack_require__("./components/constants/styled-constants.js");
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  position: relative;\n  min-height: ", ";\n  &:after {\n    content: \" \";\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    background-color: ", ";\n    background-size: cover;\n    transform: translateZ(-1px) scale(1.5);\n    z-index: -1;\n    ", ";\n  }\n"]);
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
+
 var Parallax = __WEBPACK_IMPORTED_MODULE_0_styled_components___default.a.div(_templateObject, function (props) {
   return props.minHeight || "100vh";
-}, function (props) {
+}, __WEBPACK_IMPORTED_MODULE_1__constants_styled_constants__["g" /* darkGrey */], function (props) {
   return props.backgroundUrl && "background: url(".concat(props.backgroundUrl, ") no-repeat center center;");
 });
 /* harmony default export */ __webpack_exports__["a"] = (Parallax);

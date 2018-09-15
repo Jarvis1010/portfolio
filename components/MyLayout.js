@@ -13,7 +13,7 @@ const Footer = styled.footer`
 `;
 
 const Layout = ({ children }) => (
-  <Root theme={{ primaryColor: "#cd7d7a" }}>
+  <Root theme={{ primaryColor: "#BD5751" }}>
     <PageWrapper>
       <Landing />
       <StickyNav />

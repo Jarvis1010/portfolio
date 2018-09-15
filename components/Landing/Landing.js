@@ -53,10 +53,10 @@ class LandingComponent extends React.Component {
   };
   render() {
     return (
-      <Parallax backgroundUrl={backgroundImage}>
+      <Parallax as="header" backgroundUrl={backgroundImage}>
         <Landing>
           <BoxH1 subtitle="Web Developer">Travis Waith-Mair</BoxH1>
-          <ScrollLink href="#top" />
+          <ScrollLink aria-label="scoll navbar to top" href="#top" />
         </Landing>
       </Parallax>
     );
