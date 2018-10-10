@@ -11,7 +11,6 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <title>{pageMeta.title}</title>
           {pageMeta.tags.map(tag => (
             <meta {...tag} />
           ))}

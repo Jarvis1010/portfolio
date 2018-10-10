@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Layout from "../components/MyLayout.js";
 import AboutSection from "../components/AboutSection/AboutSection";
 import ExperienceSection from "../components/ExperienceSections/ExperienceSection";
@@ -14,10 +15,14 @@ import {
 import Stack from "../components/Stack/Stack";
 import { SectionBoxTitle } from "../components/BoxTitles/BoxTitle";
 import Stackable from "../components/Stack/Stackable";
+import { pageMeta } from "../components/constants/constants";
 
 export default () => {
   return (
     <Layout>
+      <Head>
+        <title>{pageMeta.title}</title>
+      </Head>
       <Stack>
         <Stackable type="light">
           <AboutSection />
