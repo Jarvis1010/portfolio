@@ -7,7 +7,6 @@ import PadBox from "../PadBox/PadBox";
 import { about } from "../constants/constants";
 import {
   spacing16,
-  spacing32,
   grey,
   breakWidth480,
   breakWidth840
@@ -20,13 +19,13 @@ const AboutWrapper = styled(PadBox)`
 `;
 
 const SplitGrid = styled(Grid)`
-  margin-top: ${spacing16};
+  margin-top: ${props => props.theme.spacing16 || "1rem"};
   justify-content: space-around;
 `;
 
 const Profile = styled.section`
   justify-self: center;
-  padding: ${spacing32};
+  padding: ${props => props.theme.spacing32 || "2rem"};
   @media (min-width: ${breakWidth840}) {
     box-shadow: -11px 14px 34px 6px rgba(128, 128, 128, 1);
   }
@@ -41,7 +40,7 @@ const Details = styled(Grid)`
   max-width: ${breakWidth480};
   justify-items: center;
   justify-self: center;
-  padding: ${spacing32};
+  padding: ${props => props.theme.spacing32 || "2rem"};
   margin: 0;
   width: 100%;
   @media (min-width: ${breakWidth840}) {

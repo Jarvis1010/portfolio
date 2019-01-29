@@ -4,10 +4,10 @@ import { withMatchMedia } from "../MatchMedia/MatchMedia";
 import Stack from "../Stack/Stack";
 import Parallax from "../Parallax/Parallax";
 import { BoxH1 } from "../BoxTitles/BoxTitle";
-import { white, breakWidth480 } from "../constants/styled-constants";
+import { breakWidth480 } from "../constants/styled-constants";
 
 const Landing = styled(Stack)`
-  color: ${white};
+  color: ${props => props.theme.white || "white"};
   height: 100vh;
   justify-items: center;
 `;
@@ -15,8 +15,8 @@ const Landing = styled(Stack)`
 const backgroundImage = "/static/images/background.jpeg";
 
 const ScrollLink = styled.a`
-  color: ${white};
-  border: 2px solid ${white};
+  color: ${props => props.theme.white || "white"};
+  border: 2px solid ${props => props.theme.white || "white"};
   padding: 2rem;
   margin-bottom: 200px;
   align-self: end;
@@ -41,7 +41,7 @@ const ScrollLink = styled.a`
   }
 `;
 
-class LandingComponent extends React.Component {
+class Scroller extends React.Component {
   componentDidMount() {
     if (this.props.matches) this.scroll();
   }
@@ -52,15 +52,21 @@ class LandingComponent extends React.Component {
     document.querySelector("#inner").scrollTop = window.innerHeight;
   };
   render() {
-    return (
+    return this.props.children;
+  }
+}
+
+const LandingComponent = () => {
+  return (
+    <Scroller>
       <Parallax as="header" backgroundUrl={backgroundImage}>
         <Landing>
           <BoxH1 subtitle="Web Developer">Travis Waith-Mair</BoxH1>
           <ScrollLink aria-label="scoll navbar to top" href="#top" />
         </Landing>
       </Parallax>
-    );
-  }
-}
+    </Scroller>
+  );
+};
 
 export default withMatchMedia(`(max-width:${breakWidth480})`)(LandingComponent);

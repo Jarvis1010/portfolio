@@ -1,7 +1,6 @@
 import React from "react";
 import { NavWrapper, Brand, NavSlider, NavItem } from "../NavBar";
 import styled from "styled-components";
-import { colorLinkHover } from "../constants/styled-constants";
 
 const NavLink = styled.a`
   border: none;
@@ -13,7 +12,7 @@ const NavLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    color: ${colorLinkHover};
+    color: ${props => props.theme.colorLinkHover || "blue"};
   }
 
   &:hover,
@@ -22,20 +21,23 @@ const NavLink = styled.a`
   }
 `;
 
+const NavButton = props => (
+  <NavLink
+    {...props}
+    as="button"
+    onClick={() => {
+      document.querySelector("#inner").scrollTop = window.innerHeight;
+    }}
+    href="javascript:void(0)"
+  />
+);
+
 const StickyNav = () => (
   <NavWrapper id="top">
     <Brand brandName={"Travis Waith-Mair"} href="/" />
     <NavSlider>
       <NavItem>
-        <NavLink
-          as="button"
-          onClick={() => {
-            document.querySelector("#inner").scrollTop = window.innerHeight;
-          }}
-          href="javascript:void(0)"
-        >
-          About
-        </NavLink>
+        <NavButton>About</NavButton>
       </NavItem>
       <NavItem>
         <NavLink href="/#experience">Experience</NavLink>

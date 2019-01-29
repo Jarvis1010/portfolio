@@ -131,10 +131,16 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 var AboutWrapper = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_5__["default"])(_templateObject());
-var SplitGrid = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_Grid__WEBPACK_IMPORTED_MODULE_2__["default"])(_templateObject2(), _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["spacing16"]);
-var Profile = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject3(), _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["spacing32"], _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["breakWidth840"]);
+var SplitGrid = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_Grid__WEBPACK_IMPORTED_MODULE_2__["default"])(_templateObject2(), function (props) {
+  return props.theme.spacing16 || "1rem";
+});
+var Profile = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject3(), function (props) {
+  return props.theme.spacing32 || "2rem";
+}, _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["breakWidth840"]);
 var Paragraph = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject4(), _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["breakWidth480"]);
-var Details = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_Grid__WEBPACK_IMPORTED_MODULE_2__["default"])(_templateObject5(), _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["breakWidth480"], _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["spacing32"], _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["breakWidth840"]);
+var Details = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_Grid__WEBPACK_IMPORTED_MODULE_2__["default"])(_templateObject5(), _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["breakWidth480"], function (props) {
+  return props.theme.spacing32 || "2rem";
+}, _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["breakWidth840"]);
 var ContactList = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_Stack_Stack__WEBPACK_IMPORTED_MODULE_3__["default"])(_templateObject6(), _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["spacing16"], _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["grey"]);
 var ContactListItem = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_5__["default"])(_templateObject7());
 var Email = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.attrs({
@@ -156,7 +162,7 @@ var AboutSection = function AboutSection() {
     bottom: "32",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 87
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_4__["SectionBoxTitle"], {
@@ -164,7 +170,7 @@ var AboutSection = function AboutSection() {
     subtitle: "All about me",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 88
     },
     __self: this
   }, "Personal Details"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -172,39 +178,39 @@ var AboutSection = function AboutSection() {
     top: "16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 91
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SplitGrid, {
     minWidth: "280px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 92
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Profile, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 93
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 94
     },
     __self: this
   }, "Professional Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Paragraph, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 95
     },
     __self: this
   }, _constants_constants__WEBPACK_IMPORTED_MODULE_6__["about"].description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Details, {
     minWidth: "280px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 97
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContactList, {
@@ -212,7 +218,7 @@ var AboutSection = function AboutSection() {
     as: "ul",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 98
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContactListItem, {
@@ -220,13 +226,13 @@ var AboutSection = function AboutSection() {
     as: "li",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 99
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 100
     },
     __self: this
   }, "Name:"), " Travis Waith-Mair"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContactListItem, {
@@ -234,19 +240,19 @@ var AboutSection = function AboutSection() {
     as: "li",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 102
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 103
     },
     __self: this
   }, "Email:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Email, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 104
     },
     __self: this
   }, " travis.mair@gmail.com")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContactListItem, {
@@ -254,19 +260,19 @@ var AboutSection = function AboutSection() {
     as: "li",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 106
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 107
     },
     __self: this
   }, "Telephone:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Telephone, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 108
     },
     __self: this
   }, " (801) 200-7597")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContactListItem, {
@@ -274,13 +280,13 @@ var AboutSection = function AboutSection() {
     as: "li",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 110
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 111
     },
     __self: this
   }, "Location:"), " Salt Lake City, Utah")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Image, {
@@ -288,7 +294,7 @@ var AboutSection = function AboutSection() {
     alt: "Profile Photo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 114
     },
     __self: this
   })))));
@@ -344,7 +350,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0;\n  padding: 0;\n  &::before,\n  &::after {\n    content: \"\";\n    position: absolute;\n    ", ": 0;\n    ", ": 1px solid\n      ", ";\n    /* width: ", "; */\n    width:calc(51% - ", ");\n  }\n  &::before {\n    left: 0;\n  }\n  &::after {\n    right: 0;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0;\n  padding: 0;\n  &::before,\n  &::after {\n    content: \"\";\n    position: absolute;\n    ", ": 0;\n    ", ": 1px solid\n      ", ";\n\n    width: calc(51% - ", ");\n  }\n  &::before {\n    left: 0;\n  }\n  &::after {\n    right: 0;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -354,7 +360,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  align-self: center;\n  margin: auto;\n  text-align: center;\n  min-width: ", "px;\n  max-width: fit-content;\n  border: 1px solid ", ";\n  color: ", ";\n  padding: ", ";\n  position: relative;\n  font-size: ", ";\n  font-weight: bold;\n  font-family: ", ";\n  line-height: ", ";\n  letter-spacing: -0.03125rem;\n  ", ";\n\n  &::after {\n    content: ", ";\n    font-size: ", ";\n    font-weight: normal;\n    position: absolute;\n    width: fit-content;\n    ", ": 0;\n    left: 0;\n    right: 0;\n    display: block;\n    text-align: center;\n    margin: 0;\n    margin-left: auto;\n    margin-right: auto;\n    ", ": ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  align-self: center;\n  text-align: center;\n\n  margin: auto;\n  padding: ", ";\n\n  min-width: ", "px;\n  max-width: fit-content;\n\n  border: 1px solid ", ";\n  ", ";\n  color: ", ";\n\n  font-weight: bold;\n  font-size: ", ";\n  font-family: ", ";\n\n  line-height: ", ";\n  letter-spacing: -0.03125rem;\n\n  &::after {\n    content: ", ";\n    display: block;\n    position: absolute;\n    text-align: center;\n    font-size: ", ";\n    font-weight: normal;\n    width: fit-content;\n\n    ", ": 0;\n    left: 0;\n    right: 0;\n\n    margin: 0;\n    margin-left: auto;\n    margin-right: auto;\n    ", ": ", ";\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -401,44 +407,57 @@ var elements = {
     margin: "-0.4rem"
   }
 };
-var BoxHeading = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2(_templateObject(), function (_ref) {
-  var _ref$minWidth = _ref.minWidth,
-      minWidth = _ref$minWidth === void 0 ? 1 : _ref$minWidth;
-  return minWidth;
-}, function (props) {
-  return props.inverse ? _constants_styled_constants__WEBPACK_IMPORTED_MODULE_3__["black"] : _constants_styled_constants__WEBPACK_IMPORTED_MODULE_3__["white"];
-}, function (props) {
-  return props.inverse ? _constants_styled_constants__WEBPACK_IMPORTED_MODULE_3__["black"] : _constants_styled_constants__WEBPACK_IMPORTED_MODULE_3__["white"];
-}, _constants_styled_constants__WEBPACK_IMPORTED_MODULE_3__["spacing16"], function (_ref2) {
+
+var getMargin = function getMargin(_ref) {
+  var _ref$as = _ref.as,
+      as = _ref$as === void 0 ? "h2" : _ref$as;
+  return elements[as].margin;
+};
+
+var getMainSize = function getMainSize(_ref2) {
   var _ref2$as = _ref2.as,
       as = _ref2$as === void 0 ? "h2" : _ref2$as;
   return elements[as].main;
-}, _constants_styled_constants__WEBPACK_IMPORTED_MODULE_3__["serif"], _constants_styled_constants__WEBPACK_IMPORTED_MODULE_3__["lineHeightTight"], function (props) {
-  return props.top ? "border-top: none" : "border-bottom: none";
-}, function (props) {
-  return props.subtitle ? "\"".concat(props.subtitle, "\"") : " ";
-}, function (_ref3) {
+};
+
+var getsubtitleSize = function getsubtitleSize(_ref3) {
   var _ref3$as = _ref3.as,
       as = _ref3$as === void 0 ? "h2" : _ref3$as;
   return elements[as].subtitle;
-}, function (props) {
-  return props.top ? "top" : "bottom";
-}, function (props) {
+};
+
+var marginTopBottom = function marginTopBottom(props) {
   return props.top ? "margin-top" : "margin-bottom";
+};
+
+var noMarginTopBottom = function noMarginTopBottom(props) {
+  return props.top ? "border-top: none" : "border-bottom: none";
+};
+
+var checkInverse = function checkInverse(props) {
+  return props.inverse ? props.theme.black || "black" : props.theme.white || "white";
+};
+
+var BoxHeading = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2(_templateObject(), function (props) {
+  return props.theme.spacing16 || "1rem";
 }, function (_ref4) {
-  var _ref4$as = _ref4.as,
-      as = _ref4$as === void 0 ? "h2" : _ref4$as;
-  return elements[as].margin;
-});
+  var _ref4$minWidth = _ref4.minWidth,
+      minWidth = _ref4$minWidth === void 0 ? 1 : _ref4$minWidth;
+  return minWidth;
+}, checkInverse, noMarginTopBottom, checkInverse, getMainSize, function (props) {
+  return props.theme.serif || "serif";
+}, function (props) {
+  return props.theme.lineHeightTight || "1rem";
+}, function (props) {
+  return props.subtitle ? "\"".concat(props.subtitle, "\"") : " ";
+}, getsubtitleSize, function (props) {
+  return props.top ? "top" : "bottom";
+}, marginTopBottom, getMargin);
 var BottomBorder = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject2(), function (props) {
   return props.top ? "top" : "bottom";
 }, function (props) {
   return props.top ? "border-top" : "border-bottom";
-}, function (props) {
-  return props.inverse ? _constants_styled_constants__WEBPACK_IMPORTED_MODULE_3__["black"] : _constants_styled_constants__WEBPACK_IMPORTED_MODULE_3__["white"];
-}, function (props) {
-  return props.width ? "".concat(props.width, "px") : "1rem";
-}, function (props) {
+}, checkInverse, function (props) {
   return "".concat(props.width, "px");
 });
 
@@ -498,7 +517,7 @@ function (_Component) {
         top: top,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 120
         },
         __self: this
       }), children, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BottomBorder, {
@@ -507,7 +526,7 @@ function (_Component) {
         width: subTitleWidth / 2,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 128
         },
         __self: this
       }));
@@ -525,7 +544,7 @@ var BoxH1 = function BoxH1(_ref5) {
     as: "h1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 135
     },
     __self: this
   }), children);
@@ -539,7 +558,7 @@ var SectionBoxTitle = function SectionBoxTitle(_ref6) {
     top: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 141
     },
     __self: this
   }), children);
@@ -1377,7 +1396,6 @@ var ProjectList = function ProjectList(_ref) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants/styled-constants */ "./components/constants/styled-constants.js");
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-template-columns: ", ";\n  grid-gap: ", ";\n  width: 100%;\n"]);
 
@@ -1390,19 +1408,38 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-var gaps = {
-  "0": "0",
-  "4": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing4"],
-  "8": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing8"],
-  "16": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing16"],
-  "24": "1.5rem",
-  "32": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing32"],
-  "64": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing64"],
-  "128": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing128"],
-  default: _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing16"]
+
+var gaps = function gaps() {
+  var theme = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var defaultTheme = {
+    spacing4: "0.4rem",
+    spacing8: "0.8rem",
+    spacing16: "1rem",
+    spacing32: "2rem",
+    spacing64: "4rem",
+    spacing128: "8rem"
+  };
+
+  var finalTheme = _objectSpread({}, defaultTheme, theme);
+
+  return {
+    "0": "0",
+    "4": finalTheme.spacing4,
+    "8": finalTheme.spacing8,
+    "16": finalTheme.spacing16,
+    "24": "1.5rem",
+    "32": finalTheme.spacing32,
+    "64": finalTheme.spacing64,
+    "128": finalTheme.spacing128,
+    default: "0"
+  };
 };
+
 var fractions = {
   "1/4": "25%",
   "1/3": "33.33%",
@@ -1418,7 +1455,7 @@ var createColumns = function createColumns(_ref) {
 };
 
 var Split = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject(), createColumns, function (props) {
-  return gaps[props.gapSize] || gaps.default;
+  return gaps(props.theme)[props.gapSize] || gaps(props.theme).default;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Split);
 
@@ -1434,7 +1471,6 @@ var Split = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templ
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants/styled-constants */ "./components/constants/styled-constants.js");
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-gap: ", ";\n  grid-auto-columns: 100%;\n"]);
 
@@ -1447,21 +1483,40 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-var gaps = {
-  "0": "0",
-  "4": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing4"],
-  "8": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing8"],
-  "16": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing16"],
-  "24": "1.5rem",
-  "32": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing32"],
-  "64": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing64"],
-  "128": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing128"],
-  default: "0"
+
+var gaps = function gaps() {
+  var theme = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var defaultTheme = {
+    spacing4: "0.4rem",
+    spacing8: "0.8rem",
+    spacing16: "1rem",
+    spacing32: "2rem",
+    spacing64: "4rem",
+    spacing128: "8rem"
+  };
+
+  var finalTheme = _objectSpread({}, defaultTheme, theme);
+
+  return {
+    "0": "0",
+    "4": finalTheme.spacing4,
+    "8": finalTheme.spacing8,
+    "16": finalTheme.spacing16,
+    "24": "1.5rem",
+    "32": finalTheme.spacing32,
+    "64": finalTheme.spacing64,
+    "128": finalTheme.spacing128,
+    default: "0"
+  };
 };
+
 var Stack = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject(), function (props) {
-  return gaps[props.gapSize] || gaps.default;
+  return gaps(props.theme)[props.gapSize] || gaps(props.theme).default;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Stack);
 

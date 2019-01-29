@@ -1,26 +1,16 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import {
-  grey20,
-  grey30,
-  white,
-  fontSize18,
-  spacing8,
-  sans,
-  breakWidth480
-} from "../constants/styled-constants";
 
 const NavWrapper = styled.nav`
-  background: ${props =>
-    props.theme.primaryColor ? props.theme.primaryColor : grey20};
+  background: ${props => props.theme.primaryColor || "grey"};
   min-height: 50px;
   position: relative;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
-  color: ${props => (props.theme.white ? props.theme.white : white)};
+  color: ${props => props.theme.white || "white"};
   position: sticky;
   z-index: 6;
   top: 0;
@@ -28,54 +18,51 @@ const NavWrapper = styled.nav`
 
 const NavItem = styled.span`
   display: flex;
-  font-size: ${fontSize18};
-  color: ${props => (props.theme.white ? props.theme.white : white)};
+  color: ${props => props.theme.white || "white"};
   white-space: nowrap;
   & a {
     text-decoration: none;
-    color: ${props => (props.theme.white ? props.theme.white : white)};
+    color: ${props => props.theme.white || "white"};
   }
   align-self: center;
-  margin: ${spacing8};
+  margin: ${props => props.theme.spacing8 || "1rem"};
 `;
 
 const BrandName = styled.h2`
-  font-family: ${props =>
-    props.theme.fontFamily ? props.theme.fontFamily : sans};
-  font-size: ${fontSize18};
+  font-family: ${props => props.theme.fontFamily || "sans"};
+  font-size: ${props => props.theme.fontSize18 || "18px"};
   min-width: auto;
-  margin-left: ${spacing8};
+  margin-left: ${props => props.theme.spacing8 || "1rem"};
   white-space: nowrap;
 `;
 
 const BrandLink = styled.a`
   align-items: center;
   border: 0;
-  color: ${props => (props.theme.white ? props.theme.white : white)};
+  color: ${props => props.theme.white || "white"};
   display: flex;
   cursor: pointer;
   text-decoration: none;
   flex-grow: 10;
   margin-right: auto;
+
   &:hover {
-    color: ${props => (props.theme.white ? props.theme.white : white)};
+    color: ${props => props.theme.white || "white"};
     text-decoration: none;
   }
 `;
 
 const Logo = styled.img`
-  max-width: ${props => (props.size ? props.size : "30px")};
+  max-width: ${props => props.size || "30px"};
   height: auto;
-  margin: ${spacing8};
+  margin: ${props => props.theme.spacing8 || "1rem"};
 `;
 
-const Brand = ({ brandName, src, href }) => (
+const Brand = ({ brandName = "", src = "", href }) => (
   <Link href={href}>
     <BrandLink>
-      {src && (
-        <Logo src={src} alt={`${brandName ? brandName + " " : ""}logo`} />
-      )}
-      {brandName && <BrandName>{brandName}</BrandName>}
+      {src != "" && <Logo src={src} alt={`${brandName} logo`} />}
+      {brandName != "" && <BrandName>{brandName}</BrandName>}
     </BrandLink>
   </Link>
 );
@@ -83,12 +70,15 @@ const Brand = ({ brandName, src, href }) => (
 const NavSlider = styled.div`
   min-height: 50px;
   display: flex;
-  @media (max-width: ${breakWidth480}) {
+  flex-flow: row wrap;
+  font-size: ${props => props.theme.fontSize18 || "18px"};
+
+  @media (max-width: ${props => props.theme.breakWidth480 || "480px"}) {
     display: ${props => (props.hidden ? "none" : "flex")};
+    font-size: ${props => props.theme.fontSize13 || "13px"};
     width: 100%;
     order: 50;
-    background: ${props =>
-      props.theme.secondaryColor ? props.theme.secondaryColor : grey30};
+    background: ${props => props.theme.secondaryColor || "grey"};
   }
 `;
 
@@ -96,32 +86,38 @@ const Hamburger = styled.button`
   display: none;
   text-align: center;
   text-decoration: none;
-  font-size:${fontSize18};
-  color: ${props => (props.theme.white ? props.theme.white : white)};
-  border: 1px solid ${props => (props.theme.white ? props.theme.white : white)};
+  font-size: ${props => props.theme.fontSize18 || "18px"};
+  color: ${props => props.theme.white || "white"};
+  border: 1px solid ${props => props.theme.white || "white"};
   cursor: pointer;
-  background: ${props =>
-    props.theme.primaryColor ? props.theme.primaryColor : "inherit"};
-  }
-  @media screen and (max-width: ${breakWidth480}) {
+  background: ${props => props.theme.primaryColor || "inherit"};
+
+  @media screen and (max-width: ${props =>
+      props.theme.breakWidth480 || "480px"}) {
     display: inline;
-    margin:auto ${spacing8};
+    margin: auto ${props => props.theme.spacing8 || "1rem"};
+  }
 `;
 
-class NavCollapse extends React.Component {
+class Toggle extends React.Component {
   state = { hidden: true };
-
-  handleClick = () => this.setState(state => ({ hidden: !state.hidden }));
-
+  updateState = val => this.setState({ hidden: val });
   render() {
-    const { children } = this.props;
-    return (
-      <Fragment>
-        <Hamburger onClick={this.handleClick}>☰</Hamburger>
-        <NavSlider {...this.state}>{children}</NavSlider>
-      </Fragment>
-    );
+    return this.props.children([this.state.hidden, this.updateState]);
   }
 }
+
+const NavCollapse = ({ children }) => {
+  return (
+    <Toggle>
+      {([hidden, updateHidden]) => (
+        <Fragment>
+          <Hamburger onClick={() => updateHidden(!hidden)}>☰</Hamburger>
+          <NavSlider hidden={hidden}>{children}</NavSlider>
+        </Fragment>
+      )}
+    </Toggle>
+  );
+};
 
 export { NavWrapper, NavItem, NavSlider, NavCollapse, Brand };

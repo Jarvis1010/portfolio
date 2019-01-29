@@ -22,7 +22,7 @@ exports[`Navbar Components Render Brand Renders Renders Brand 2`] = `
 >
   <styled.a>
     <styled.img
-      alt="logo"
+      alt=" logo"
       src="/"
     />
   </styled.a>
@@ -53,9 +53,6 @@ exports[`Navbar Components Render NavItem Renders Renders NavSlider 1`] = `
         "rules": Array [
           "
   display: flex;
-  font-size: ",
-          "1.125rem",
-          ";
   color: ",
           [Function],
           ";
@@ -68,7 +65,7 @@ exports[`Navbar Components Render NavItem Renders Renders NavSlider 1`] = `
   }
   align-self: center;
   margin: ",
-          "0.5rem",
+          [Function],
           ";
 ",
         ],
@@ -99,9 +96,6 @@ exports[`Navbar Components Render NavItem Renders Renders NavSlider with theme 1
         "rules": Array [
           "
   display: flex;
-  font-size: ",
-          "1.125rem",
-          ";
   color: ",
           [Function],
           ";
@@ -114,7 +108,7 @@ exports[`Navbar Components Render NavItem Renders Renders NavSlider with theme 1
   }
   align-self: center;
   margin: ",
-          "0.5rem",
+          [Function],
           ";
 ",
         ],
@@ -153,10 +147,18 @@ exports[`Navbar Components Render NavSlider Renders Renders NavSlider 1`] = `
           "
   min-height: 50px;
   display: flex;
+  flex-flow: row wrap;
+  font-size: ",
+          [Function],
+          ";
+
   @media (max-width: ",
-          "480px",
+          [Function],
           ") {
     display: ",
+          [Function],
+          ";
+    font-size: ",
           [Function],
           ";
     width: 100%;
@@ -195,10 +197,18 @@ exports[`Navbar Components Render NavSlider Renders Renders NavSlider with theme
           "
   min-height: 50px;
   display: flex;
+  flex-flow: row wrap;
+  font-size: ",
+          [Function],
+          ";
+
   @media (max-width: ",
-          "480px",
+          [Function],
           ") {
     display: ",
+          [Function],
+          ";
+    font-size: ",
           [Function],
           ";
     width: 100%;

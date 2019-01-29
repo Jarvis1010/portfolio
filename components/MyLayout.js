@@ -7,12 +7,14 @@ import * as theme from "../components/constants/styled-constants";
 const Footer = styled.footer`
   margin: 0;
   text-align: center;
-  color: white;
+  color: ${props => props.theme.white || "white"};
   background-color: ${props => props.theme.darkGrey || "#565656"};
 `;
 
 const Layout = ({ children }) => (
-  <ThemeProvider theme={{ primaryColor: "#BD5751", ...theme }}>
+  <ThemeProvider
+    theme={{ primaryColor: "#BD5751", secondaryColor: theme.grey30, ...theme }}
+  >
     <PageWrapper>
       <Landing />
       <StickyNav />

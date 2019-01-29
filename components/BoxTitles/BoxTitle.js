@@ -10,12 +10,7 @@ import {
   fontSize20,
   fontSize28,
   fontSize32,
-  fontSize42,
-  lineHeightTight,
-  spacing16,
-  black,
-  white,
-  serif
+  fontSize42
 } from "../constants/styled-constants";
 
 const elements = {
@@ -27,40 +22,54 @@ const elements = {
   h6: { main: fontSize14, subtitle: fontSize11, margin: `-0.4rem` }
 };
 
+const getMargin = ({ as = "h2" }) => elements[as].margin;
+const getMainSize = ({ as = "h2" }) => elements[as].main;
+const getsubtitleSize = ({ as = "h2" }) => elements[as].subtitle;
+const marginTopBottom = props => (props.top ? "margin-top" : "margin-bottom");
+const noMarginTopBottom = props =>
+  props.top ? `border-top: none` : `border-bottom: none`;
+const checkInverse = props =>
+  props.inverse ? props.theme.black || "black" : props.theme.white || "white";
+
 const BoxHeading = styled.h2`
+  position: relative;
   align-self: center;
-  margin: auto;
   text-align: center;
+
+  margin: auto;
+  padding: ${props => props.theme.spacing16 || "1rem"};
+
   min-width: ${({ minWidth = 1 }) => minWidth}px;
   max-width: fit-content;
-  border: 1px solid ${props => (props.inverse ? black : white)};
-  color: ${props => (props.inverse ? black : white)};
-  padding: ${spacing16};
-  position: relative;
-  font-size: ${({ as = "h2" }) => elements[as].main};
+
+  border: 1px solid ${checkInverse};
+  ${noMarginTopBottom};
+  color: ${checkInverse};
+
   font-weight: bold;
-  font-family: ${serif};
-  line-height: ${lineHeightTight};
+  font-size: ${getMainSize};
+  font-family: ${props => props.theme.serif || "serif"};
+
+  line-height: ${props => props.theme.lineHeightTight || "1rem"};
   letter-spacing: -0.03125rem;
-  ${props => (props.top ? `border-top: none` : `border-bottom: none`)};
 
   &::after {
     content: ${props => (props.subtitle ? `"${props.subtitle}"` : " ")};
-    font-size: ${({ as = "h2" }) => elements[as].subtitle};
-    font-weight: normal;
+    display: block;
     position: absolute;
+    text-align: center;
+    font-size: ${getsubtitleSize};
+    font-weight: normal;
     width: fit-content;
+
     ${props => (props.top ? "top" : "bottom")}: 0;
     left: 0;
     right: 0;
-    display: block;
-    text-align: center;
+
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    ${props => (props.top ? "margin-top" : "margin-bottom")}: ${({
-      as = "h2"
-    }) => elements[as].margin};
+    ${marginTopBottom}: ${getMargin};
   }
 `;
 
@@ -73,9 +82,9 @@ const BottomBorder = styled.div`
     position: absolute;
     ${props => (props.top ? "top" : "bottom")}: 0;
     ${props => (props.top ? "border-top" : "border-bottom")}: 1px solid
-      ${props => (props.inverse ? black : white)};
-    /* width: ${props => (props.width ? `${props.width}px` : "1rem")}; */
-    width:calc(51% - ${props => `${props.width}px`});
+      ${checkInverse};
+
+    width: calc(51% - ${props => `${props.width}px`});
   }
   &::before {
     left: 0;

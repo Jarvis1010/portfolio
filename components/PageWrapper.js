@@ -1,11 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Normalize from "./Normalize";
-import {
-  white,
-  breakWidthMax,
-  breakWidth480
-} from "./constants/styled-constants";
 
 const Outer = styled.div`
   background-color: rgb(247, 248, 248);
@@ -15,9 +10,9 @@ const Outer = styled.div`
 `;
 
 const Inner = styled.div`
-  background: ${white};
+  background: ${props => props.theme.white || "white"};
   margin: 0 auto;
-  max-width: ${breakWidthMax};
+  max-width: ${props => props.theme.breakWidthMax || "1600px"};
   overflow-x: hidden;
   perspective: 2px;
   transform-style: preserve-3d;
@@ -26,7 +21,8 @@ const Inner = styled.div`
   height: 100vh;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  @media (max-width: ${breakWidth480}) {
+
+  @media (max-width: ${props => props.theme.breakWidth480 || "480px"}) {
     scroll-padding-top: 64px;
   }
 `;
