@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Normalize from "./Normalize";
 import {
   white,
   breakWidthMax,
@@ -32,6 +33,7 @@ const Inner = styled.div`
 
 export default ({ children }) => (
   <Outer>
+    <Normalize />
     <Inner id="inner">{children}</Inner>
   </Outer>
 );

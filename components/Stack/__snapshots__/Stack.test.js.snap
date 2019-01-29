@@ -1,109 +1,307 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Stack Tests renders with proper gaps 1`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-gap: 0;
+  grid-gap: ",
+          [Function],
+          ";
   grid-auto-columns: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="0"
 />
 `;
 
 exports[`Stack Tests renders with proper gaps 2`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-gap: 0.25rem;
+  grid-gap: ",
+          [Function],
+          ";
   grid-auto-columns: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="4"
 />
 `;
 
 exports[`Stack Tests renders with proper gaps 3`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-gap: 0.5rem;
+  grid-gap: ",
+          [Function],
+          ";
   grid-auto-columns: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="8"
 />
 `;
 
 exports[`Stack Tests renders with proper gaps 4`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: ",
+          [Function],
+          ";
   grid-auto-columns: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="16"
 />
 `;
 
 exports[`Stack Tests renders with proper gaps 5`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-gap: 1.5rem;
+  grid-gap: ",
+          [Function],
+          ";
   grid-auto-columns: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="24"
 />
 `;
 
 exports[`Stack Tests renders with proper gaps 6`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: ",
+          [Function],
+          ";
   grid-auto-columns: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="32"
 />
 `;
 
 exports[`Stack Tests renders with proper gaps 7`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-gap: 4rem;
+  grid-gap: ",
+          [Function],
+          ";
   grid-auto-columns: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="64"
 />
 `;
 
 exports[`Stack Tests renders with proper gaps 8`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-gap: 8rem;
+  grid-gap: ",
+          [Function],
+          ";
   grid-auto-columns: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="128"
 />
 `;
 
 exports[`Stack Tests renders with proper gaps 9`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-gap: 0;
+  grid-gap: ",
+          [Function],
+          ";
   grid-auto-columns: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize={null}
 />
 `;

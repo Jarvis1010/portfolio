@@ -1,26 +1,25 @@
 import StickyNav from "./StickyNav/StickyNav";
 import Landing from "../components/Landing/Landing";
-import styled from "styled-components";
-import Root from "./Root";
+import styled, { ThemeProvider } from "styled-components";
 import PageWrapper from "./PageWrapper";
-import { darkGrey } from "../components/constants/styled-constants";
+import * as theme from "../components/constants/styled-constants";
 
 const Footer = styled.footer`
   margin: 0;
   text-align: center;
   color: white;
-  background-color: ${darkGrey};
+  background-color: ${props => props.theme.darkGrey || "#565656"};
 `;
 
 const Layout = ({ children }) => (
-  <Root theme={{ primaryColor: "#BD5751" }}>
+  <ThemeProvider theme={{ primaryColor: "#BD5751", ...theme }}>
     <PageWrapper>
       <Landing />
       <StickyNav />
       <main>{children}</main>
       <Footer>JTWM © 2018. All Rights Reserved</Footer>
     </PageWrapper>
-  </Root>
+  </ThemeProvider>
 );
 
 export default Layout;

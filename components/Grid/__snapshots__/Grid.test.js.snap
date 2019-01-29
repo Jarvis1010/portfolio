@@ -1,144 +1,408 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Grid Tests renders Grid with columns passed as props 1`] = `
-.c0 {
+<StyledComponent
+  columns={4}
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-template-columns: repeat(4, minmax(1px,1fr));
-  grid-gap: 1rem;
+  grid-template-columns: ",
+          [Function],
+          ";
+  grid-gap: ",
+          [Function],
+          ";
   width: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
 />
 `;
 
 exports[`Grid Tests renders Grid with minWidth passed as props 1`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100,1fr));
-  grid-gap: 1rem;
+  grid-template-columns: ",
+          [Function],
+          ";
+  grid-gap: ",
+          [Function],
+          ";
   width: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  minWidth={100}
 />
 `;
 
 exports[`Grid Tests renders with proper gaps with default columns and width 1`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
-  grid-gap: 0;
+  grid-template-columns: ",
+          [Function],
+          ";
+  grid-gap: ",
+          [Function],
+          ";
   width: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="0"
 />
 `;
 
 exports[`Grid Tests renders with proper gaps with default columns and width 2`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
-  grid-gap: 0.25rem;
+  grid-template-columns: ",
+          [Function],
+          ";
+  grid-gap: ",
+          [Function],
+          ";
   width: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="4"
 />
 `;
 
 exports[`Grid Tests renders with proper gaps with default columns and width 3`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
-  grid-gap: 0.5rem;
+  grid-template-columns: ",
+          [Function],
+          ";
+  grid-gap: ",
+          [Function],
+          ";
   width: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="8"
 />
 `;
 
 exports[`Grid Tests renders with proper gaps with default columns and width 4`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
-  grid-gap: 1rem;
+  grid-template-columns: ",
+          [Function],
+          ";
+  grid-gap: ",
+          [Function],
+          ";
   width: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="16"
 />
 `;
 
 exports[`Grid Tests renders with proper gaps with default columns and width 5`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
-  grid-gap: 1.5rem;
+  grid-template-columns: ",
+          [Function],
+          ";
+  grid-gap: ",
+          [Function],
+          ";
   width: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="24"
 />
 `;
 
 exports[`Grid Tests renders with proper gaps with default columns and width 6`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
-  grid-gap: 2rem;
+  grid-template-columns: ",
+          [Function],
+          ";
+  grid-gap: ",
+          [Function],
+          ";
   width: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="32"
 />
 `;
 
 exports[`Grid Tests renders with proper gaps with default columns and width 7`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
-  grid-gap: 4rem;
+  grid-template-columns: ",
+          [Function],
+          ";
+  grid-gap: ",
+          [Function],
+          ";
   width: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="64"
 />
 `;
 
 exports[`Grid Tests renders with proper gaps with default columns and width 8`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
-  grid-gap: 8rem;
+  grid-template-columns: ",
+          [Function],
+          ";
+  grid-gap: ",
+          [Function],
+          ";
   width: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize="128"
 />
 `;
 
 exports[`Grid Tests renders with proper gaps with default columns and width 9`] = `
-.c0 {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1px,1fr));
-  grid-gap: 1rem;
+  grid-template-columns: ",
+          [Function],
+          ";
+  grid-gap: ",
+          [Function],
+          ";
   width: 100%;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  gapSize={null}
 />
 `;
