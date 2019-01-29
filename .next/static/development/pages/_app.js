@@ -213,7 +213,7 @@ function (_Component) {
         top: top,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 118
         },
         __self: this
       }), children, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BottomBorder, {
@@ -222,7 +222,7 @@ function (_Component) {
         width: subTitleWidth / 2,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 126
         },
         __self: this
       }));
@@ -240,7 +240,7 @@ var BoxH1 = function BoxH1(_ref5) {
     as: "h1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 133
     },
     __self: this
   }), children);
@@ -254,7 +254,7 @@ var SectionBoxTitle = function SectionBoxTitle(_ref6) {
     top: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 139
     },
     __self: this
   }), children);

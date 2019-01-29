@@ -2,15 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Grid from "../Grid";
 import Stack from "../Stack/Stack";
-import { SectionBoxTitle } from "../BoxTitles/BoxTitle";
 import PadBox from "../PadBox/PadBox";
+import { SectionBoxTitle } from "../BoxTitles/BoxTitle";
 import { about } from "../constants/constants";
-import {
-  spacing16,
-  grey,
-  breakWidth480,
-  breakWidth840
-} from "../constants/styled-constants";
 
 const AboutWrapper = styled(PadBox)`
   scroll-snap-align: start;
@@ -26,24 +20,24 @@ const SplitGrid = styled(Grid)`
 const Profile = styled.section`
   justify-self: center;
   padding: ${props => props.theme.spacing32 || "2rem"};
-  @media (min-width: ${breakWidth840}) {
+  @media (min-width: ${props => props.theme.breakWidth840 || "840px"}) {
     box-shadow: -11px 14px 34px 6px rgba(128, 128, 128, 1);
   }
 `;
 
 const Paragraph = styled.p`
-  max-width: ${breakWidth480};
+  max-width: ${props => props.theme.breakWidth480 || "480px"};
   line-height: 2rem;
 `;
 
 const Details = styled(Grid)`
-  max-width: ${breakWidth480};
+  max-width: ${props => props.theme.breakWidth480 || "480px"};
   justify-items: center;
   justify-self: center;
   padding: ${props => props.theme.spacing32 || "2rem"};
   margin: 0;
   width: 100%;
-  @media (min-width: ${breakWidth840}) {
+  @media (min-width: ${props => props.theme.breakWidth840 || "840px"}) {
     box-shadow: -11px 14px 34px 6px rgba(128, 128, 128, 1);
   }
 `;
@@ -56,8 +50,8 @@ const ContactList = styled(Stack)`
   & > li:not(:last-child):after {
     content: "";
     display: block;
-    padding: ${spacing16};
-    border-bottom: 1px solid ${grey};
+    padding: ${props => props.theme.spacing16 || "1rem"};
+    border-bottom: 1px solid ${props => props.theme.grey || "grey"};
     top: 0;
     position: absolute;
     width: 90%;
@@ -71,9 +65,17 @@ const ContactListItem = styled(PadBox)`
   width: 100%;
 `;
 
-const Email = styled.a.attrs({ href: props => `mailto:${props.children}` })``;
+const Email = ({ children, ...props }) => (
+  <a {...props} href={`mailto:${children}`}>
+    {children}
+  </a>
+);
 
-const Telephone = styled.a.attrs({ href: props => `tel:${props.children}` })``;
+const Telephone = ({ children, ...props }) => (
+  <a {...props} href={`tel:${children}`}>
+    {children}
+  </a>
+);
 
 const Image = styled.img`
   height: auto;
@@ -95,19 +97,20 @@ const AboutSection = () => (
           <Paragraph>{about.description}</Paragraph>
         </Profile>
         <Details minWidth={"280px"}>
-          <ContactList size="8" as="ul">
-            <ContactListItem size="8" as="li">
-              <strong>Name:</strong> Travis Waith-Mair
+          <ContactList size="8">
+            <ContactListItem size="8">
+              <strong>Name: </strong>
+              <span>Travis Waith-Mair</span>
             </ContactListItem>
-            <ContactListItem size="8" as="li">
-              <strong>Email:</strong>
-              <Email> travis.mair@gmail.com</Email>
+            <ContactListItem size="8">
+              <strong>Email: </strong>
+              <Email>travis.mair@gmail.com</Email>
             </ContactListItem>
-            <ContactListItem size="8" as="li">
-              <strong>Telephone:</strong>
-              <Telephone> (801) 200-7597</Telephone>
+            <ContactListItem size="8">
+              <strong>Telephone: </strong>
+              <Telephone>(801) 200-7597</Telephone>
             </ContactListItem>
-            <ContactListItem size="8" as="li">
+            <ContactListItem size="8">
               <strong>Location:</strong> Salt Lake City, Utah
             </ContactListItem>
           </ContactList>
