@@ -13,7 +13,11 @@ import {
 } from "../components/constants/constants";
 import Stack from "../components/Stack/Stack";
 import { SectionBoxTitle } from "../components/BoxTitles/BoxTitle";
-import Stackable from "../components/Stack/Stackable";
+import Stackable, {
+  StackableLight,
+  StackableMedium,
+  StackableDark
+} from "../components/Stack/Stackable";
 import { pageMeta } from "../components/constants/constants";
 
 export default () => {
@@ -22,26 +26,26 @@ export default () => {
       <Head>
         <title>{pageMeta.title}</title>
       </Head>
-      <Stackable type="light">
+      <StackableLight>
         <AboutSection />
-      </Stackable>
-      <Stackable type="medium">
+      </StackableLight>
+      <StackableMedium>
         <ExperienceSection />
-      </Stackable>
-      <Stackable type="dark" id="portfolio">
+      </StackableMedium>
+      <StackableDark id="portfolio">
         <Stack style={{ paddingTop: "2rem" }}>
           <SectionBoxTitle subtitle="My Stuff">Portfolio</SectionBoxTitle>
           <Portfolio projectGroups={portfolio} />
         </Stack>
-      </Stackable>
-      <Stackable type="medium" id="contact">
+      </StackableDark>
+      <StackableMedium id="contact">
         <Stack style={{ paddingTop: "2rem" }}>
           <SectionBoxTitle inverse subtitle="Talk To Me">
             Contact Information
           </SectionBoxTitle>
           <Contact list={list} message={desc} />
         </Stack>
-      </Stackable>
+      </StackableMedium>
       <Stackable>
         <FinalSection links={links} />
       </Stackable>

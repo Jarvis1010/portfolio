@@ -14,6 +14,10 @@ export default class MyDocument extends Document {
           {pageMeta.tags.map(tag => (
             <meta {...tag} />
           ))}
+          <link
+            href="https://fonts.googleapis.com/css?family=Montserrat|Slabo+27px"
+            rel="stylesheet"
+          />
           {styleTags}
         </Head>
 

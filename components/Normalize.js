@@ -19,7 +19,17 @@ import {
 
 const Normalize = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Slabo+27px');
+ /* @import url('https://fonts.googleapis.com/css?family=Montserrat|Slabo+27px'); 
+
+@font-face {
+    font-family: Montserrat;
+    src: url('https://fonts.googleapis.com/css?family=Montserrat');
+  }
+
+  @font-face {
+    font-family: Slabo;
+    src: url('https://fonts.googleapis.com/css?family=Slabo+27px');
+  } */
 
   *, *:before, *:after {
     box-sizing: border-box;

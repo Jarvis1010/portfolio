@@ -20,7 +20,7 @@ const type = (theme = {}) => {
   };
 };
 
-const Stack = styled.div`
+const Stackable = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
@@ -30,4 +30,11 @@ const Stack = styled.div`
       .join(";")};
 `;
 
-export default Stack;
+export default Stackable;
+
+export const StackableLight = props => <Stackable {...props} type="light" />;
+export const StackableMedium = props => <Stackable {...props} type="medium" />;
+export const StackableDark = props => <Stackable {...props} type="dark" />;
+export const StackableTransparent = props => (
+  <Stackable {...props} type="transparent" />
+);

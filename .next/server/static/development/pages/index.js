@@ -1578,13 +1578,24 @@ var Stack = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div(_templa
 /*!***************************************!*\
   !*** ./components/Stack/Stackable.js ***!
   \***************************************/
-/*! exports provided: default */
+/*! exports provided: default, StackableLight, StackableMedium, StackableDark, StackableTransparent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StackableLight", function() { return StackableLight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StackableMedium", function() { return StackableMedium; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StackableDark", function() { return StackableDark; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StackableTransparent", function() { return StackableTransparent; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/Stack/Stackable.js";
+
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  width: 100%;\n  height: 100%;\n  ", ";\n"]);
 
@@ -1638,12 +1649,52 @@ var type = function type() {
   };
 };
 
-var Stack = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div(_templateObject(), function (props) {
+var Stackable = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject(), function (props) {
   return Object.entries(type(props.theme)[props.type] || type().default).map(function (x) {
     return x.join(":");
   }).join(";");
 });
-/* harmony default export */ __webpack_exports__["default"] = (Stack);
+/* harmony default export */ __webpack_exports__["default"] = (Stackable);
+var StackableLight = function StackableLight(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Stackable, _extends({}, props, {
+    type: "light",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }));
+};
+var StackableMedium = function StackableMedium(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Stackable, _extends({}, props, {
+    type: "medium",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }));
+};
+var StackableDark = function StackableDark(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Stackable, _extends({}, props, {
+    type: "dark",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }));
+};
+var StackableTransparent = function StackableTransparent(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Stackable, _extends({}, props, {
+    type: "transparent",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }));
+};
 
 /***/ }),
 
@@ -2012,53 +2063,50 @@ var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/pages/index.js";
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stack_Stack__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 25
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 26
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 27
     },
     __self: this
-  }, _components_constants_constants__WEBPACK_IMPORTED_MODULE_7__["pageMeta"].title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stack_Stackable__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    type: "light",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AboutSection_AboutSection__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stack_Stackable__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    type: "medium",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ExperienceSections_ExperienceSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, _components_constants_constants__WEBPACK_IMPORTED_MODULE_7__["pageMeta"].title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stack_Stackable__WEBPACK_IMPORTED_MODULE_10__["StackableLight"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stack_Stackable__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    type: "dark",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AboutSection_AboutSection__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stack_Stackable__WEBPACK_IMPORTED_MODULE_10__["StackableMedium"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ExperienceSections_ExperienceSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stack_Stackable__WEBPACK_IMPORTED_MODULE_10__["StackableDark"], {
     id: "portfolio",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 35
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stack_Stack__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -2067,29 +2115,28 @@ var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/pages/index.js";
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 36
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_9__["SectionBoxTitle"], {
     subtitle: "My Stuff",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 37
     },
     __self: this
   }, "Portfolio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Portfolio_Portfolio__WEBPACK_IMPORTED_MODULE_4__["default"], {
     projectGroups: _components_constants_constants__WEBPACK_IMPORTED_MODULE_7__["portfolio"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 38
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stack_Stackable__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    type: "medium",
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stack_Stackable__WEBPACK_IMPORTED_MODULE_10__["StackableMedium"], {
     id: "contact",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 41
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stack_Stack__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -2098,7 +2145,7 @@ var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/pages/index.js";
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 42
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_9__["SectionBoxTitle"], {
@@ -2106,7 +2153,7 @@ var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/pages/index.js";
     subtitle: "Talk To Me",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 43
     },
     __self: this
   }, "Contact Information"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Contact_Contact__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -2114,20 +2161,20 @@ var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/pages/index.js";
     message: _components_constants_constants__WEBPACK_IMPORTED_MODULE_7__["desc"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 46
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stack_Stackable__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 49
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FinalSection_FinalSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
     links: _components_constants_constants__WEBPACK_IMPORTED_MODULE_7__["links"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 50
     },
     __self: this
   })));
