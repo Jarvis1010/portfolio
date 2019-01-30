@@ -19,14 +19,13 @@ function iconPicker(content) {
   }
 }
 
-export const LinkList = ({ links }) => (
+export const LinkList = ({ links = [] }) => (
   <ListOfLinks>
-    {links &&
-      links.map(link => (
-        <IconLink key={link.href} href={link.href}>
-          {iconPicker(link.content)}
-        </IconLink>
-      ))}
+    {links.map(link => (
+      <IconLink key={link.href} href={link.href}>
+        {iconPicker(link.content)}
+      </IconLink>
+    ))}
   </ListOfLinks>
 );
 

@@ -1,34 +1,37 @@
 import styled from "styled-components";
 
-import {
-  spacing4,
-  spacing8,
-  spacing16,
-  spacing32,
-  spacing64,
-  spacing128
-} from "../constants/styled-constants";
+const allowedSpacings = (theme = {}) => {
+  const defaultTheme = {
+    spacing4: "0.25rem",
+    spacing8: "0.5rem",
+    spacing16: "1rem",
+    spacing32: "2rem",
+    spacing64: "4rem",
+    spacing128: "8rem"
+  };
+  const finalTheme = { ...defaultTheme, ...theme };
 
-const allowedSpacings = {
-  // fixed vals
-  "0": "0",
-  "4": spacing4,
-  "8": spacing8,
-  "16": spacing16,
-  "24": "1.5rem",
-  "32": spacing32,
-  "64": spacing64,
-  "128": spacing128,
+  return {
+    // fixed vals
+    "0": "0",
+    "4": finalTheme.spacing4,
+    "8": finalTheme.spacing8,
+    "16": finalTheme.spacing16,
+    "24": "1.5rem",
+    "32": finalTheme.spacing32,
+    "64": finalTheme.spacing64,
+    "128": finalTheme.spacing128,
 
-  // percentage
-  ".05": "5%",
-  ".10": "10%",
-  ".15": "15%",
-  ".20": "20%"
+    // percentage
+    ".05": "5%",
+    ".10": "10%",
+    ".15": "15%",
+    ".20": "20%"
+  };
 };
 
 const handlePaddingFor = pos => ({ size = "32", ...props }) =>
-  (props[pos] && allowedSpacings[props[pos]]) || allowedSpacings[size];
+  (props[pos] && allowedSpacings()[props[pos]]) || allowedSpacings()[size];
 
 const PadBox = styled.div`
   width: 100%;

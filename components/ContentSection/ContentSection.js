@@ -9,6 +9,6 @@ const Content = styled.div`
   text-align: center;
 `;
 
-export const ContentSection = ({ children }) => <Content>{children}</Content>;
+export const ContentSection = props => <Content {...props} />;
 
 export default ContentSection;

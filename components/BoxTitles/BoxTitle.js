@@ -141,4 +141,10 @@ export const SectionBoxTitle = ({ children, ...props }) => (
   </BoxTitle>
 );
 
+export const SectionBoxTitleInverse = ({ children, ...props }) => (
+  <BoxTitle {...props} inverse as="h2" top>
+    {children}
+  </BoxTitle>
+);
+
 export default BoxTitle;

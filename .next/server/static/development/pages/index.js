@@ -418,13 +418,14 @@ var AboutSection = function AboutSection() {
 /*!******************************************!*\
   !*** ./components/BoxTitles/BoxTitle.js ***!
   \******************************************/
-/*! exports provided: BoxH1, SectionBoxTitle, default */
+/*! exports provided: BoxH1, SectionBoxTitle, SectionBoxTitleInverse, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BoxH1", function() { return BoxH1; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionBoxTitle", function() { return SectionBoxTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionBoxTitleInverse", function() { return SectionBoxTitleInverse; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
@@ -674,6 +675,21 @@ var SectionBoxTitle = function SectionBoxTitle(_ref6) {
     __self: this
   }), children);
 };
+var SectionBoxTitleInverse = function SectionBoxTitleInverse(_ref7) {
+  var children = _ref7.children,
+      props = _objectWithoutProperties(_ref7, ["children"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BoxTitle, _extends({}, props, {
+    inverse: true,
+    as: "h2",
+    top: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 145
+    },
+    __self: this
+  }), children);
+};
 /* harmony default export */ __webpack_exports__["default"] = (BoxTitle);
 
 /***/ }),
@@ -840,6 +856,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/ContentSection/ContentSection.js";
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  padding: 40px;\n  border-bottom: 1px solid grey;\n  font-size: 14px;\n  line-height: 1.42857143;\n  text-align: center;\n"]);
 
@@ -855,15 +873,14 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 var Content = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject());
-var ContentSection = function ContentSection(_ref) {
-  var children = _ref.children;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Content, {
+var ContentSection = function ContentSection(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Content, _extends({}, props, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
-  }, children);
+  }));
 };
 /* harmony default export */ __webpack_exports__["default"] = (ContentSection);
 
@@ -900,13 +917,9 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
- // import Grid from "../Grid";
-// import Stack from "../Stack/Stack";
 
 
 
- // import { about } from "../constants/constants";
-// import { spacing16, grey, breakWidth480 } from "../constants/styled-constants";
 
 var ExperienceWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_4__["default"])(_templateObject());
 
@@ -918,15 +931,14 @@ var Experience = function Experience() {
     bottom: "32",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 14
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_3__["SectionBoxTitle"], {
-    inverse: true,
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_3__["SectionBoxTitleInverse"], {
     subtitle: "What I have been doing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 15
     },
     __self: this
   }, "Work Experience"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -934,14 +946,14 @@ var Experience = function Experience() {
     top: "16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Split__WEBPACK_IMPORTED_MODULE_2__["default"], {
     fraction: "1/3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -950,13 +962,13 @@ var Experience = function Experience() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 20
     },
     __self: this
   }, "dates"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 21
     },
     __self: this
   }, "Duis consectetur veniam eiusmod amet aliquip incididunt nostrud laboris est."))));
@@ -1048,7 +1060,6 @@ var FinalSection = function FinalSection(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants/styled-constants */ "./components/constants/styled-constants.js");
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-template-columns: ", ";\n  grid-gap: ", ";\n  width: 100%;\n"]);
 
@@ -1061,28 +1072,46 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-var gaps = {
-  "0": "0",
-  "4": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing4"],
-  "8": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing8"],
-  "16": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing16"],
-  "24": "1.5rem",
-  "32": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing32"],
-  "64": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing64"],
-  "128": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing128"],
-  default: _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing16"]
+
+var gaps = function gaps() {
+  var theme = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var defaultTheme = {
+    spacing4: "0.4rem",
+    spacing8: "0.8rem",
+    spacing16: "1rem",
+    spacing32: "2rem",
+    spacing64: "4rem",
+    spacing128: "8rem"
+  };
+
+  var finalTheme = _objectSpread({}, defaultTheme, theme);
+
+  return {
+    "0": "0",
+    "4": finalTheme.spacing4,
+    "8": finalTheme.spacing8,
+    "16": finalTheme.spacing16,
+    "24": "1.5rem",
+    "32": finalTheme.spacing32,
+    "64": finalTheme.spacing64,
+    "128": finalTheme.spacing128,
+    default: "0"
+  };
 };
 
 var createColumns = function createColumns(_ref) {
   var columns = _ref.columns,
       minWidth = _ref.minWidth;
-  return "repeat(".concat(columns ? columns : "auto-fit", ", \n   minmax(").concat(minWidth ? minWidth : "1px", ",1fr))");
+  return "repeat(".concat(columns || "auto-fit", ", \n   minmax(").concat(minWidth || "1px", ",1fr))");
 };
 
 var Grid = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div(_templateObject(), createColumns, function (props) {
-  return gaps[props.gapSize] || gaps.default;
+  return gaps(props.theme)[props.gapSize] || gaps(props.theme).default;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Grid);
 
@@ -1151,20 +1180,21 @@ function iconPicker(content) {
 }
 
 var LinkList = function LinkList(_ref) {
-  var links = _ref.links;
+  var _ref$links = _ref.links,
+      links = _ref$links === void 0 ? [] : _ref$links;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinkListStyles__WEBPACK_IMPORTED_MODULE_2__["ListOfLinks"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  }, links && links.map(function (link) {
+  }, links.map(function (link) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinkListStyles__WEBPACK_IMPORTED_MODULE_2__["IconLink"], {
       key: link.href,
       href: link.href,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 25
       },
       __self: this
     }, iconPicker(link.content));
@@ -1226,7 +1256,6 @@ var IconLink = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.a(_templ
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants/styled-constants */ "./components/constants/styled-constants.js");
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  padding-bottom: ", ";\n  padding-left: ", ";\n  padding-top: ", ";\n  padding-right: ", ";\n"]);
 
@@ -1243,23 +1272,41 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-var allowedSpacings = {
-  // fixed vals
-  "0": "0",
-  "4": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing4"],
-  "8": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing8"],
-  "16": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing16"],
-  "24": "1.5rem",
-  "32": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing32"],
-  "64": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing64"],
-  "128": _constants_styled_constants__WEBPACK_IMPORTED_MODULE_1__["spacing128"],
-  // percentage
-  ".05": "5%",
-  ".10": "10%",
-  ".15": "15%",
-  ".20": "20%"
+
+var allowedSpacings = function allowedSpacings() {
+  var theme = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var defaultTheme = {
+    spacing4: "0.25rem",
+    spacing8: "0.5rem",
+    spacing16: "1rem",
+    spacing32: "2rem",
+    spacing64: "4rem",
+    spacing128: "8rem"
+  };
+
+  var finalTheme = _objectSpread({}, defaultTheme, theme);
+
+  return {
+    // fixed vals
+    "0": "0",
+    "4": finalTheme.spacing4,
+    "8": finalTheme.spacing8,
+    "16": finalTheme.spacing16,
+    "24": "1.5rem",
+    "32": finalTheme.spacing32,
+    "64": finalTheme.spacing64,
+    "128": finalTheme.spacing128,
+    // percentage
+    ".05": "5%",
+    ".10": "10%",
+    ".15": "15%",
+    ".20": "20%"
+  };
 };
 
 var handlePaddingFor = function handlePaddingFor(pos) {
@@ -1268,7 +1315,7 @@ var handlePaddingFor = function handlePaddingFor(pos) {
         size = _ref$size === void 0 ? "32" : _ref$size,
         props = _objectWithoutProperties(_ref, ["size"]);
 
-    return props[pos] && allowedSpacings[props[pos]] || allowedSpacings[size];
+    return props[pos] && allowedSpacings()[props[pos]] || allowedSpacings()[size];
   };
 };
 
