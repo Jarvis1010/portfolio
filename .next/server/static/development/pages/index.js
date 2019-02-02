@@ -899,9 +899,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Split__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Split */ "./components/Split/index.js");
-/* harmony import */ var _BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../BoxTitles/BoxTitle */ "./components/BoxTitles/BoxTitle.js");
-/* harmony import */ var _PadBox_PadBox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../PadBox/PadBox */ "./components/PadBox/PadBox.js");
+/* harmony import */ var _Stack_Stack__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Stack/Stack */ "./components/Stack/Stack.js");
+/* harmony import */ var _Split__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Split */ "./components/Split/index.js");
+/* harmony import */ var _BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../BoxTitles/BoxTitle */ "./components/BoxTitles/BoxTitle.js");
+/* harmony import */ var _PadBox_PadBox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../PadBox/PadBox */ "./components/PadBox/PadBox.js");
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/ExperienceSections/ExperienceSection.js";
 
 function _templateObject() {
@@ -921,7 +922,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var ExperienceWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_4__["default"])(_templateObject());
+
+var ExperienceWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_5__["default"])(_templateObject());
 
 var Experience = function Experience() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ExperienceWrapper, {
@@ -931,47 +933,135 @@ var Experience = function Experience() {
     bottom: "32",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_3__["SectionBoxTitleInverse"], {
-    subtitle: "What I have been doing",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: this
-  }, "Work Experience"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    size: "64",
-    top: "16",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_4__["SectionBoxTitleInverse"], {
+    subtitle: "What I have been doing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 16
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Split__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    fraction: "1/3",
+  }, "Work Experience"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    size: "64",
+    top: "16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    style: {
-      borderRight: "1px solid black"
-    },
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Split__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    fraction: "1/4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
-  }, "dates"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    style: {
+      borderRight: "1px solid black"
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
-  }, "Duis consectetur veniam eiusmod amet aliquip incididunt nostrud laboris est."))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Stack_Stack__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, "April 2018 - Present"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+    style: {
+      width: "100%"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, "Pluralsight"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, "Software Engineer"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, "Duis consectetur veniam eiusmod amet aliquip incididunt nostrud laboris est. Aute commodo est ipsum laborum occaecat.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Split__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    fraction: "1/4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    style: {
+      borderRight: "1px solid black"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Stack_Stack__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, "May 2017 - April 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+    style: {
+      width: "100%"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, "The Church of Jesus Christ of Latter-day Saints"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, "Front End Engineer"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, "Duis consectetur veniam eiusmod amet aliquip incididunt nostrud laboris est. Aute commodo est ipsum laborum occaecat."))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Experience);
