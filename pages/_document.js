@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           {pageMeta.tags.map(tag => (
-            <meta {...tag} />
+            <meta key={tag} {...tag} />
           ))}
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat|Slabo+27px"

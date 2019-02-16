@@ -1,29 +1,20 @@
 import React from "react";
+import VisuallyHidden from "@reach/visually-hidden";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { ListOfLinks, IconLink } from "./LinkListStyles";
 
-function iconPicker(content) {
-  switch (content) {
-    case "github": {
-      return <FaGithub />;
-    }
-    case "twitter": {
-      return <FaTwitter />;
-    }
-    case "linkedin": {
-      return <FaLinkedin />;
-    }
-    default: {
-      return "";
-    }
-  }
-}
+const iconPicker = {
+  github: <FaGithub />,
+  twitter: <FaTwitter />,
+  linkedin: <FaLinkedin />
+};
 
 export const LinkList = ({ links = [] }) => (
   <ListOfLinks>
     {links.map(link => (
-      <IconLink key={link.href} href={link.href}>
-        {iconPicker(link.content)}
+      <IconLink key={link.content} href={link.href}>
+        <VisuallyHidden>{link.content}</VisuallyHidden>
+        {iconPicker[link.content]}
       </IconLink>
     ))}
   </ListOfLinks>

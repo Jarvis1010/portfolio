@@ -239,7 +239,9 @@ function (_Document) {
         },
         __self: this
       }, _components_constants_constants__WEBPACK_IMPORTED_MODULE_3__["pageMeta"].tags.map(function (tag) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", _extends({}, tag, {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", _extends({
+          key: tag
+        }, tag, {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 15

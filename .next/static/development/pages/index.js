@@ -907,11 +907,17 @@ var Experience = function Experience() {
       lineNumber: 29
     },
     __self: this
-  }, "Duis consectetur veniam eiusmod amet aliquip incididunt nostrud laboris est. Aute commodo est ipsum laborum occaecat.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Split__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    fraction: "1/4",
+  }, "Duis consectetur veniam eiusmod amet aliquip incididunt nostrud laboris est. Aute commodo est ipsum laborum occaecat.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Split__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    fraction: "1/4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -920,19 +926,19 @@ var Experience = function Experience() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Stack_Stack__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   }, "May 2017 - April 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
@@ -941,25 +947,25 @@ var Experience = function Experience() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: this
   }, "The Church of Jesus Christ of Latter-day Saints"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: this
   }, "Front End Engineer"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PadBox_PadBox__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: this
   }, "Duis consectetur veniam eiusmod amet aliquip incididunt nostrud laboris est. Aute commodo est ipsum laborum occaecat."))));
@@ -1119,74 +1125,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinkList", function() { return LinkList; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.mjs");
-/* harmony import */ var _LinkListStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./LinkListStyles */ "./components/LinkList/LinkListStyles.js");
+/* harmony import */ var _reach_visually_hidden__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @reach/visually-hidden */ "./node_modules/@reach/visually-hidden/es/index.js");
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.mjs");
+/* harmony import */ var _LinkListStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./LinkListStyles */ "./components/LinkList/LinkListStyles.js");
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/LinkList/LinkList.js";
 
 
 
 
-function iconPicker(content) {
-  switch (content) {
-    case "github":
-      {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaGithub"], {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 8
-          },
-          __self: this
-        });
-      }
-
-    case "twitter":
-      {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaTwitter"], {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 11
-          },
-          __self: this
-        });
-      }
-
-    case "linkedin":
-      {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaLinkedin"], {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 14
-          },
-          __self: this
-        });
-      }
-
-    default:
-      {
-        return "";
-      }
-  }
-}
-
+var iconPicker = {
+  github: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaGithub"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }),
+  twitter: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaTwitter"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }),
+  linkedin: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaLinkedin"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  })
+};
 var LinkList = function LinkList(_ref) {
   var _ref$links = _ref.links,
       links = _ref$links === void 0 ? [] : _ref$links;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinkListStyles__WEBPACK_IMPORTED_MODULE_2__["ListOfLinks"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinkListStyles__WEBPACK_IMPORTED_MODULE_3__["ListOfLinks"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 13
     },
     __self: this
   }, links.map(function (link) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinkListStyles__WEBPACK_IMPORTED_MODULE_2__["IconLink"], {
-      key: link.href,
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LinkListStyles__WEBPACK_IMPORTED_MODULE_3__["IconLink"], {
+      key: link.content,
       href: link.href,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 15
       },
       __self: this
-    }, iconPicker(link.content));
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_visually_hidden__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, link.content), iconPicker[link.content]);
   }));
 };
 /* harmony default export */ __webpack_exports__["default"] = (LinkList);
@@ -1206,7 +1200,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IconLink", function() { return IconLink; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  color: inherit;\n  text-decoration: none;\n  border: 1px solid;\n  border-radius: 50%;\n  padding: 0.4em 0.7em 0.7em 0.7em;\n  margin: 0 0.2em;\n  background: inherit;\n  &:hover {\n    text-decoration: none;\n    background: white;\n    color: grey;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: inherit;\n  text-decoration: none;\n  border: 1px solid;\n  border-radius: 50%;\n  padding: 0.7em 0.7em 0.7em 0.7em;\n  margin: 0 0.2em;\n  background: inherit;\n  &:hover {\n    text-decoration: none;\n    background: white;\n    color: grey;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -2784,6 +2778,38 @@ var unitlessKeys = {
 
 /* harmony default export */ __webpack_exports__["default"] = (unitlessKeys);
 
+
+/***/ }),
+
+/***/ "./node_modules/@reach/visually-hidden/es/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@reach/visually-hidden/es/index.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var style = {
+  border: 0,
+  clip: "rect(0 0 0 0)",
+  height: "1px",
+  width: "1px",
+  margin: "-1px",
+  padding: 0,
+  overflow: "hidden",
+  position: "absolute"
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var children = _ref.children;
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { style: style, children: children });
+});
 
 /***/ }),
 

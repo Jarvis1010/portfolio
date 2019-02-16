@@ -31,6 +31,7 @@ const Experience = () => (
           laboris est. Aute commodo est ipsum laborum occaecat.
         </PadBox>
       </Split>
+      <hr />
       <Split fraction="1/4">
         <PadBox style={{ borderRight: "1px solid black" }}>
           <Stack>

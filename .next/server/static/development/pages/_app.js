@@ -384,13 +384,15 @@ var SectionBoxTitleInverse = function SectionBoxTitleInverse(_ref7) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _MatchMedia_MatchMedia__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../MatchMedia/MatchMedia */ "./components/MatchMedia/MatchMedia.js");
-/* harmony import */ var _Stack_Stack__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Stack/Stack */ "./components/Stack/Stack.js");
-/* harmony import */ var _Parallax_Parallax__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Parallax/Parallax */ "./components/Parallax/Parallax.js");
-/* harmony import */ var _BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../BoxTitles/BoxTitle */ "./components/BoxTitles/BoxTitle.js");
-/* harmony import */ var _constants_styled_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../constants/styled-constants */ "./components/constants/styled-constants.js");
+/* harmony import */ var _reach_visually_hidden__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @reach/visually-hidden */ "@reach/visually-hidden");
+/* harmony import */ var _reach_visually_hidden__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_reach_visually_hidden__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _MatchMedia_MatchMedia__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../MatchMedia/MatchMedia */ "./components/MatchMedia/MatchMedia.js");
+/* harmony import */ var _Stack_Stack__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Stack/Stack */ "./components/Stack/Stack.js");
+/* harmony import */ var _Parallax_Parallax__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Parallax/Parallax */ "./components/Parallax/Parallax.js");
+/* harmony import */ var _BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../BoxTitles/BoxTitle */ "./components/BoxTitles/BoxTitle.js");
+/* harmony import */ var _constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../constants/styled-constants */ "./components/constants/styled-constants.js");
 var _jsxFileName = "/Users/travis-mair/portfolio/portfolio/components/Landing/Landing.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -442,11 +444,12 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var Landing = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_Stack_Stack__WEBPACK_IMPORTED_MODULE_3__["default"])(_templateObject(), function (props) {
+
+var Landing = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(_Stack_Stack__WEBPACK_IMPORTED_MODULE_4__["default"])(_templateObject(), function (props) {
   return props.theme.white || "white";
 });
 var backgroundImage = "/static/images/background.jpeg";
-var ScrollLink = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a(_templateObject2(), function (props) {
+var ScrollLink = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.a(_templateObject2(), function (props) {
   return props.theme.white || "white";
 }, function (props) {
   return props.theme.white || "white";
@@ -501,42 +504,47 @@ var LandingComponent = function LandingComponent() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Scroller, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Parallax_Parallax__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    as: "header",
-    backgroundUrl: backgroundImage,
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 62
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Landing, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Parallax_Parallax__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    as: "header",
+    backgroundUrl: backgroundImage,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 63
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_5__["BoxH1"], {
-    subtitle: "Web Developer",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Landing, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64
     },
     __self: this
-  }, "Travis Waith-Mair"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ScrollLink, {
-    "aria-label": "scoll navbar to top",
-    href: "#top",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BoxTitles_BoxTitle__WEBPACK_IMPORTED_MODULE_6__["BoxH1"], {
+    subtitle: "Web Developer",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 65
     },
     __self: this
-  }))));
+  }, "Travis Waith-Mair"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ScrollLink, {
+    href: "#top",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_visually_hidden__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    },
+    __self: this
+  }, "scroll to main page")))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_MatchMedia_MatchMedia__WEBPACK_IMPORTED_MODULE_2__["withMatchMedia"])("(max-width:".concat(_constants_styled_constants__WEBPACK_IMPORTED_MODULE_6__["breakWidth480"], ")"))(LandingComponent));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_MatchMedia_MatchMedia__WEBPACK_IMPORTED_MODULE_3__["withMatchMedia"])("(max-width:".concat(_constants_styled_constants__WEBPACK_IMPORTED_MODULE_7__["breakWidth480"], ")"))(LandingComponent));
 
 /***/ }),
 
@@ -1757,6 +1765,17 @@ function (_App) {
 
 module.exports = __webpack_require__(/*! ./pages/_app.js */"./pages/_app.js");
 
+
+/***/ }),
+
+/***/ "@reach/visually-hidden":
+/*!*****************************************!*\
+  !*** external "@reach/visually-hidden" ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@reach/visually-hidden");
 
 /***/ }),
 

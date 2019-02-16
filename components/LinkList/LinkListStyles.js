@@ -10,7 +10,7 @@ export const IconLink = styled.a`
   text-decoration: none;
   border: 1px solid;
   border-radius: 50%;
-  padding: 0.4em 0.7em 0.7em 0.7em;
+  padding: 0.7em 0.7em 0.7em 0.7em;
   margin: 0 0.2em;
   background: inherit;
   &:hover {

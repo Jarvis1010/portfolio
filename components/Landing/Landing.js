@@ -1,4 +1,5 @@
 import React from "react";
+import VisuallyHidden from "@reach/visually-hidden";
 import styled from "styled-components";
 import { withMatchMedia } from "../MatchMedia/MatchMedia";
 import Stack from "../Stack/Stack";
@@ -62,7 +63,9 @@ const LandingComponent = () => {
       <Parallax as="header" backgroundUrl={backgroundImage}>
         <Landing>
           <BoxH1 subtitle="Web Developer">Travis Waith-Mair</BoxH1>
-          <ScrollLink aria-label="scoll navbar to top" href="#top" />
+          <ScrollLink href="#top">
+            <VisuallyHidden>scroll to main page</VisuallyHidden>
+          </ScrollLink>
         </Landing>
       </Parallax>
     </Scroller>
